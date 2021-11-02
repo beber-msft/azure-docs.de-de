@@ -1,5 +1,5 @@
 ---
-title: Rehydrierung von Klecksen aus der Archivebene
+title: Rehydrierung von Blob-Speicher aus der Archivebene
 description: Während ein Blob sich auf der Archivzugriffsebene befindet, wird es als offline betrachtet und kann nicht gelesen oder geändert werden. Wenn Daten in einem archivierten Blob gelesen oder geändert werden sollen, muss das Blob zunächst auf einer Onlineebene (heiße oder kalte Ebene) aktiviert werden.
 services: storage
 author: tamram
