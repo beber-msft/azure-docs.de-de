@@ -8,12 +8,12 @@ manager: bsiva
 ms.topic: how-to
 ms.date: 4/25/2021
 ms.author: rahugup
-ms.openlocfilehash: 26c068450b93272986a1a3c82af0530adfa30ebb
-ms.sourcegitcommit: 9339c4d47a4c7eb3621b5a31384bb0f504951712
+ms.openlocfilehash: 0c3cb5671dfb0a38626e68ba6dd25fb380e70942
+ms.sourcegitcommit: 677e8acc9a2e8b842e4aef4472599f9264e989e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2021
-ms.locfileid: "113766468"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "132294027"
 ---
 # <a name="migrate-availability-group-to-sql-server-on-azure-vm"></a>Migrieren einer Always On-Verfügbarkeitsgruppe zu SQL Server auf Azure-VMs
 
@@ -148,7 +148,7 @@ Führen Sie die folgenden Schritte aus, um den Mobilitätsdienst zu installieren
 
 1. Stellen Sie eine Verbindung mit dem Computer her, und extrahieren Sie den Inhalt der Installationsdatei in einen lokalen Ordner (z. B. C:\temp). Führen Sie den folgenden Befehl in einer Administratorbefehlsaufforderung aus: 
 
-    ```
+    ```cmd
     ren Microsoft-ASR_UA*Windows*release.exe MobilityServiceInstaller.exe
     MobilityServiceInstaller.exe /q /x:C:\Temp\Extracted
     cd C:\Temp\Extracted
@@ -156,13 +156,13 @@ Führen Sie die folgenden Schritte aus, um den Mobilitätsdienst zu installieren
 
 2. Führen Sie das Mobility Service-Installationsprogramm aus:
 
-    ```
-   UnifiedAgent.exe /Role "MS" /Platform "VmWare" /Silent
+    ```cmd
+    UnifiedAgent.exe /Role "MS" /Platform "VmWare" /Silent
     ```
 
 3. Registrieren Sie den Agent bei der Replikationsappliance:
 
-    ```
+    ```cmd
     cd C:\Program Files (x86)\Microsoft Azure Site Recovery\agent
     UnifiedAgentConfigurator.exe  /CSEndPoint <replication appliance IP address> /PassphraseFilePath <Passphrase File Path>
     ```
@@ -346,10 +346,10 @@ Die Always On-Verfügbarkeitsgruppe ist bereit.
     - Schützen Sie Ihre Daten, indem Sie Azure-VMs mit dem [Azure Backup-Dienst](../../../backup/quick-backup-vm-portal.md) sichern. 
     - Sorgen Sie für die kontinuierliche Ausführung und Verfügbarkeit von Workloads, indem Sie Azure-VMs mithilfe von [Site Recovery](../../../site-recovery/azure-to-azure-tutorial-enable-replication.md) in eine sekundäre Region replizieren.
 - Beachten Sie zur Steigerung der Sicherheit Folgendes:
-    - Sperren und beschränken Sie den Zugriff von eingehendem Datenverkehr mit der [Just-in-Time-Verwaltung im Azure Security Center](../../../security-center/security-center-just-in-time.md).
+    - Sperren und beschränken Sie den Zugriff auf eingehenden Datenverkehr mit der [Just-In-Time-Verwaltung in Microsoft Defender für Cloud](../../../security-center/security-center-just-in-time.md).
     - Beschränken Sie den Netzwerkdatenverkehr mithilfe von [Netzwerksicherheitsgruppen](../../../virtual-network/network-security-groups-overview.md) auf Verwaltungsendpunkte.
     - Stellen Sie [Azure Disk Encryption](../../../security/fundamentals/azure-disk-encryption-vms-vmss.md) bereit, um Datenträger und Daten vor Diebstahl und unbefugtem Zugriff zu schützen.
-    - Erfahren Sie mehr über das [Sichern von IaaS-Ressourcen](https://azure.microsoft.com/services/virtual-machines/secure-well-managed-iaas/), und besuchen Sie die Website [Azure Security Center](https://azure.microsoft.com/services/security-center/).
+    - Erfahren Sie mehr über das [Schützen von IaaS-Ressourcen](https://azure.microsoft.com/services/virtual-machines/secure-well-managed-iaas/) und besuchen Sie die Website [Microsoft Defender für Cloud](https://azure.microsoft.com/services/security-center/).
 - Beachten Sie zur Überwachung und Verwaltung Folgendes:
     - Ziehen Sie die Bereitstellung von [Azure Cost Management](../../../cost-management-billing/cost-management-billing-overview.md) in Erwägung, um den Ressourceneinsatz und die Ausgaben zu überwachen.
 

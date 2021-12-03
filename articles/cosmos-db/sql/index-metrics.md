@@ -5,14 +5,14 @@ author: timsander1
 ms.service: cosmos-db
 ms.subservice: cosmosdb-sql
 ms.topic: conceptual
-ms.date: 10/05/2021
+ms.date: 10/25/2021
 ms.author: tisande
-ms.openlocfilehash: 13d667327fde6f55072f40dd6d1f9b7eb07d1214
-ms.sourcegitcommit: 1d56a3ff255f1f72c6315a0588422842dbcbe502
+ms.openlocfilehash: f10208e83c9c7f23600285444d22ed5b5faf2488
+ms.sourcegitcommit: 05c8e50a5df87707b6c687c6d4a2133dc1af6583
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "129615199"
+ms.lasthandoff: 11/16/2021
+ms.locfileid: "132551974"
 ---
 # <a name="indexing-metrics-in-azure-cosmos-db"></a>Indizierungsmetriken in Azure Cosmos DB
 [!INCLUDE[appliesto-sql-api](../includes/appliesto-sql-api.md)]
@@ -29,36 +29,23 @@ Sie können Indizierungsmetriken für eine Abfrage aktivieren, indem Sie die Eig
 ### <a name="net-sdk-example"></a>Beispiel für .NET SDK
 
 ```csharp
-    string sqlQuery = "SELECT TOP 10 c.id FROM c WHERE c.Item = 'value1234' AND c.Price > 2";
+    string sqlQueryText = "SELECT TOP 10 c.id FROM c WHERE c.Item = 'value1234' AND c.Price > 2";
 
-    List<Result> results = new List<Result>(); //Individual Benchmark results
+    QueryDefinition query = new QueryDefinition(sqlQueryText);
 
-    QueryDefinition query = new QueryDefinition(sqlQuery);
-
-    FeedIterator<Item> resultSetIterator = exampleApp.container.GetItemQueryIterator<Item>(
+    FeedIterator<Item> resultSetIterator = container.GetItemQueryIterator<Item>(
                 query, requestOptions: new QueryRequestOptions
         {
             PopulateIndexMetrics = true
         });
 
-    double requestCharge = 0;
-    tring indexMetrics = "";
-
     FeedResponse<Item> response = null;
 
     while (resultSetIterator.HasMoreResults)
         {
-            response = await resultSetIterator.ReadNextAsync();
-            requestCharge = requestCharge + response.RequestCharge;
-
-            if (indexMetrics != "")
-                {
-                    indexMetrics = response.IndexMetrics;
-                }
+          response = await resultSetIterator.ReadNextAsync();
+          Console.WriteLine(response.IndexMetrics);
         }
-
-    Console.WriteLine(response.IndexMetrics);
-    Console.WriteLine($"RU charge: " + response.RequestCharge);
 ```
 
 ### <a name="example-output"></a>Beispielausgabe
@@ -150,7 +137,7 @@ Index Utilization Information
     Index Impact Score: High
     ---
 ```
-Diese Indexmetriken zeigen, dass die Abfrage die indizierten Pfade `/name/?`, `/age/?`, `/town/?` und `/timestamp/?` verwendet hat. Die Indexmetriken zeigen auch, dass es eine hohe Wahrscheinlichkeit gibt, dass das Hinzufügen der zusammengesetzten Indizes (`/name` ASC, `(/town ASC, /age ASC)` und `(/name ASC, /town ASC, /timestamp ASC)`) die Leistung weiter verbessern wird.
+Diese Indexmetriken zeigen, dass die Abfrage die indizierten Pfade `/name/?`, `/age/?`, `/town/?` und `/timestamp/?` verwendet hat. Die Indexmetriken zeigen auch, dass es eine hohe Wahrscheinlichkeit gibt, dass das Hinzufügen der zusammengesetzten Indizes `(/name ASC, /town ASC, /age ASC)` und `(/name ASC, /town ASC, /timestamp ASC)` die Leistung weiter verbessern wird.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

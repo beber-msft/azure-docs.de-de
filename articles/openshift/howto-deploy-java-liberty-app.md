@@ -1,5 +1,6 @@
 ---
 title: Bereitstellen einer Java-Anwendung mit Open Liberty/WebSphere Liberty in Azure Red Hat OpenShift 4-Clustern
+recommendations: false
 description: Bereitstellen einer Java-Anwendung mit Open Liberty/WebSphere Liberty in Azure Red Hat OpenShift 4-Clustern.
 author: majguo
 ms.author: jiangma
@@ -7,17 +8,13 @@ ms.service: azure-redhat-openshift
 ms.topic: conceptual
 ms.date: 10/30/2020
 keywords: java, jakartaee, javaee, microprofile, open-liberty, websphere-liberty, aro, openshift, red hat
-ms.custom:
-- devx-track-java
-- devx-track-javaee
-- devx-track-javaee-liberty
-- devx-track-javaee-liberty-aro
-ms.openlocfilehash: 5207d0928fd293a10bd88222660bfaec4198db0e
-ms.sourcegitcommit: 692382974e1ac868a2672b67af2d33e593c91d60
+ms.custom: devx-track-java, devx-track-javaee, devx-track-javaee-liberty, devx-track-javaee-liberty-aro
+ms.openlocfilehash: 6a3ef6da2ef6c75d6eeba5894054cf81723b17b9
+ms.sourcegitcommit: 05c8e50a5df87707b6c687c6d4a2133dc1af6583
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "130234263"
+ms.lasthandoff: 11/16/2021
+ms.locfileid: "132553855"
 ---
 # <a name="deploy-a-java-application-with-open-libertywebsphere-liberty-on-an-azure-red-hat-openshift-4-cluster"></a>Bereitstellen einer Java-Anwendung mit Open Liberty/WebSphere Liberty in Azure Red Hat OpenShift 4-Clustern
 

@@ -4,19 +4,19 @@ description: Liste der Dienste, die verwaltete Identitäten für Azure-Ressource
 services: active-directory
 author: barclayn
 ms.author: barclayn
-ms.date: 07/13/2021
+ms.date: 10/26/2021
 ms.topic: conceptual
 ms.service: active-directory
 ms.subservice: msi
 manager: daveba
 ms.collection: M365-identity-device-management
 ms.custom: references_regions
-ms.openlocfilehash: c9167111a1799575b5dc0d06cb26bf7cc20002e9
-ms.sourcegitcommit: 0770a7d91278043a83ccc597af25934854605e8b
+ms.openlocfilehash: 43b4fcdbd867a2aee95c6bf23d57e77e8fbbe08f
+ms.sourcegitcommit: 4cd97e7c960f34cb3f248a0f384956174cdaf19f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "124826807"
+ms.lasthandoff: 11/08/2021
+ms.locfileid: "132026898"
 ---
 # <a name="services-that-support-managed-identities-for-azure-resources"></a>Dienste, die verwaltete Identitäten für Azure-Ressourcen unterstützen
 
@@ -28,7 +28,6 @@ Verwaltete Identitäten für Azure-Ressourcen stellen für Azure-Dienste eine au
 ## <a name="azure-services-that-support-managed-identities-for-azure-resources"></a>Azure-Dienste, die verwaltete Identitäten für Azure-Ressourcen unterstützen
 
 Die folgenden Azure-Dienste unterstützen verwaltete Identitäten für Azure-Ressourcen:
-
 
 ### <a name="azure-api-management"></a>Azure API Management
 
@@ -102,12 +101,12 @@ Im folgenden Dokument finden Sie Informationen zum erneuten Konfigurieren einer 
 
 | Typ der verwalteten Identität | Allgemein verfügbar<br>Globale Azure-Regionen | Azure Government | Azure Deutschland | Azure China 21Vianet |
 | --- | :-: | :-: | :-: | :-: |
-| Vom System zugewiesen | Vorschau | Vorschau | Nicht verfügbar | Vorschau |
-| Vom Benutzer zugewiesen | Vorschau | Vorschau | Nicht verfügbar | Vorschau |
+| Vom System zugewiesen | ![Verfügbar][Check]| ![Verfügbar][Check] | Nicht verfügbar | ![Verfügbar][Check] |
+| Vom Benutzer zugewiesen | ![Verfügbar][Check] | ![Verfügbar][Check] | Nicht verfügbar | ![Verfügbar][Check] |
 
 Informationen zur Verwendung einer verwalteten Identität mit [Azure Automation](../../automation/automation-intro.md) finden Sie in den folgenden Dokumenten:
 
-* [Übersicht über die Automation-Kontoauthentifizierung – Verwaltete Identitäten](../../automation/automation-security-overview.md#managed-identities-preview)
+* [Übersicht über die Automation-Kontoauthentifizierung – Verwaltete Identitäten](../../automation/automation-security-overview.md#managed-identities)
 * [Aktivieren und Verwenden einer verwalteten Identität für Automation](../../automation/enable-managed-identity-for-automation.md)
 
 ### <a name="azure-blueprints"></a>Azure Blueprint
@@ -326,7 +325,7 @@ Informationen zum Konfigurieren der verwalteten Identität für Azure Service 
 | Vom Benutzer zugewiesen | Nicht verfügbar. | Nicht verfügbar. | Nicht verfügbar. | Nicht verfügbar. |
 
 
-Weitere Informationen finden Sie unter [Aktivieren einer systemseitig zugewiesenen verwalteten Identität für eine Azure Spring Cloud-Anwendung](../../spring-cloud/how-to-enable-system-assigned-managed-identity.md).
+Weitere Informationen finden Sie unter [Aktivieren einer systemseitig zugewiesenen verwalteten Identität für Anwendungen in Azure Spring Cloud](../../spring-cloud/how-to-enable-system-assigned-managed-identity.md).
 
 ### <a name="azure-stack-edge"></a>Azure Stack Edge
 

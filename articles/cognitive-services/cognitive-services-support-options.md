@@ -2,18 +2,18 @@
 title: Support- und Hilfeoptionen für Azure Cognitive Services
 description: Hier erfahren Sie, wie Sie Hilfe und Support zu Fragen und Problemen beim Erstellen von Anwendungen mit Azure Cognitive Services-Integration erhalten.
 services: cognitive-services
-author: erhopf
+author: PatrickFarley
 manager: nitinme
 ms.service: cognitive-services
 ms.topic: conceptual
 ms.date: 10/8/2021
-ms.author: erhopf
-ms.openlocfilehash: e706c8ed4bd15d7d8f1d234d8adfab85d626788c
-ms.sourcegitcommit: 216b6c593baa354b36b6f20a67b87956d2231c4c
+ms.author: pafarley
+ms.openlocfilehash: fa9a1391b6f222156c94a829586309220838ea89
+ms.sourcegitcommit: 106f5c9fa5c6d3498dd1cfe63181a7ed4125ae6d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "129729100"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "131058348"
 ---
 # <a name="azure-cognitive-services-support-and-help-options"></a>Support- und Hilfeoptionen für Azure Cognitive Services
 
@@ -110,34 +110,35 @@ Verwenden Sie beim Übermitteln einer neuen Frage an Stack Overflow bei der Erst
 
 Um neue Features anzufordern, veröffentlichen Sie sie auf https://feedback.azure.com. Teilen Sie Ihre Ideen mit, damit Cognitive Services und die APIs noch besser für die Anwendungen funktionieren, die Sie entwickeln. 
 
-* [Cognitive Services](https://feedback.azure.com/forums/932041-azure-cognitive-services?category_id=395737)
+* [Cognitive Services](https://feedback.azure.com/d365community/forum/09041fae-0b25-ec11-b6e6-000d3a4f0858)
 
 **Bildanalyse**
 
-* [Maschinelles Sehen](https://feedback.azure.com/forums/932041-azure-cognitive-services?category_id=395743)
-* [Custom Vision](https://feedback.azure.com/forums/932041-azure-cognitive-services?category_id=395743)
-* [Gesichtserkennung](https://feedback.azure.com/forums/932041-azure-cognitive-services?category_id=395743)
-* [Formularerkennung](https://feedback.azure.com/forums/932041-azure-cognitive-services?category_id=395743)
-* [Video Indexer](https://feedback.azure.com/forums/932041-azure-cognitive-services?category_id=395743)
+* [Maschinelles Sehen](https://feedback.azure.com/d365community/forum/09041fae-0b25-ec11-b6e6-000d3a4f0858?c=7a8853b4-0b25-ec11-b6e6-000d3a4f0858)
+* [Custom Vision](https://feedback.azure.com/d365community/forum/09041fae-0b25-ec11-b6e6-000d3a4f0858?c=7a8853b4-0b25-ec11-b6e6-000d3a4f0858)
+* [Gesichtserkennung](https://feedback.azure.com/d365community/forum/09041fae-0b25-ec11-b6e6-000d3a4f0858?c=7a8853b4-0b25-ec11-b6e6-000d3a4f0858)
+* [Formularerkennung](https://feedback.azure.com/d365community/forum/09041fae-0b25-ec11-b6e6-000d3a4f0858?c=7a8853b4-0b25-ec11-b6e6-000d3a4f0858)
+* [Video Indexer](https://feedback.azure.com/d365community/forum/09041fae-0b25-ec11-b6e6-000d3a4f0858?c=6483a3c0-0b25-ec11-b6e6-000d3a4f0858)
+
 
 **Sprache**
 
-* [Plastischer Reader](https://feedback.azure.com/forums/932041-azure-cognitive-services?category_id=395749)
-* [Language Understanding (LUIS)](https://feedback.azure.com/forums/932041-azure-cognitive-services?category_id=395749)
-* [QnA Maker](https://feedback.azure.com/forums/932041-azure-cognitive-services?category_id=395749)
-* [Textanalyse](https://feedback.azure.com/forums/932041-azure-cognitive-services?category_id=395749)
-* [Translator](https://feedback.azure.com/forums/932041-azure-cognitive-services?category_id=395749)
+* [Plastischer Reader](https://feedback.azure.com/d365community/forum/09041fae-0b25-ec11-b6e6-000d3a4f0858?c=449a6fba-0b25-ec11-b6e6-000d3a4f0858)
+* [Language Understanding (LUIS)](https://feedback.azure.com/d365community/forum/09041fae-0b25-ec11-b6e6-000d3a4f0858?c=449a6fba-0b25-ec11-b6e6-000d3a4f0858)
+* [QnA Maker](https://feedback.azure.com/d365community/forum/09041fae-0b25-ec11-b6e6-000d3a4f0858?c=449a6fba-0b25-ec11-b6e6-000d3a4f0858)
+* [Textanalyse](https://feedback.azure.com/d365community/forum/09041fae-0b25-ec11-b6e6-000d3a4f0858?c=449a6fba-0b25-ec11-b6e6-000d3a4f0858)
+* [Translator](https://feedback.azure.com/d365community/forum/09041fae-0b25-ec11-b6e6-000d3a4f0858?c=449a6fba-0b25-ec11-b6e6-000d3a4f0858)
 
 **Speech**
 
-* [Speech-Dienst](https://feedback.azure.com/forums/932041-azure-cognitive-services?category_id=395740)
+* [Speech-Dienst](https://feedback.azure.com/d365community/forum/09041fae-0b25-ec11-b6e6-000d3a4f0858?c=21041fae-0b25-ec11-b6e6-000d3a4f0858)
 
 **Entscheidung**
 
-* [Anomalieerkennung](https://feedback.azure.com/forums/932041-azure-cognitive-services?category_id=395746) 
-* [Content Moderator](https://feedback.azure.com/forums/932041-azure-cognitive-services?category_id=395746)
-* [Metrics Advisor (Vorschau)](https://feedback.azure.com/forums/932041-azure-cognitive-services?category_id=395746)
-* [Personalisierung](https://feedback.azure.com/forums/932041-azure-cognitive-services?category_id=395746)
+* [Anomalieerkennung](https://feedback.azure.com/d365community/forum/09041fae-0b25-ec11-b6e6-000d3a4f0858?c=6c8853b4-0b25-ec11-b6e6-000d3a4f0858) 
+* [Content Moderator](https://feedback.azure.com/d365community/forum/09041fae-0b25-ec11-b6e6-000d3a4f0858?c=6c8853b4-0b25-ec11-b6e6-000d3a4f0858)
+* [Metrics Advisor (Vorschau)](https://feedback.azure.com/d365community/forum/09041fae-0b25-ec11-b6e6-000d3a4f0858?c=6c8853b4-0b25-ec11-b6e6-000d3a4f0858)
+* [Personalisierung](https://feedback.azure.com/d365community/forum/09041fae-0b25-ec11-b6e6-000d3a4f0858?c=6c8853b4-0b25-ec11-b6e6-000d3a4f0858)
 
 ## <a name="stay-informed"></a>Immer auf dem neuesten Stand
 

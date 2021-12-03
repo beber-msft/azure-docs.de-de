@@ -14,12 +14,12 @@ ms.author: ajburnle
 ms.reviewer: krbain
 ms.custom: it-pro, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b23b4a60795dc01667df3c6a9efa8e9cde4aeda9
-ms.sourcegitcommit: c385af80989f6555ef3dadc17117a78764f83963
+ms.openlocfilehash: e8c8e3be984d50475724525e34a2aee682408be4
+ms.sourcegitcommit: 901ea2c2e12c5ed009f642ae8021e27d64d6741e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111409899"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "132369662"
 ---
 # <a name="what-is-group-based-licensing-in-azure-active-directory"></a>Was ist die gruppenbasierte Lizenzierung in Azure Active Directory?
 
@@ -34,7 +34,7 @@ Sie benötigen **für jeden Benutzer**, der von der gruppenbasierten Lizenzierun
 
 - Kostenpflichtiges oder Testabonnement für Azure AD Premium P1 oder höher
 
-- Kostenpflichtige Edition oder kostenlose Testversion von Office 365 Enterprise E3 oder Office 365 A3 oder Office 365 GCC G3 oder Office 365 E3 für GCCH oder Office 365 E3 für DOD und höher
+- Kostenpflichtige Edition oder kostenlose Testversion von Microsoft 365 Business Premium oder Office 365 Enterprise E3 oder Office 365 A3 oder Office 365 GCC G3 oder Office 365 E3 für GCCH oder Office 365 E3 für DOD und höher
 
 ### <a name="required-number-of-licenses"></a>Erforderliche Anzahl von Lizenzen
 Für alle Gruppen, denen eine Lizenz zugewiesen ist, müssen Sie auch über eine Lizenz für jedes einzelne Mitglied verfügen. Sie müssen zwar nicht jedem Mitglied der Gruppe eine Lizenz zuweisen, aber Sie müssen mindestens über genügend Lizenzen für alle Mitglieder verfügen. Bei 1.000 einzelnen Mitgliedern, die lizenzierten Gruppen in Ihrem Mandanten angehören, müssen Sie beispielsweise über mindestens 1.000 Lizenzen verfügen, um den Lizenzvertrag zu erfüllen.
@@ -59,7 +59,7 @@ Hier die Hauptmerkmale der gruppenbasierten Lizenzierung:
 
 ## <a name="your-feedback-is-welcome"></a>Wir freuen uns auf Ihr Feedback!
 
-Wenn Sie Feedback oder Vorschläge zu Features haben, verwenden Sie [das Azure AD-Administratorforum](https://feedback.azure.com/forums/169401-azure-active-directory?category_id=162510).
+Wenn Sie Feedback oder Vorschläge zu Features haben, verwenden Sie [das Azure AD-Administratorforum](https://feedback.azure.com/d365community/forum/22920db1-ad25-ec11-b6e6-000d3a4f0789).
 
 ## <a name="next-steps"></a>Nächste Schritte
 

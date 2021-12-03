@@ -1,19 +1,19 @@
 ---
 title: Konfigurieren von Diagnoseeinstellungen und Arbeitsbereich
 description: Erfahren Sie, wie Sie Diagnoseeinstellungen und einen Log Analytics-Arbeitsbereich zum Überwachen von Azure Data Factory konfigurieren.
-author: minhe-msft
-ms.author: hemin
+author: joshuha-msft
+ms.author: joowen
 ms.reviewer: jburchel
 ms.service: data-factory
 ms.subservice: monitoring
 ms.topic: conceptual
 ms.date: 09/02/2021
-ms.openlocfilehash: 7c982c0cb94ed5cf4a473265b1b414edbe0295a0
-ms.sourcegitcommit: 03e84c3112b03bf7a2bc14525ddbc4f5adc99b85
+ms.openlocfilehash: 6637cd45f6c7dd9260eb3bb5af1601457213158f
+ms.sourcegitcommit: 8946cfadd89ce8830ebfe358145fd37c0dc4d10e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2021
-ms.locfileid: "129400532"
+ms.lasthandoff: 11/05/2021
+ms.locfileid: "131845283"
 ---
 # <a name="configure-diagnostic-settings-and-a-workspace"></a>Konfigurieren von Diagnoseeinstellungen und Arbeitsbereich
 

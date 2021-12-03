@@ -3,25 +3,23 @@ title: 'Übersicht über die Sprachsynthese: Speech-Dienst'
 titleSuffix: Azure Cognitive Services
 description: Das Feature Text-zu-Sprache in Speech-Dienst ermöglicht es Ihren Anwendungen, Tools oder Geräten, Text in natürliche, menschenähnliche synthetisierte Sprache umzuwandeln. Dieser Artikel bietet einen Überblick über die Vorteile und Funktionen des Sprachsynthesediensts.
 services: cognitive-services
-author: PatrickFarley
+author: eric-urban
 manager: nitinme
 ms.service: cognitive-services
 ms.subservice: speech-service
 ms.topic: conceptual
 ms.date: 09/01/2020
-ms.author: pafarley
+ms.author: eur
 ms.custom: cog-serv-seo-aug-2020
 keywords: Sprachsynthese
-ms.openlocfilehash: 7be06937cf9f3117d426fd9c19cbb6059826e6ec
-ms.sourcegitcommit: 0770a7d91278043a83ccc597af25934854605e8b
+ms.openlocfilehash: c3a4caa638debfa32fa6d571b473b2bf5bd0cf09
+ms.sourcegitcommit: 5af89a2a7b38b266cc3adc389d3a9606420215a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "124736891"
+ms.lasthandoff: 11/08/2021
+ms.locfileid: "131990374"
 ---
 # <a name="what-is-neural-text-to-speech"></a>Was ist die neuronale Sprachsynthese?
-
-[!INCLUDE [TLS 1.2 enforcement](../../../includes/cognitive-services-tls-announcement.md)]
 
 Die neuronale Sprachsynthese von Microsoft verwenden Deep Neural Network-Instanzen, um die Stimmen von Computern so zu gestalten, dass sie von Aufzeichnungen von Personen nahezu nicht zu unterscheiden sind. Durch natürliche, menschenähnliche Intonation und klare Aussprache von Wörtern kann die neuronale Sprachsynthese die Hörermüdung bei der Interaktion mit KI-Systemen erheblich verringern.
 

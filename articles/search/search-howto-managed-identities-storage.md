@@ -2,17 +2,18 @@
 title: Einrichten einer Verbindung mit einem Speicherkonto mithilfe einer verwalteten Identität
 titleSuffix: Azure Cognitive Search
 description: Hier erfahren Sie, wie Sie mithilfe einer verwalteten Identität eine Indexerverbindung mit einem Azure Storage-Konto einrichten.
-author: markheff
-ms.author: maheff
+author: gmndrg
+ms.author: gimondra
+manager: nitinme
 ms.service: cognitive-search
 ms.topic: conceptual
 ms.date: 10/01/2021
-ms.openlocfilehash: 139fa020459804571129d63819a0e82e3f1737e2
-ms.sourcegitcommit: 079426f4980fadae9f320977533b5be5c23ee426
+ms.openlocfilehash: d714c4cd1b507a8722bb6407fb991a2b158b72e6
+ms.sourcegitcommit: 591ffa464618b8bb3c6caec49a0aa9c91aa5e882
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "129418649"
+ms.lasthandoff: 11/06/2021
+ms.locfileid: "131894372"
 ---
 # <a name="set-up-a-connection-to-an-azure-storage-account-using-a-managed-identity"></a>Einrichten einer Verbindung mit einem Azure Storage-Konto mithilfe einer verwalteten Identität
 

@@ -3,7 +3,7 @@ items:
     href: ./azure-api-for-fhir/index.yml
   - name: Dokumentation zu Azure Healthcare-APIs (Vorschauversion)
     href: index.yml
-  - name: Übersicht
+  - name: Überblick
     expanded: true
     items:
       - name: Informationen zu Gesundheits-APIs
@@ -14,7 +14,7 @@ items:
         href: ./fhir/index.yml
       - name: DICOM-Dienst
         href: ./dicom/index.yml
-      - name: IoT-Connector
+      - name: IoT-Konnektor
         href: ./iot/index.yml
       - name: Übertragen und Transformieren von Daten
         href: ./data-transformation/index.yml
@@ -26,16 +26,23 @@ items:
   - name: Anleitungen
     expanded: true
     items:
-      - name: Authentifizierung und Autorisierung
-        href: authentication-authorization.md
-      - name: Zugreifen auf den FHIR-Dienst mit Postman
+      - name: Verwalten des Benutzerzugriffs und der Berechtigungen
+        expanded: true
+        items:
+          - name: Authentifizierung und Autorisierung
+            href: authentication-authorization.md
+          - name: Registrieren einer Clientanwendung
+            href: register-application.md
+          - name: Konfigurieren der Azure RBAC
+            href: configure-azure-rbac.md
+          - name: Abrufen eines Zugriffstokens
+            href: get-access-token.md
+      - name: Zugriff mit Postman
         href: use-postman.md
       - name: Zugriff mit cURL
         href: using-curl.md
       - name: Zugriff mithilfe des REST-Clients
         href: using-rest-client.md
-      - name: Registrieren von Anwendungen
-        href: register-application.md
       - name: Protokollierung
         href: logging.md
   - name: Konzepte
@@ -45,6 +52,8 @@ items:
   - name: Ressourcen
     expanded: true
     items:
+      - name: Versionshinweise
+        href: release-notes.md
       - name: Häufig gestellte Fragen
         href: healthcare-apis-faqs.md
       - name: GitHub Projekte

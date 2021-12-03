@@ -2,17 +2,18 @@
 title: Einrichten einer Verbindung mit Azure SQL-Datenbank mithilfe einer verwalteten Identität
 titleSuffix: Azure Cognitive Search
 description: Erfahren Sie, wie Sie eine Indexerverbindung mit Azure SQL-Datenbank mithilfe einer verwalteten Identität einrichten.
-author: markheff
-ms.author: maheff
+author: gmndrg
+ms.author: gimondra
+manager: nitinme
 ms.service: cognitive-search
 ms.topic: conceptual
 ms.date: 07/02/2021
-ms.openlocfilehash: c0bff947d0f5b58a956d05959dd49bbea1f942ab
-ms.sourcegitcommit: 2d412ea97cad0a2f66c434794429ea80da9d65aa
+ms.openlocfilehash: 1a975d8eeebe86bbdf09870ab6c450727bdd545b
+ms.sourcegitcommit: 591ffa464618b8bb3c6caec49a0aa9c91aa5e882
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2021
-ms.locfileid: "122350743"
+ms.lasthandoff: 11/06/2021
+ms.locfileid: "131894405"
 ---
 # <a name="set-up-an-indexer-connection-to-azure-sql-database-using-a-managed-identity"></a>Einrichten einer Indexerverbindung mit Azure SQL-Datenbank mithilfe einer verwalteten Identität
 
@@ -27,7 +28,7 @@ Bevor Sie mehr über diese Funktion erfahren, sollten Sie wissen, was ein Indexe
 
 ## <a name="1---set-up-a-managed-identity"></a>1: Einrichten einer verwalteten Identität
 
-Richten Sie die [verwaltete Identität](../active-directory/managed-identities-azure-resources/overview.md) mit einer der folgenden Optionen ein.
+Richten Sie die [verwaltete Identität](../active-directory/managed-identities-azure-resources/overview.md) mit einer der folgenden Optionen ein:
 
 ### <a name="option-1---turn-on-system-assigned-managed-identity"></a>Option 1: Aktivieren einer systemseitig zugewiesenen verwalteten Identität
 

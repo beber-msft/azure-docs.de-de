@@ -3,19 +3,20 @@ title: Bewerten und Verbessern der Custom Speech-Genauigkeit – Speech-Dienst
 titleSuffix: Azure Cognitive Services
 description: In diesem Dokument erfahren Sie, wie Sie die Qualität unseres Spracherkennungsmodells oder Ihres benutzerdefinierten Modells quantitativ messen und verbessern können. Zum Testen der Genauigkeit sind Audio- und menschenmarkierte Transkriptionsdaten erforderlich, und 30 Minuten bis 5 Stunden an repräsentativem Audio müssen bereitgestellt werden.
 services: cognitive-services
-author: PatrickFarley
+author: eric-urban
 manager: nitinme
 ms.service: cognitive-services
 ms.subservice: speech-service
 ms.topic: conceptual
 ms.date: 02/12/2021
-ms.author: pafarley
-ms.openlocfilehash: b188ccde91f82a9d03cf83386315d0ee80ac41d0
-ms.sourcegitcommit: f2d0e1e91a6c345858d3c21b387b15e3b1fa8b4c
+ms.author: eur
+ms.custom: ignite-fall-2021
+ms.openlocfilehash: 2a0ad4a926365ffe8bed5ebda5b9848ce72c7845
+ms.sourcegitcommit: 2cc9695ae394adae60161bc0e6e0e166440a0730
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2021
-ms.locfileid: "123538829"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "131501113"
 ---
 # <a name="evaluate-and-improve-custom-speech-accuracy"></a>Bewerten und Verbessern der Custom Speech-Genauigkeit
 
@@ -96,12 +97,21 @@ Planen Sie die Wartung Ihres benutzerdefinierten Modells durch das regelmäßige
 
 In den folgenden Abschnitten wird beschrieben, wie mit den einzelnen Arten von zusätzlichen Trainingsdaten Fehler reduziert werden können.
 
-### <a name="add-related-text-sentences"></a>Hinzufügen von passenden Textsätzen
+### <a name="add-plain-text-data"></a>Hinzufügen von Nur-Text-Daten
 
 Beginnen Sie beim Training eines neuen benutzerdefinierten Modells, indem Sie verwandten Text hinzufügen, um die Erkennung von themenspezifischen Wörtern und Ausdrücken zu verbessern. Mit passenden Textsätzen können hauptsächlich Ersetzungsfehler reduziert werden, die sich auf die fehlerhafte Erkennung von gängigen und themenspezifischen Wörtern beziehen, indem diese im Kontext angezeigt werden. Bei themenspezifischen Wörtern kann es sich auch um ungewöhnliche oder ausgedachte Wörter handeln, aber ihre Aussprache muss eindeutig sein, damit sie erkannt werden können.
 
 > [!NOTE]
 > Vermeiden Sie Textsätze, die „Rauschen“ enthalten, z. B. nicht zu erkennende Buchstaben oder Wörter.
+
+### <a name="add-structured-text-data"></a>Hinzufügen strukturierter Textdaten
+
+Sie können strukturierte Textdaten im Markdownformat ähnlich wie Nur-Text-Sätze verwenden, aber Sie würden strukturierte Textdaten verwenden, wenn Ihre Daten einem bestimmten Muster in bestimmten Äußerungen folgen, die sich nur durch Wörter oder Ausdrücke aus einer Liste unterscheiden. Weitere Informationen finden Sie unter [Strukturierte Textdaten für das Training](how-to-custom-speech-test-and-train.md#structured-text-data-for-training-public-preview). 
+
+> [!NOTE]
+> Das Training mit strukturiertem Text wird nur für diese Sprachumgebungen unterstützt: `en-US`, `de-DE`, `en-UK`, `en-IN`, `fr-FR`, `fr-CA`, `es-ES`, `es-MX` und Sie müssen das neueste Basismodell für diese Gebietsschemata verwenden. Eine Liste mit Basismodellen, die das Training mit Audiodaten unterstützen, finden Sie unter [Sprachunterstützung](language-support.md).
+> 
+> Für Gebietsschemas, die das Training mit strukturiertem Text nicht unterstützen, nimmt der Dienst alle Trainingssätze entgegen, die im Rahmen des Trainings mit Nur-Text-Daten auf keine Klassen verweisen.
 
 ### <a name="add-audio-with-human-labeled-transcripts"></a>Hinzufügen von Audiodaten mit menschenmarkierten Transkriptionen
 
@@ -137,7 +147,7 @@ Wörter, die ausgedacht oder sehr speziell sind, verfügen unter Umständen übe
 
 Die folgende Tabelle enthält Szenarien zur Spracherkennung und Quellmaterial für die drei obigen Kategorien für Trainingsinhalte.
 
-| Szenario | Passende Textsätze | Audio + menschenmarkierte Transkripte | Neue Wörter mit besonderer Aussprache |
+| Szenario | Hinzufügen von Nur-Text-Daten und <br> strukturierter Textdaten | Audio + menschenmarkierte Transkripte | Neue Wörter mit besonderer Aussprache |
 |----------|------------------------|------------------------------|------------------------------|
 | Callcenter             | Marketingdokumente, Website, Produktbewertungen in Bezug auf Callcenteraktivitäten | Von Menschen transkribierte Callcenteranrufe | Begriffe mit mehrdeutiger Aussprache (siehe „Xbox“ oben) |
 | Sprachassistent         | Auflisten von Sätzen mit allen Kombinationen von Befehlen und Entitäten | Aufzeichnen von Stimmen, die Befehle in das Gerät sprechen, und Transkribieren in Text | Namen (Filme, Songs, Produkte) mit besonderer Aussprache |

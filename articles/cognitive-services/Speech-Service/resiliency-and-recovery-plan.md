@@ -1,5 +1,5 @@
 ---
-title: Sichern und Wiederherstellen von Sprachanpassungsressourcen
+title: Sichern und Wiederherstellen von kundenspezifischen Sprachressourcen
 titleSuffix: Azure Cognitive Services
 description: Erfahren Sie, wie Sie sich auf Dienstausfälle von Custom Speech und Custom Voice vorbereiten.
 services: cognitive-services
@@ -10,18 +10,19 @@ ms.subservice: speech-service
 ms.topic: conceptual
 ms.date: 07/28/2021
 ms.author: mitagaki
-ms.openlocfilehash: 0f540025561b6e452371a74093133bf3e1183b1b
-ms.sourcegitcommit: 0770a7d91278043a83ccc597af25934854605e8b
+ms.custom: ignite-fall-2021
+ms.openlocfilehash: 860e70f567742a418e8de75c68793b29fb691df2
+ms.sourcegitcommit: 106f5c9fa5c6d3498dd1cfe63181a7ed4125ae6d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "124744125"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "131058367"
 ---
-# <a name="back-up-and-recover-speech-customization-resources"></a>Sichern und Wiederherstellen von Sprachanpassungsressourcen
+# <a name="back-up-and-recover-speech-customer-resources"></a>Sichern und Wiederherstellen von kundenspezifischen Sprachressourcen
 
 Der Speech-Dienst ist [in verschiedenen Regionen verfügbar](./regions.md). Dienstabonnementschlüssel sind an eine einzelne Region gebunden. Wenn Sie einen Schlüssel abrufen, wählen Sie eine bestimmte Region aus, in der sich Ihre Daten, Ihr Modell und Ihre Bereitstellungen befinden.
 
-Datasets für vom Kunden erstellte Datenressourcen, wie etwa angepasste Sprachmodelle und benutzerdefinierte Voicefonts, stehen ebenfalls nur in der **Bereitstellungsregion des Diensts zur Verfügung**. Solche Ressourcen sind:
+Datasets für kundenseitig erstellte Datenressourcen (wie z. B. benutzerdefinierte Sprachmodelle, benutzerdefinierte Voicefonts und Stimmprofile zur Sprechererkennung) stehen ebenfalls nur in der **Bereitstellungsregion des Diensts zur Verfügung**. Solche Ressourcen sind:
 
 **Custom Speech Service**
 -   Audio-/Textdaten zum Training
@@ -33,6 +34,10 @@ Datasets für vom Kunden erstellte Datenressourcen, wie etwa angepasste Sprachmo
 -   Audio-/Textdaten zum Training
 -   Audio-/Textdaten zum Testen
 -   Benutzerdefinierte Voicefonts
+
+**Sprechererkennung**
+- Audio zur Sprecherregistrierung
+- Sprecherstimmensignatur
 
 Während einige Kunden unsere Standardendpunkte verwenden, um Audiomaterial oder Standardstimmen für die Sprachsynthese zu transkribieren, erstellen andere Kunden Ressourcen zur Anpassung.
 
@@ -114,3 +119,9 @@ Wenn bei der Echtzeitsynthese der benutzerdefinierten Stimme ein Fehler auftritt
     -   Hinweis: Zusätzliche Endpunkte unterliegen zusätzlichen Gebühren. [Die Preise für das Hosting von Modellen finden Sie hier](https://azure.microsoft.com/pricing/details/cognitive-services/speech-services/).
 
 4.  Konfigurieren Sie Ihren Client für das Failover in die sekundäre Region. Siehe dazu den Beispielcode in C#: [GitHub: benutzerdefiniertes Sprachfailover in die sekundäre Region](https://github.com/Azure-Samples/cognitive-services-speech-sdk/blob/master/samples/csharp/sharedcontent/console/speech_synthesis_samples.cs#L920).
+
+### <a name="speaker-recognition"></a>Sprechererkennung
+
+Die Sprechererkennung verwendet [Azure-Regionspaare](/azure/best-practices-availability-paired-regions) für automatische Failover von Prozessen. Sprecherregistrierungen und Stimmsignaturen werden regelmäßig gesichert, um Datenverluste zu vermeiden und diese im Falle eines Ausfalls wiederverwenden zu können.
+
+Im Falle eines Ausfalls führt der Sprechererkennungsdienst automatisch ein Failover in eine gekoppelte Region durch und verwendet die gesicherten Daten, um mit der Verarbeitung von Anforderungen fortzufahren, bis die Hauptregion wieder online ist.

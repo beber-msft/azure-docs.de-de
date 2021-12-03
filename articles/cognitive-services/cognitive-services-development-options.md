@@ -3,17 +3,17 @@ title: Entwicklungsoptionen für Azure Cognitive Services
 description: Erfahren Sie, wie Sie Azure Cognitive Services mit verschiedenen Entwicklungs- und Bereitstellungsoptionen wie etwa Clientbibliotheken, REST-APIs, Logik-Apps, Power Automate, Azure Functions, Azure App Service, Azure Databricks und vielen weiteren verwenden.
 services: cognitive-services
 manager: nitinme
-author: erhopf
-ms.author: erhopf
+author: PatrickFarley
+ms.author: pafarley
 ms.service: cognitive-services
 ms.topic: conceptual
-ms.date: 10/22/2020
-ms.openlocfilehash: 6f3cd38985b6bbf1f0095ef124d2690cce00181f
-ms.sourcegitcommit: e8b229b3ef22068c5e7cd294785532e144b7a45a
+ms.date: 10/28/2021
+ms.openlocfilehash: 1d6f882a52a66b478a34b0da129a53c502ccbbca
+ms.sourcegitcommit: 702df701fff4ec6cc39134aa607d023c766adec3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2021
-ms.locfileid: "123473728"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "131458226"
 ---
 # <a name="cognitive-services-development-options"></a>Entwicklungsoptionen für Cognitive Services
 
@@ -95,7 +95,7 @@ Power Automate ist ein Dienst der [Power Platform](/power-platform/) und unterst
 
 ### <a name="ai-builder"></a>AI Builder 
 
-[AI Builder](/ai-builder/overview) ist eine Microsoft Power Platform-Funktion, die Sie verwenden können, um die Unternehmensleistung zu steigern, indem Sie Prozesse automatisieren und Ergebnisse vorhersagen. AI Builder macht die Möglichkeiten von KI über eine Point-and-Click-Benutzeroberfläche für Ihre Lösungen verfügbar. Viele Cognitive Services, wie die Textanalyse und maschinelles Sehen, wurden hier direkt integriert, und Sie brauchen keine eigenen Cognitive Services zu erschaffen. 
+[AI Builder](/ai-builder/overview) ist eine Microsoft Power Platform-Funktion, die Sie verwenden können, um die Unternehmensleistung zu steigern, indem Sie Prozesse automatisieren und Ergebnisse vorhersagen. AI Builder macht die Möglichkeiten von KI über eine Point-and-Click-Benutzeroberfläche für Ihre Lösungen verfügbar. Viele Cognitive Services, wie der Sprachdienst und maschinelles Sehen, wurden hier direkt integriert, und Sie brauchen keine eigenen Cognitive Services zu erschaffen. 
 
 * **Zielbenutzer**: Geschäftsbenutzer (Analysten) und SharePoint-Administratoren
 * **Vorteile:** Eine schlüsselfertige Lösung, die die Leistungsfähigkeit von KI über eine Point-and-Klick-Benutzeroberfläche verfügbar macht. Es sind keine Fähigkeiten zur Codeerstellung oder Datenanalyse erforderlich.

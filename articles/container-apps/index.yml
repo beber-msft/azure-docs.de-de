@@ -1,0 +1,70 @@
+### YamlMime:Landing
+title: Dokumentation zur Vorschauversion von Azure Container Apps
+summary: Mit Azure Container Apps können Sie Containeranwendungen ausführen, ohne sich Gedanken über Orchestrierung oder Infrastruktur machen zu müssen.
+metadata:
+  title: Dokumentation zu Azure Container Apps
+  description: Mit Azure Container Apps können Sie Containeranwendungen ausführen, ohne sich Gedanken über Orchestrierung oder Infrastruktur machen zu müssen.
+  ms.topic: landing-page
+  ms.service: container-apps
+  author: craigshoemaker
+  ms.author: cshoe
+  ms.date: 11/08/2021
+  ms.openlocfilehash: 39397cee65d48d44896c248620a4ac5d3d65283e
+  ms.sourcegitcommit: 0415f4d064530e0d7799fe295f1d8dc003f17202
+  ms.translationtype: HT
+  ms.contentlocale: de-DE
+  ms.lasthandoff: 11/17/2021
+  ms.locfileid: "132704767"
+landingContent:
+- title: Informationen zu Azure Container Apps
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Was ist Azure Container Apps?
+      url: overview.md
+    - text: Vergleichen von Containeroptionen in Azure
+      url: compare-options.md
+- title: Erste Schritte
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: 'Bereitstellen Ihrer ersten Container-App: Azure CLI'
+      url: ./get-started.md
+    - text: 'Bereitstellen Ihrer ersten Container-App: Azure-Portal'
+      url: ./quickstart-portal.md
+  - linkListType: concept
+    links:
+    - text: Umgebungen
+      url: environment.md
+    - text: Container
+      url: containers.md
+    - text: Revisionen
+      url: revisions.md
+    - text: Anwendungslebenszyklusverwaltung
+      url: application-lifecycle-management.md
+    - text: Microservices
+      url: microservices.md
+- title: Häufige Aufgaben
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Festlegen von Skalierungsregeln
+      url: scale-app.md
+    - text: Schützen einer App
+      url: secure-app.md
+    - text: Überwachen einer App
+      url: monitor.md
+    - text: Verwalten von Revisionen
+      url: revisions-manage.md
+    - text: Einrichten des eingehenden HTTP-Datenverkehrs
+      url: ingress.md
+    - text: Verbinden mehrerer Apps
+      url: connect-apps.md
+- title: Apps und Microservices
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Microservices mit Dapr
+      url: microservices-dapr.md
+    - text: Hintergrundverarbeitung
+      url: background-processing.md

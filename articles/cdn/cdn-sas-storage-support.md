@@ -3,7 +3,7 @@ title: Verwenden von Azure CDN mit SAS | Microsoft-Dokumentation
 description: Azure CDN unterstützt die Verwendung von Shared Access Signature (SAS), um einen eingeschränkten Zugriff auf private Speichercontainer zu gewähren.
 services: cdn
 documentationcenter: ''
-author: asudbring
+author: duongau
 manager: danielgi
 editor: ''
 ms.assetid: ''
@@ -13,13 +13,13 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: how-to
 ms.date: 06/21/2018
-ms.author: allensu
-ms.openlocfilehash: ccf55e0e3986de8afe23cb646d4df743b576900c
-ms.sourcegitcommit: f28ebb95ae9aaaff3f87d8388a09b41e0b3445b5
+ms.author: duau
+ms.openlocfilehash: 54c863bec80d6a56525588f8d53724b23e56d853
+ms.sourcegitcommit: 702df701fff4ec6cc39134aa607d023c766adec3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2021
-ms.locfileid: "101725321"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "131426504"
 ---
 # <a name="using-azure-cdn-with-sas"></a>Verwenden von Azure CDN mit SAS
 
@@ -40,7 +40,8 @@ Nachdem Sie ein SAS-Token generiert haben, können Sie auf die BLOB-Speicherdate
 `https://<account name>.blob.core.windows.net/<container>/<file>?sv=<SAS token>`
  
 Beispiel:
- ```
+
+```
 https://democdnstorage1.blob.core.windows.net/container1/demo.jpg?sv=2017-07-29&ss=b&srt=co&sp=r&se=2038-01-02T21:30:49Z&st=2018-01-02T13:30:49Z&spr=https&sig=QehoetQFWUEd1lhU5iOMGrHBmE727xYAbKJl5ohSiWI%3D
 ```
 

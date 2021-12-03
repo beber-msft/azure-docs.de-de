@@ -1,19 +1,19 @@
 ---
 title: Überwachen von SSIS-Vorgängen mit Azure Monitor
 description: Hier erfahren Sie, wie Sie mit Azure Monitor SSIS-Vorgänge in Azure Data Factory überwachen.
-author: minhe-msft
-ms.author: hemin
+author: joshuha-msft
+ms.author: joowen
 ms.reviewer: jburchel
 ms.service: data-factory
 ms.subservice: monitoring
 ms.topic: conceptual
 ms.date: 09/02/2021
-ms.openlocfilehash: 5c03304933bb9c89b276f4950aea355436393ba2
-ms.sourcegitcommit: 0770a7d91278043a83ccc597af25934854605e8b
+ms.openlocfilehash: 91e291b27301cee8b7ec8f65e248e09c4f79799c
+ms.sourcegitcommit: 8946cfadd89ce8830ebfe358145fd37c0dc4d10e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "124838206"
+ms.lasthandoff: 11/05/2021
+ms.locfileid: "131842737"
 ---
 # <a name="monitor-ssis-operations-with-azure-monitor"></a>Überwachen von SSIS-Vorgängen mit Azure Monitor
 

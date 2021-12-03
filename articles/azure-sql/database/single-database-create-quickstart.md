@@ -11,16 +11,19 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: ''
 ms.date: 01/27/2021
-ms.openlocfilehash: 8f9fa57a160871ba88b080ac7599e1781202fb84
-ms.sourcegitcommit: 851b75d0936bc7c2f8ada72834cb2d15779aeb69
+ms.openlocfilehash: 54724f2788813830bf85ff1665291ea3b3b43cc8
+ms.sourcegitcommit: 05c8e50a5df87707b6c687c6d4a2133dc1af6583
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "123306244"
+ms.lasthandoff: 11/16/2021
+ms.locfileid: "132553570"
 ---
 # <a name="quickstart-create-an-azure-sql-database-single-database"></a>Schnellstart: Erstellen einer Azure SQL-Einzeldatenbank
 
 In dieser Schnellstartanleitung erstellen Sie über das Azure-Portal, mithilfe eines PowerShell-Skripts oder eines Azure CLI-Skripts eine [Einzeldatenbank](single-database-overview.md). Anschließend fragen Sie die Datenbank mit dem **Abfrage-Editor** im Azure-Portal ab.
+
+> [!div class="nextstepaction"]
+> [Umfrage zur Verbesserung von Azure SQL](https://aka.ms/AzureSQLSurveyNov2021)
 
 
 ## <a name="prerequisites"></a>Voraussetzungen
@@ -70,7 +73,7 @@ Diese Schnellstarteinleitung beginnt für die Erstellung eines Singletons im Azu
   
 
 1. Wählen Sie auf der Registerkarte **Zusätzliche Einstellungen** im Abschnitt **Datenquelle** unter **Vorhandene Daten verwenden** die Option **Beispiel** aus. Dadurch wird eine AdventureWorksLT-Beispieldatenbank erstellt, sodass es einige Tabellen und Daten, die Sie abfragen und mit denen Sie experimentieren können, im Gegensatz zu einer leeren Datenbank gibt.
-1. Aktivieren Sie optional [Azure Defender für SQL](../database/azure-defender-for-sql.md).
+1. Aktivieren Sie optional [Microsoft Defender für SQL](../database/azure-defender-for-sql.md).
 1. Legen Sie optional das [Wartungsfenster](../database/maintenance-window.md) fest, damit die geplante Wartung zum optimalen Zeitpunkt für die Datenbank ausgeführt wird.
 1. Wählen Sie unten auf der Seite die Option **Überprüfen + erstellen** aus:
 
@@ -145,7 +148,7 @@ az sql server firewall-rule create \
 
 ## <a name="create-a-single-database-with-azure-cli"></a>Erstellen einer Einzeldatenbank per Azure CLI
 
-Erstellen Sie eine Datenbank mit dem Befehl [az sql db create](/cli/azure/sql/db). Der folgende Code erstellt
+Erstellen Sie eine Datenbank mit dem Befehl [az sql db create](/cli/azure/sql/db).
 
 
 ```azurecli-interactive
@@ -167,6 +170,27 @@ az sql db create \
 Azure Cloud Shell ist eine kostenlose interaktive Shell, mit der Sie die Schritte in diesem Artikel ausführen können. Sie verfügt über allgemeine vorinstallierte Tools und ist für die Verwendung mit Ihrem Konto konfiguriert. 
 
 Wählen Sie zum Öffnen von Cloud Shell oben rechts in einem Codeblock einfach die Option **Ausprobieren**. Sie können Cloud Shell auch auf einer separaten Browserregisterkarte starten, indem Sie zu [https://shell.azure.com](https://shell.azure.com) navigieren. Wählen Sie **Kopieren** aus, um die Blöcke mit dem Code zu kopieren. Fügen Sie ihn anschließend in Cloud Shell ein, und drücken Sie die **EINGABETASTE**, um ihn auszuführen.
+
+## <a name="set-parameter-values"></a>Festlegen von Parameterwerten
+
+Mit den folgenden Werten werden in nachfolgenden Befehlen die Datenbank und die erforderlichen Ressourcen erstellt. Servernamen müssen innerhalb von Azure global eindeutig sein, damit die Funktion „$RANDOM“ zum Erstellen des Servernamens verwendet werden kann. Ersetzen Sie die Werte „0.0.0.0“ im IP-Adressbereich entsprechend ihrer spezifischen Umgebung.
+
+```azurecli-interactive
+# Set the resource group name and location for your server
+resourceGroupName=myResourceGroup
+location=eastus
+
+# Set an admin login and password for your database
+adminlogin=azureuser
+password=Azure1234567!
+
+# Set a server name that is unique to Azure DNS (<server_name>.database.windows.net)
+serverName=server-$RANDOM
+
+# Set the ip address range that can access your database
+startip=0.0.0.0
+endip=0.0.0.0
+```
 
 ## <a name="create-a-database-and-resources"></a>Erstellen einer Datenbank und von Ressourcen
 

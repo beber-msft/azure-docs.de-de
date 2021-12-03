@@ -5,14 +5,14 @@ author: Vikram1988
 ms.author: vibansa
 ms.manager: abhemraj
 ms.topic: tutorial
-ms.date: 03/11/2021
+ms.date: 11/12/2021
 ms.custom: mvc
-ms.openlocfilehash: 89548cf1c98e360569255b9028b26230fedf5ed2
-ms.sourcegitcommit: 61e7a030463debf6ea614c7ad32f7f0a680f902d
+ms.openlocfilehash: 1a12e8ddf419b4e7b26d82e76a59de43fb73ddb4
+ms.sourcegitcommit: e1037fa0082931f3f0039b9a2761861b632e986d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2021
-ms.locfileid: "129092336"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "132402407"
 ---
 # <a name="tutorial-discover-physical-servers-with-azure-migrate-discovery-and-assessment"></a>Tutorial: Ermitteln physischer Server mit der Ermittlung und Bewertung von Azure Migrate
 
@@ -32,7 +32,7 @@ In diesem Tutorial lernen Sie Folgendes:
 > [!NOTE]
 > Tutorials zeigen den schnellsten Weg zum Ausprobieren eines Szenarios, dabei kommen die Standardoptionen zum Einsatz.  
 
-Wenn Sie kein Azure-Abonnement besitzen, können Sie ein [kostenloses Konto](https://azure.microsoft.com/pricing/free-trial/) erstellen, bevor Sie beginnen.
+Wenn Sie kein Azure-Abonnement besitzen, erstellen Sie ein [kostenloses Konto](https://azure.microsoft.com/pricing/free-trial/), bevor Sie beginnen.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -185,7 +185,7 @@ Vergewissern Sie sich vor der Bereitstellung, dass die gezippte Datei sicher ist
 
     **Download** | **Hashwert**
     --- | ---
-    [Aktuelle Version](https://go.microsoft.com/fwlink/?linkid=2140334) | 15a94b637a39c53ac91a2d8b21cc3cca8905187e4d9fb4d895f4fa6fd2f30b9f
+    [Aktuelle Version](https://go.microsoft.com/fwlink/?linkid=2140334) | 3C00F9EB54CC6C55E127EDE47DFA28CCCF752697377EB1C9F3435E75DA5AA029
 
 > [!NOTE]
 > Das gleiche Skript kann verwendet werden, um eine physische Appliance für die öffentliche Azure-Cloud oder die Azure Government-Cloud mit Konnektivität für öffentliche oder private Endpunkte einzurichten.
@@ -199,7 +199,7 @@ Vergewissern Sie sich vor der Bereitstellung, dass die gezippte Datei sicher ist
 
 3. Ändern Sie das PowerShell-Verzeichnis in den Ordner, in den die Inhalte der gezippten Datei extrahiert wurden, die Sie heruntergeladen haben.
 
-4. Führen Sie das Skript mit dem Namen `AzureMigrateInstaller.ps1` aus, indem Sie den folgenden Befehl ausführen:
+4. Führen Sie das Skript `AzureMigrateInstaller.ps1` mit folgendem Befehl aus:
 
    `PS C:\Users\administrator\Desktop\AzureMigrateInstaller> .\AzureMigrateInstaller.ps1`
 
@@ -301,7 +301,7 @@ Nach Abschluss der Ermittlung können Sie überprüfen, ob die Server im Portal 
 Nachdem die Ermittlung initiiert wurde, können Sie alle hinzugefügten Server aus dem Appliancekonfigurations-Manager löschen, indem Sie in der Tabelle nach **Ermittlungsquelle hinzufügen** suchen und auf **Löschen** klicken.
 
 >[!NOTE]
-> Wenn Sie einen Server löschen möchten, auf dem die Ermittlung initiiert wurde, werden die laufende Ermittlung und Bewertung beendet, was sich möglicherweise auf die Vertrauenswürdigkeit der Bewertung auswirkt, die diesen Server enthält. [Weitere Informationen](https://go.microsoft.com/fwlink/?linkid=2171565)
+> Wenn Sie einen Server löschen möchten, auf dem die Ermittlung initiiert wurde, werden die laufende Ermittlung und Bewertung beendet, was sich möglicherweise auf die Vertrauenswürdigkeit der Bewertung auswirkt, die diesen Server enthält. [Weitere Informationen](/azure/migrate/common-questions-discovery-assessment#why-is-the-confidence-rating-of-my-assessment-low)
 
 ## <a name="next-steps"></a>Nächste Schritte
 

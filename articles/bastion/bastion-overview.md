@@ -5,15 +5,15 @@ services: bastion
 author: cherylmc
 ms.service: bastion
 ms.topic: overview
-ms.date: 07/12/2021
+ms.date: 10/12/2021
 ms.author: cherylmc
-ms.custom: contperf-fy2q1-portal
-ms.openlocfilehash: fe1cc48b3106d4874e151ed8be114e6a98e51720
-ms.sourcegitcommit: add71a1f7dd82303a1eb3b771af53172726f4144
+ms.custom: contperf-fy2q1-portal, ignite-fall-2021
+ms.openlocfilehash: 6fbfd04283e5bf89be32c89294ad5d26fb6e5af2
+ms.sourcegitcommit: 702df701fff4ec6cc39134aa607d023c766adec3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2021
-ms.locfileid: "123434183"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "131426694"
 ---
 # <a name="what-is-azure-bastion"></a>Was ist Azure Bastion?
 
@@ -34,7 +34,7 @@ Bastion bietet sichere RDP- und SSH-Verbindungen mit allen virtuellen Computern 
 
 ## <a name="skus"></a><a name="sku"></a>SKUs
 
-Für Azure Bastion sind zwei SKUs verfügbar: Basic und Standard. Die Standard-SKU ist zurzeit als Vorschauversion verfügbar. Weitere Informationen, auch zum Upgraden einer SKU, finden Sie im Artikel [Konfigurationseinstellungen](configuration-settings.md#skus). 
+Für Azure Bastion sind zwei SKUs verfügbar: Basic und Standard. Weitere Informationen, auch zum Upgraden einer SKU, finden Sie im Artikel [Konfigurationseinstellungen](configuration-settings.md#skus).
 
 Die folgende Tabelle enthält die Features der entsprechenden SKUs.
 
@@ -50,7 +50,7 @@ RDP und SSH sind grundlegende Protokolle, über die Sie eine Verbindung mit Ihre
 
 In dieser Abbildung ist die Architektur einer Azure Bastion-Bereitstellung wie folgt In diesem Diagramm:
 
-* Der Bastion-Host wird in dem virtuellen Netzwerk bereitgestellt, in dem das Subnetz „AzureBastionSubnet“ (mindestens Präfix „/27“) enthalten ist.
+* Der Bastionhost wird in dem virtuellen Netzwerk bereitgestellt, in dem das Subnetz „AzureBastionSubnet“ (mindestens Präfix „/26“) enthalten ist.
 * Der Benutzer stellt in einem HTML5-Browser eine Verbindung mit dem Azure-Portal her.
 * Der Benutzer wählt den virtuellen Computer für die Verbindung aus.
 * Mit nur einem Klick wird die RDP- oder SSH-Sitzung im Browser geöffnet.

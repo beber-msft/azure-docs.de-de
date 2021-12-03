@@ -8,12 +8,13 @@ ms.service: api-management
 ms.topic: article
 ms.date: 07/19/2021
 ms.author: danlep
-ms.openlocfilehash: c593d9d9f2d957564eed5be98f3f92f29ce79a27
-ms.sourcegitcommit: f6e2ea5571e35b9ed3a79a22485eba4d20ae36cc
+ms.custom: ignite-fall-2021
+ms.openlocfilehash: e5eda2df72afd7fa82a63dcd31adbf117d58bfe2
+ms.sourcegitcommit: 677e8acc9a2e8b842e4aef4472599f9264e989e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128551097"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "132340341"
 ---
 # <a name="api-management-policies"></a>Richtlinien für die API-Verwaltung
 Dieser Abschnitt enthält eine Referenz für die folgenden API Management-Richtlinien. Weitere Informationen zum Hinzufügen und Konfigurieren von Richtlinien finden Sie unter [Richtlinien in API Management](api-management-howto-policies.md).
@@ -84,7 +85,9 @@ Dieser Abschnitt enthält eine Referenz für die folgenden API Management-Richtl
 . 
     - [Validate parameters](validation-policies.md#validate-parameters) (Validieren von Parametern): Hiermit können Sie den Anforderungsheader, die Abfrage oder die Pfadparameter anhand des API-Schemas überprüfen.
     - [Validieren von Headern](validation-policies.md#validate-headers): Überprüft die Anforderungsheader anhand des API-Schemas.
-    - [Validate status code](validation-policies.md#validate-status-code) (Validieren von Statuscodes): Hiermit werden die HTTP-Statuscodes in Antworten anhand des API-Schemas überprüft.
+    - [Validieren von Statuscodes](validation-policies.md#validate-status-code): Überprüft die HTTP-Statuscodes in Antworten anhand des API-Schemas.
+- [Graph QL-Validierungsrichtlinie](graphql-validation-policies.md)
+    - [Überprüfen einer GraphQL-Anforderung²](graphql-validation-policies.md#validate-graphql-request)– Überprüft und autorisiert eine Anforderung an eine GraphQL-API.
 
 ## <a name="next-steps"></a>Nächste Schritte
 Weitere Informationen zur Verwendung von Richtlinien finden Sie unter:

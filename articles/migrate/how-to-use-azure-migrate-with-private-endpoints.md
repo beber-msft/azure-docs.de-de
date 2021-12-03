@@ -6,12 +6,12 @@ ms.author: deseelam
 ms.manager: bsiva
 ms.topic: how-to
 ms.date: 05/10/2020
-ms.openlocfilehash: 773a22fb1fbd94540f8d56fb417a88bbcfccdd3a
-ms.sourcegitcommit: 611b35ce0f667913105ab82b23aab05a67e89fb7
+ms.openlocfilehash: c581e89a8252ea8e084a48dc827d75aba90bc670
+ms.sourcegitcommit: 2cc9695ae394adae60161bc0e6e0e166440a0730
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "130003135"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "131500486"
 ---
 # <a name="use-azure-migrate-with-private-endpoints"></a>Verwenden von Azure Migrate mit privaten Endpunkten
 
@@ -27,7 +27,7 @@ Es wird empfohlen, die Verbindung über private Endpunkte herzustellen, wenn die
 
 ### <a name="supported-geographies"></a>Unterstützte geografischer Regionen
 
-Die Funktionalität befindet sich in unterstützten [öffentlichen](/azure/migrate/migrate-support-matrix#supported-geographies-public-cloud) und [behördlichen Cloudgeografien](/azure/migrate/migrate-support-matrix#supported-geographies-azure-government) jetzt in der Vorschau.
+Die Funktionalität befindet sich in unterstützten [öffentlichen](./migrate-support-matrix.md#supported-geographies-public-cloud) und [behördlichen Cloudgeografien](./migrate-support-matrix.md#supported-geographies-azure-government) jetzt in der Vorschau.
 
 ### <a name="required-permissions"></a>Erforderliche Berechtigungen
 
@@ -121,7 +121,7 @@ Vergewissern Sie sich vor der Bereitstellung, dass die gezippte Datei sicher ist
 
     **Download** | **Hashwert**
     --- | ---
-    [Aktuelle Version](https://go.microsoft.com/fwlink/?linkid=2160648) | BA84B58E88DDFE23E5D4CE73530227EBBC187B3634B66A3E0F0B3E5DF5F0A94F
+    [Aktuelle Version](https://go.microsoft.com/fwlink/?linkid=2160648) | 3C00F9EB54CC6C55E127EDE47DFA28CCCF752697377EB1C9F3435E75DA5AA029
 
 > [!NOTE]
 > Das gleiche Skript kann verwendet werden, um eine Appliance mit privater Endpunktkonnektivität für jedes der ausgewählten Szenarien (z. B. VMware, Hyper-V, physisch usw.), um eine Appliance mit der gewünschten Konfiguration bereitzustellen.

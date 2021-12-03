@@ -3,19 +3,20 @@ title: 'Unterhaltungstranskription (Vorschau): Speech-Dienst'
 titleSuffix: Azure Cognitive Services
 description: Bei der Unterhaltungstranskription handelt es sich um eine Lösung für Besprechungen, die Erkennung, Sprecher-ID und Diarisierung miteinander kombiniert, um die Transkription einer beliebigen Unterhaltung zu ermöglichen.
 services: cognitive-services
-author: PatrickFarley
+author: eric-urban
 manager: nitinme
 ms.service: cognitive-services
 ms.subservice: speech-service
 ms.topic: conceptual
 ms.date: 03/26/2021
-ms.author: pafarley
-ms.openlocfilehash: abef7e44ad2e15bda230d28e8dae74a3fd949f88
-ms.sourcegitcommit: 860f6821bff59caefc71b50810949ceed1431510
+ms.author: eur
+ms.custom: ignite-fall-2021
+ms.openlocfilehash: f72af708beff4e44b4fca6347eb17aca0ac54c0b
+ms.sourcegitcommit: 2cc9695ae394adae60161bc0e6e0e166440a0730
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2021
-ms.locfileid: "129706330"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "131502728"
 ---
 # <a name="what-is-conversation-transcription-preview"></a>Was ist Unterhaltungstranskription (Vorschau)?
 
@@ -54,7 +55,7 @@ Dies ist eine allgemeine Übersicht darüber, wie die Unterhaltungstranskription
 
 ## <a name="expected-inputs"></a>Erwartete Eingaben
 
-- **Mehrkanalaudiostream**: Weitere Informationen zu Spezifikationen und Design finden Sie unter den [Mikrofonempfehlungen für das Speech-Geräte-SDK von Microsoft](./speech-devices-sdk-microphone.md). Weitere Informationen zum Development Kit und dessen Erwerb finden Sie unter [Abrufen des Speech-Geräte-SDK von Microsoft](./get-speech-devices-sdk.md).
+- **Mehrkanalaudiostream**: Weitere Informationen zu Spezifikationen und Design finden Sie unter den [Mikrofonempfehlungen für das Speech-Geräte-SDK von Microsoft](./speech-sdk-microphone.md). Weitere Informationen zum Development Kit und dessen Erwerb finden Sie unter [Abrufen des Speech-Geräte-SDK von Microsoft](./get-speech-devices-sdk.md).
 - **Benutzerstimmproben**: Für die Unterhaltungstranskription sind vor der Unterhaltung Benutzerprofile zur Sprecheridentifikation erforderlich. Sie müssen Audioaufzeichnungen von jedem Benutzer sammeln und die Aufzeichnungen dann an den [Dienst für die Signaturgenerierung](https://aka.ms/cts/signaturegenservice) senden, um die Audioaufnahmen zu überprüfen und Benutzerprofile zu generieren.
 
 > [!NOTE]

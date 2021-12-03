@@ -10,13 +10,13 @@ ms.custom: contperf-fy21q1, data4ml
 ms.author: yogipandey
 author: ynpandey
 ms.reviewer: nibaccam
-ms.date: 07/06/2021
-ms.openlocfilehash: a125ee289f9f3ea87f1015136b07ec2ad76cef32
-ms.sourcegitcommit: 611b35ce0f667913105ab82b23aab05a67e89fb7
+ms.date: 10/21/2021
+ms.openlocfilehash: 2916b7c8042a96e35ad138ae5ae20c389c62e751
+ms.sourcegitcommit: 1a0fe16ad7befc51c6a8dc5ea1fe9987f33611a1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "130003040"
+ms.lasthandoff: 11/05/2021
+ms.locfileid: "131866637"
 ---
 # <a name="create-azure-machine-learning-datasets"></a>Erstellen von Azure Machine Learning-Datasets
 
@@ -97,8 +97,7 @@ Wenn sich Ihr Arbeitsbereich in einem virtuellen Netzwerk befindet, müssen Sie 
 Damit Azure Machine Learning auf die Daten zugreifen kann, müssen Datasets auf der Grundlage von Pfaden in [Azure Machine Learning-Datenspeichern](how-to-access-data.md) oder auf der Grundlage von Web-URLs erstellt werden. 
 
 > [!TIP] 
-> Sie können Datasets direkt auf der Grundlage von Speicher-URLs mit identitätsbasiertem Datenzugriff erstellen. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit Speicher mit identitätsbasiertem Datenzugriff (Vorschau)](how-to-identity-based-data-access.md).<br><br>
-Diese Funktion ist eine [experimentelle](/python/api/overview/azure/ml/#stable-vs-experimental) Previewfunktion und kann jederzeit geändert werden. 
+> Sie können Datasets direkt auf der Grundlage von Speicher-URLs mit identitätsbasiertem Datenzugriff erstellen. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit Speicher mit identitätsbasiertem Datenzugriff](how-to-identity-based-data-access.md).
 
  
 So erstellen Sie Datasets auf der Grundlage eines Datenspeichers mit dem Python SDK:
@@ -245,12 +244,9 @@ labeled_dataset = labeled_dataset.filter(labeled_dataset['label'] == 'dog')
 labeled_dataset = labeled_dataset.filter((labeled_dataset['label']['isCrowd'] == True) & (labeled_dataset.file_metadata['Size'] > 100000))
 ```
 
-### <a name="partition-data-preview"></a>Partitionieren von Daten (Vorschau)
+### <a name="partition-data"></a>Partitionieren von Daten
 
 Sie können ein Dataset partitionieren, indem Sie beim Erstellen eines Datasets vom Typ „TabularDataset“ oder „FileDataset“ den Parameter `partitions_format` mit einschließen. 
-
-> [!IMPORTANT]
-> Das Erstellen von Datasetpartitionen ist eine [experimentelle](/python/api/overview/azure/ml/#stable-vs-experimental) Previewfunktion, die sich jederzeit ändern kann. 
 
 Wenn Sie ein Dataset partitionieren, werden die Partitionsinformationen der einzelnen Dateipfade jeweils basierend auf dem angegebenen Format in Spalten extrahiert. Das Format muss an der Position des ersten Partitionsschlüssels beginnen und bis zum Ende des Dateipfads reichen. 
 

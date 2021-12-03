@@ -5,15 +5,15 @@ ms.service: data-factory
 ms.subservice: monitoring
 ms.topic: conceptual
 ms.date: 01/16/2018
-author: minhe-msft
-ms.author: hemin
+author: joshuha-msft
+ms.author: joowen
 ms.custom: devx-track-python
-ms.openlocfilehash: 93187bd3f46fc85375289e911a816e2cb3e3da12
-ms.sourcegitcommit: 0046757af1da267fc2f0e88617c633524883795f
+ms.openlocfilehash: 06d4a50c0480d82fe348576f366d5f2ff1375afa
+ms.sourcegitcommit: 8946cfadd89ce8830ebfe358145fd37c0dc4d10e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122349511"
+ms.lasthandoff: 11/05/2021
+ms.locfileid: "131845302"
 ---
 # <a name="programmatically-monitor-an-azure-data-factory"></a>Programmgesteuertes Überwachen einer Azure Data Factory
 

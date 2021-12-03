@@ -1,23 +1,25 @@
 ---
-title: 'Azure Sentinel: Referenz zum Datenquellenschema'
-description: In diesem Artikel werden die von Azure Sentinel unterstützten Datenquellenschemas von Azure und Drittanbietern mit Links zu ihrer Referenzdokumentation aufgelistet.
+title: 'Microsoft Sentinel: Referenz zum Datenquellenschema'
+description: In diesem Artikel werden die von Microsoft Sentinel unterstützten Datenquellenschemas von Azure und Drittanbietern mit Links zu ihrer Referenzdokumentation aufgelistet.
 author: batamig
 ms.author: bagol
 manager: rkarlin
 ms.assetid: ''
-ms.service: azure-sentinel
-ms.subservice: azure-sentinel
+ms.service: microsoft-sentinel
+ms.subservice: microsoft-sentinel
 ms.topic: reference
-ms.custom: ''
-ms.date: 01/14/2021
-ms.openlocfilehash: 4601f2d6eddbbe8809dfd46a7e0cc5aa3c40c722
-ms.sourcegitcommit: c3739cb161a6f39a9c3d1666ba5ee946e62a7ac3
+ms.custom: ignite-fall-2021
+ms.date: 11/09/2021
+ms.openlocfilehash: 5b2c03c90fc17d2226de9f364e5ff4d3e5447307
+ms.sourcegitcommit: 2ed2d9d6227cf5e7ba9ecf52bf518dff63457a59
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "107209569"
+ms.lasthandoff: 11/16/2021
+ms.locfileid: "132521679"
 ---
 # <a name="data-source-schema-reference"></a>Referenz zum Datenquellenschema
+
+[!INCLUDE [Banner for top of topics](./includes/banner.md)]
 
 In diesem Artikel werden die unterstützten Datenquellenschemas von Azure und Drittanbietern mit Links zu ihrer Referenzdokumentation aufgelistet.
 
@@ -67,8 +69,8 @@ In der folgenden Tabelle sind die unterstützten Drittanbieter und deren Dokumen
 > 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu den unterstützten Azure Sentinel-Connectors wie CEF-, Syslog-, Agent-, direkten und benutzerdefinierten Connectors:
+Weitere Informationen zu den unterstützten Microsoft Sentinel-Connectors wie CEF, Syslog und Agent sowie zu direkten und benutzerdefinierten Connectors finden Sie unter:
 
 - [Herstellen einer Verbindung mit Datenquellen](connect-data-sources.md)
 
-- [Azure Sentinel-Connectors für Syslog und CEF und andere Connectors von Drittanbietern](https://techcommunity.microsoft.com/t5/azure-sentinel/azure-sentinel-syslog-cef-and-other-3rd-party-connectors-grand/ba-p/803891)
+- [Microsoft Sentinel-Connectors für Syslog und CEF und andere Connectors von Drittanbietern](https://techcommunity.microsoft.com/t5/azure-sentinel/azure-sentinel-syslog-cef-and-other-3rd-party-connectors-grand/ba-p/803891)

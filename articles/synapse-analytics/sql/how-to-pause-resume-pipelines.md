@@ -9,12 +9,12 @@ ms.subservice: sql
 ms.topic: how-to
 ms.date: 08/12/2021
 ms.custom: template-how-to
-ms.openlocfilehash: 01fd517be7e60a5ab16e7844d8c149ddac2dcb3e
-ms.sourcegitcommit: 6c6b8ba688a7cc699b68615c92adb550fbd0610f
+ms.openlocfilehash: d31cb6d07958c5f14ac5e45f0094e772b168a535
+ms.sourcegitcommit: 8946cfadd89ce8830ebfe358145fd37c0dc4d10e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122340406"
+ms.lasthandoff: 11/05/2021
+ms.locfileid: "131847924"
 ---
 # <a name="pause-and-resume-dedicated-sql-pools-with-synapse-pipelines"></a>Anhalten und Fortsetzen dedizierter SQL-Pools mit Synapse-Pipelines
 
@@ -223,9 +223,6 @@ Um Ihre Pipeline zu planen, wählen Sie am Anfang Ihrer Pipeline **Trigger hinzu
 
 Weitere Informationen zur verwalteten Identität für Azure Synapse und dazu, wie eine verwaltete Identität Ihrem dedizierten SQL-Pool hinzugefügt wird, finden Sie hier:
 
-[Azure Synapse-Arbeitsbereich – verwaltete Identität](../security/synapse-workspace-managed-identity.md)
+[Azure Synapse-Arbeitsbereich – verwaltete Identität](../../data-factory/data-factory-service-identity.md?context=/azure/synapse-analytics/context/context&tabs=synapse-analytics)
 
 [Erteilen von Berechtigungen für die verwaltete Identität eines Arbeitsbereichs (Vorschau)](../security/how-to-grant-workspace-managed-identity-permissions.md)
-
-[SQL-Zugriffssteuerung für Synapse-Pipelineausführungen](../security/how-to-set-up-access-control.md#step-73-sql-access-control-for-azure-synapse-pipeline-runs)
-

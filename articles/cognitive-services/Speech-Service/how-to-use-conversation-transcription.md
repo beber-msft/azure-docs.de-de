@@ -3,20 +3,21 @@ title: 'Schnellstart: Unterhaltungstranskription in Echtzeit: Speech-Dienst'
 titleSuffix: Azure Cognitive Services
 description: Erfahren Sie, wie Sie die Unterhaltungstranskription in Echtzeit mit dem Speech SDK verwenden. Die Unterhaltungstranskription ermöglicht Ihnen das Transkribieren von Besprechungen und anderen Unterhaltungen mit der Möglichkeit, mehrere Teilnehmer hinzuzufügen, zu entfernen und zu bestimmen, indem Sie Audiodatenströme an den Speech-Dienste streamen.
 services: cognitive-services
-author: PatrickFarley
+author: eric-urban
 manager: nitinme
 ms.service: cognitive-services
 ms.subservice: speech-service
 ms.topic: conceptual
 ms.date: 10/20/2020
-ms.author: pafarley
+ms.author: eur
 zone_pivot_groups: acs-js-csharp
-ms.openlocfilehash: b3057bc9ee058ece0fd4a005c26ef8b95ec6a4b0
-ms.sourcegitcommit: f2d0e1e91a6c345858d3c21b387b15e3b1fa8b4c
+ms.custom: ignite-fall-2021
+ms.openlocfilehash: 00cfb66da3b3e233e703e74b039be9d6a7d02c4b
+ms.sourcegitcommit: 2cc9695ae394adae60161bc0e6e0e166440a0730
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2021
-ms.locfileid: "123539059"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "131508924"
 ---
 # <a name="get-started-with-real-time-conversation-transcription"></a>Erste Schritte mit der Unterhaltungstranskription in Echtzeit
 
@@ -25,7 +26,7 @@ Mit der **ConversationTranscriber**-API des Speech SDK können Sie Besprechungen
 ## <a name="limitations"></a>Einschränkungen
 
 * Nur in den folgenden Abonnementregionen verfügbar : `centralus`, `eastasia`, `eastus`, `westeurope`
-* Es ist ein kreisförmiges Mikrofonarray mit 7 Mikrofonen erforderlich. Das Mikrofonarray sollte [unsere Spezifikation](./speech-devices-sdk-microphone.md) erfüllen.
+* Es ist ein kreisförmiges Mikrofonarray mit 7 Mikrofonen erforderlich. Das Mikrofonarray sollte [unsere Spezifikation](./speech-sdk-microphone.md) erfüllen.
 * Das [Speech-Geräte-SDK](speech-devices-sdk.md) stellt geeignete Geräte und eine Beispiel-App zur Veranschaulichung der Unterhaltungstranskription bereit.
 
 ## <a name="prerequisites"></a>Voraussetzungen

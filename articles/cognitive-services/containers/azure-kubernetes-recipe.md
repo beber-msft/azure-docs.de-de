@@ -1,6 +1,6 @@
 ---
 title: Ausführen des Spracherkennungscontainers in Kubernetes Service
-titleSuffix: Text Analytics -  Azure Cognitive Services
+titleSuffix: Azure Cognitive Services
 description: Stellen Sie den Sprachenerkennungscontainer mit einem ausgeführten Beispiel in Azure Kubernetes Service bereit, und testen Sie ihn in einem Webbrowser.
 services: cognitive-services
 author: aahill
@@ -8,16 +8,17 @@ manager: nitinme
 ms.service: cognitive-services
 ms.subservice: text-analytics
 ms.topic: conceptual
-ms.date: 04/01/2020
+ms.date: 10/11/2021
 ms.author: aahi
-ms.openlocfilehash: 6918218d8434c06f59b0738e60cad53b94b0a0b5
-ms.sourcegitcommit: f28ebb95ae9aaaff3f87d8388a09b41e0b3445b5
+ms.custom: ignite-fall-2021
+ms.openlocfilehash: a60f92f98a23cacfd36e42619008f91285902f9d
+ms.sourcegitcommit: 702df701fff4ec6cc39134aa607d023c766adec3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "98939850"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "131476773"
 ---
-# <a name="deploy-the-text-analytics-language-detection-container-to-azure-kubernetes-service"></a>Bereitstellen des Spracherkennungscontainers der Textanalyse in Azure Kubernetes Service
+# <a name="deploy-a-language-detection-container-to-azure-kubernetes-service"></a>Bereitstellen eines Spracherkennungscontainers in Azure Kubernetes Service
 
 Hier erfahren Sie, wie Sie den Sprachenerkennungscontainer bereitstellen. In dem Verfahren wird gezeigt, wie Sie die lokalen Docker-Container erstellen, Container per Push in Ihre eigene private Containerregistrierung übertragen, den Container in einem Kubernetes-Cluster ausführen und ihn in einem Webbrowser testen.
 
@@ -31,14 +32,14 @@ Für dieses Verfahren müssen mehrere Tools lokal installiert und ausgeführt we
 * [Docker-Engine](https://www.docker.com/products/docker-engine). (Vergewissern Sie sich, dass die Docker-Befehlszeilenschnittstelle in einem Konsolenfenster funktioniert.)
 * [kubectl](https://storage.googleapis.com/kubernetes-release/release/v1.13.1/bin/windows/amd64/kubectl.exe).
 * Eine Azure-Ressource mit dem korrekten Tarif. Nicht alle Tarife können mit diesem Container verwendet werden:
-  * Ressource **Textanalyse** nur mit F0- oder Standard-Tarif.
+  * **Language**-Ressource nur mit F0- oder Standard-Tarif
   * Ressource **Cognitive Services** mit dem S0-Tarif.
 
 ## <a name="running-the-sample"></a>Ausführen des Beispiels
 
 Im Rahmen dieses Verfahrens wird das Cognitive Services-Containerbeispiel für die Sprachenerkennung geladen und ausgeführt. Das Beispiel enthält zwei Container: einen für die Clientanwendung und einen für den Cognitive Services-Container. Wir übertragen beide Images per Push in die Azure Container Registry. Nachdem sie sich in Ihrer eigenen Registrierung befinden, erstellen Sie eine Azure Kubernetes Service-Instanz, um auf diese Images zuzugreifen und die Container auszuführen. Wenn die Container ausgeführt werden, verwenden Sie die Befehlszeilenschnittstelle **kubectl**, um die Leistung der Container zu überwachen. Greifen Sie über eine HTTP-Anforderung auf die Clientanwendung zu, und sehen Sie sich die Ergebnisse an.
 
-![Konzeptidee zum Ausführen von Beispielcontainern](../text-analytics/media/how-tos/container-instance-sample/containers.png)
+![Diagramm, das die konzeptionelle Idee der Ausführung eines Containers auf Kubernetes zeigt](media/container-instance-sample.png)
 
 ## <a name="the-sample-containers"></a>Die Beispielcontainer
 
@@ -309,21 +310,21 @@ In diesem Abschnitt wird die Befehlszeilenschnittstelle **kubectl** verwendet, u
 
     [!code-yml[Kubernetes orchestration file for the Cognitive Services containers sample](~/samples-cogserv-containers/Kubernetes/language/language.yml "Kubernetes orchestration file for the Cognitive Services containers sample")]
 
-1. Ändern Sie die Bereitstellungszeilen für „language-frontend“ in der Datei `language.yml` auf der Grundlage der folgenden Tabelle, um die Imagenamen, das Clientgeheimnis und die Textanalyseeinstellungen Ihrer eigenen Containerregistrierung hinzufügen.
+1. Ändern Sie die Bereitstellungszeilen für „language-frontend“ in der Datei `language.yml` auf der Grundlage der folgenden Tabelle, um die Imagenamen, das Clientgeheimnis und die Sprachdiensteinstellungen Ihrer eigenen Containerregistrierung hinzufügen.
 
     Bereitstellungseinstellungen für „language-frontend“|Zweck|
     |--|--|
     |Zeile 32<br> `image`-Eigenschaft|Speicherort des Front-End-Images in Ihrer Containerregistrierung<br>`<container-registry-name>.azurecr.io/language-frontend:v1`|
     |Zeile 44<br> `name`-Eigenschaft|Geheimnis der Containerregistrierung für das Image (weiter oben als `<client-secret>` bezeichnet).|
 
-1. Ändern Sie die Bereitstellungszeilen für „language“ in der Datei `language.yml` auf der Grundlage der folgenden Tabelle, um die Imagenamen, das Clientgeheimnis und die Textanalyseeinstellungen Ihrer eigenen Containerregistrierung hinzufügen.
+1. Ändern Sie die Bereitstellungszeilen für „language“ in der Datei `language.yml` auf der Grundlage der folgenden Tabelle, um die Imagenamen, das Clientgeheimnis und die Sprachdiensteinstellungen Ihrer eigenen Containerregistrierung hinzufügen.
 
     |Bereitstellungseinstellungen für „language“|Zweck|
     |--|--|
     |Zeile 78<br> `image`-Eigenschaft|Speicherort des Sprachimages in Ihrer Containerregistrierung<br>`<container-registry-name>.azurecr.io/language:1.1.006770001-amd64-preview`|
     |Zeile 95<br> `name`-Eigenschaft|Geheimnis der Containerregistrierung für das Image (weiter oben als `<client-secret>` bezeichnet).|
-    |Zeile 91<br> `apiKey`-Eigenschaft|Der Schlüssel Ihrer Textanalyseressource.|
-    |Zeile 92<br> `billing`-Eigenschaft|Der Abrechnungsendpunkt für Ihre Textanalyseressource.<br>`https://westus.api.cognitive.microsoft.com/text/analytics/v2.1`|
+    |Zeile 91<br> `apiKey`-Eigenschaft|Ihr Ressourcenschlüssel für den Sprachdienst|
+    |Zeile 92<br> `billing`-Eigenschaft|Der Abrechnungsendpunkt für Ihre Sprachdienstressource.<br>`https://westus.api.cognitive.microsoft.com/text/analytics/v2.1`|
 
     Da **apiKey** und **Abrechnungsendpunkt** im Rahmen der Kubernetes-Orchestrierungsdefinition festgelegt werden, müssen sie dem Websitecontainer nicht bekannt sein und nicht zusammen mit der Anforderung übergeben werden. Der Websitecontainer verweist auf den Sprachenerkennungscontainer anhand des Orchestratornamens `language`.
 
@@ -383,7 +384,7 @@ Falls `EXTERNAL-IP` für den Dienst als ausstehend angezeigt wird, führen Sie d
 
 Navigieren Sie in einem Browser zu der externen IP-Adresse des Containers `language` aus dem vorherigen Abschnitt: `http://<external-ip>:5000/swagger/index.html`. Sie können das Feature `Try it` der API verwenden, um den Endpunkt für die Sprachenerkennung zu testen.
 
-![Anzeigen der Swagger-Dokumentation des Containers](../text-analytics/media/how-tos/container-instance-sample/language-detection-container-swagger-documentation.png)
+![Screenshot der Swagger-Dokumentation des Containers](./media/language-detection-container-swagger-documentation.png)
 
 ## <a name="test-the-client-application-container"></a>Testen des Clientanwendungscontainers
 

@@ -1,19 +1,19 @@
 ---
 title: Wettervorhersage mithilfe von Machine Learning Studio (klassisch) unter Verwendung von IoT Hub-Daten
 description: Verwenden Sie ML Studio (klassisch), um das Regenrisiko basierend auf den Temperatur- und Luftfeuchtigkeitsdaten vorherzusagen, die Ihr IoT-Hub über einen Sensor erfasst.
-author: robinsh
+author: eross-msft
 keywords: Wettervorhersage, Machine Learning
 ms.service: iot-hub
 services: iot-hub
 ms.topic: conceptual
-ms.date: 09/16/2020
-ms.author: robinsh
-ms.openlocfilehash: 1a85456c6227df1f32387ff92746e0efb8c721ca
-ms.sourcegitcommit: 5d605bb65ad2933e03b605e794cbf7cb3d1145f6
+ms.date: 10/26/2021
+ms.author: lizross
+ms.openlocfilehash: 1656e055316ecde439793fe4afdd25933db476ce
+ms.sourcegitcommit: 05c8e50a5df87707b6c687c6d4a2133dc1af6583
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "122597449"
+ms.lasthandoff: 11/16/2021
+ms.locfileid: "132554615"
 ---
 # <a name="weather-forecast-using-the-sensor-data-from-your-iot-hub-in-machine-learning-studio-classic"></a>Wettervorhersage mithilfe von Sensordaten Ihres IoT-Hubs in Machine Learning Studio (klassisch)
 
@@ -173,7 +173,7 @@ In diesem Abschnitt überprüfen Sie das Modell, richten einen Vorhersagewebdien
 
    ![Hinzufügen einer Ausgabe zum Stream Analytics-Auftrag in Azure](media/iot-hub-weather-forecast-machine-learning/add-output-stream-analytics-job.png)
 
-1. Klicken Sie auf **Speichern**.
+1. Wählen Sie **Speichern**.
 
 ### <a name="add-a-function-to-the-stream-analytics-job-to-call-the-web-service-you-deployed"></a>Hinzufügen einer Funktion zum Stream Analytics-Auftrag, um den von Ihnen bereitgestellten Webdienst aufzurufen
 

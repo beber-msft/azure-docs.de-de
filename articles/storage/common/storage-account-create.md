@@ -10,12 +10,12 @@ ms.date: 05/18/2021
 ms.author: tamram
 ms.subservice: common
 ms.custom: devx-track-azurecli, devx-track-azurepowershell
-ms.openlocfilehash: a843952e05d71a13a26d56e1588fd10bea0e50c8
-ms.sourcegitcommit: 613789059b275cfae44f2a983906cca06a8706ad
+ms.openlocfilehash: 3be79a2af3dfb05b289a0111c9e1f9fcf17bab02
+ms.sourcegitcommit: 05c8e50a5df87707b6c687c6d4a2133dc1af6583
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2021
-ms.locfileid: "129275865"
+ms.lasthandoff: 11/16/2021
+ms.locfileid: "132555544"
 ---
 # <a name="create-a-storage-account"></a>Speicherkonto erstellen
 
@@ -123,13 +123,13 @@ Geben Sie auf der Registerkarte **Grundlagen** die grundlegenden Informationen f
 
 In der folgenden Tabelle werden die Felder der Registerkarte **Grundlagen** beschrieben.
 
-| `Section` | Feld | Erforderlich oder optional | BESCHREIBUNG |
+| `Section` | Feld | Erforderlich oder optional | Beschreibung |
 |--|--|--|--|
 | Projektdetails | Subscription | Erforderlich | Wählen Sie das Abonnement für das neue Speicherkonto aus. |
 | Projektdetails | Ressourcengruppe | Erforderlich | Erstellen Sie eine neue Ressourcengruppe für dieses Speicherkonto oder wählen Sie eine vorhandene Ressourcengruppe aus. Weitere Informationen finden Sie unter [Ressourcengruppen](../../azure-resource-manager/management/overview.md#resource-groups). |
 | Instanzendetails | Speicherkontoname | Erforderlich | Wählen Sie einen eindeutigen Namen für Ihr Speicherkonto aus. Speicherkontonamen müssen zwischen 3 und 24 Zeichen lang sein und dürfen nur Zahlen und Kleinbuchstaben enthalten. |
 | Instanzendetails | Region | Erforderlich | Wählen Sie die passende Region für Ihr Speicherkonto aus. Weitere Informationen finden Sie unter [Regionen und Verfügbarkeitszonen in Azure](../../availability-zones/az-overview.md).<br /><br />Nicht alle Regionen werden für alle Arten von Speicherkonten oder Redundanzkonfigurationen unterstützt. Weitere Informationen finden Sie unter [Azure Storage-Redundanz](storage-redundancy.md).<br /><br />Die Wahl der Region kann sich auf die Abrechnung auswirken. Weitere Informationen finden Sie unter [Speicherkontoabrechnung](storage-account-overview.md#storage-account-billing). |
-| Instanzendetails | Leistung | Erforderlich | Wählen Sie **Standard** performance for general-purpose v2 storage accounts (default) (Standardleistung für Speicherkonten vom Standardversions-V2-Speicherkonto (Standard)) aus. Diese Art von Konto wird von Microsoft für die meisten Szenarien empfohlen. Weitere Informationen finden Sie unter [Speicherkontentypen](storage-account-overview.md#types-of-storage-accounts).<br /><br />Wählen Sie **Premium** für Szenarien mit geringer Latenz aus. Wählen Sie nach dem Auswählen von **Premium** den Typ des zu erstellenden Premium-Speicherkontos aus. Die folgenden Arten von Premium-Speicherkonten sind verfügbar: <ul><li>[Blockblobs](../blobs/storage-blob-performance-tiers.md)</li><li>[Dateifreigaben](../files/storage-files-planning.md#management-concepts)</li><li>[Seitenblobs](../blobs/storage-blob-pageblob-overview.md)</li></ul> |
+| Instanzendetails | Leistung | Erforderlich | Wählen Sie **Standard** performance for general-purpose v2 storage accounts (default) (Standardleistung für Speicherkonten vom Standardversions-V2-Speicherkonto (Standard)) aus. Diese Art von Konto wird von Microsoft für die meisten Szenarien empfohlen. Weitere Informationen finden Sie unter [Speicherkontentypen](storage-account-overview.md#types-of-storage-accounts).<br /><br />Wählen Sie **Premium** für Szenarien mit geringer Latenz aus. Wählen Sie nach dem Auswählen von **Premium** den Typ des zu erstellenden Premium-Speicherkontos aus. Die folgenden Arten von Premium-Speicherkonten sind verfügbar: <ul><li>[Blockblobs](./storage-account-overview.md)</li><li>[Dateifreigaben](../files/storage-files-planning.md#management-concepts)</li><li>[Seitenblobs](../blobs/storage-blob-pageblob-overview.md)</li></ul> |
 | Instanzendetails | Redundanz | Erforderlich | Wählen Sie die gewünschte Redundanzkonfiguration aus. Nicht alle Redundanzoptionen sind für alle Arten von Speicherkonten in allen Regionen verfügbar. Weitere Informationen zu Redundanzkonfigurationen finden Sie unter [Azure Storage-Redundanz](storage-redundancy.md).<br /><br />Wenn Sie eine georedundante Konfiguration (GRS oder GZRS) auswählen, werden Ihre Daten in ein Rechenzentrum in einer anderen Region repliziert. Wählen Sie für den Lesezugriff auf Daten in der sekundären Region die Option **Lesezugriff auf Daten verfügbar machen** aus, wenn die regionale Nichtverfügbarkeit nicht möglich ist. |
 
 Die folgende Abbildung zeigt eine Standardkonfiguration für ein neues Speicherkonto.
@@ -150,6 +150,7 @@ In der folgenden Tabelle werden die Felder der Registerkarte **Erweitert** besch
 | Sicherheit | Zugriff auf Speicherkontoschlüssel aktivieren (Vorschau) | Optional | Wenn diese Einstellung aktiviert ist, können Clients Anforderungen an das Speicherkonto entweder mit den Kontozugriffsschlüsseln oder einem Azure Active Directory-Konto (Azure AD) autorisieren (Standard). Wenn Sie diese Einstellung deaktivieren, wird die Autorisierung mit den Kontozugriffsschlüsseln verhindert. Weitere Informationen finden Sie unter [Verhindern der Autorisierung mit gemeinsam verwendeten Schlüsseln für ein Azure Storage-Konto](shared-key-authorization-prevent.md). |
 | Sicherheit | TLS-Mindestversion | Erforderlich | Wählen Sie die erforderliche Mindestversion der Transport Layer Security (TLS) für eingehende Anforderungen an ein Speicherkonto. Der Standardwert ist TLS-Version 1.2. Wenn dieser Wert auf den Standardwert festgelegt ist, werden eingehende Anforderungen mit TLS 1.0 oder TLS 1.1 abgelehnt. Weitere Informationen finden Sie unter [Erzwingen der erforderliche Mindestversion der Transport Layer Security (TLS) für Anforderungen an ein Speicherkonto](transport-layer-security-configure-minimum-version.md). |
 | Data Lake Storage Gen2 | Aktivieren Sie hierarchische Namespace | Optional | Wenn Sie dieses Speicherkonto für Azure Data Lake Storage Gen2 verwenden möchten, müssen Sie einen hierarchischen Namespace konfigurieren. Weitere Informationen hierzu finden Sie unter [Einführung in Azure Data Lake Storage Gen2](../blobs/data-lake-storage-introduction.md). |
+| Sicheres Dateiübertragungsprotokoll (SFTP) | Aktivieren von SFTP | Optional | Aktivieren Sie die Verwendung von Secure File Transfer Protocol (SFTP), um Daten sicher über das Internet zu übertragen. Weitere Informationen finden Sie unter [Unterstützung des SFTP-Protokolls (Secure File Transfer) in Azure Blob Storage](../blobs/secure-file-transfer-protocol-support.md). |
 | Blobspeicher | Aktivieren der Netzwerkdateifreigabe v3 (NFS) | Optional | NFS v3 bietet Linux-Dateisystemkompatibilität bei Objektspeicherskalierung und ermöglicht es Linux-Clients, einen Container aus einem virtuellen Azure-Computer (VM) oder einem lokalen Computer in Blob Storage einzubinden. Weitere Informationen finden Sie unter [Unterstützung für Network File System 3.0 (NFS) in Azure Blob Storage](../blobs/network-file-system-protocol-support.md). |
 | Blobspeicher | Zugriffsebene | Erforderlich | Mit Blobzugriffsebenen können Sie Blobdaten basierend auf der Nutzung auf die kostengünstigste Weise speichern. Wählen Sie die heiße Zugriffsebene (Standard) für Daten aus, auf die häufig zugegriffen wird. Wählen Sie die kalte Zugriffsebene für Daten aus, auf die selten zugegriffen wird. Weitere Informationen finden Sie unter [Zugriffsebenen „Heiß“, „Kalt“ und „Archiv“ für Blobdaten](../blobs/access-tiers-overview.md). |
 | Azure Files | Aktivieren großer Dateifreigaben | Optional | Nur für Standarddateifreigaben mit LRS- oder ZRS-Redundanzen verfügbar. |
@@ -172,7 +173,7 @@ Auf der Registerkarte **Datenschutz** können Sie Datenschutzoptionen für Blobd
 
 In der folgenden Tabelle werden die Felder auf der Registerkarte **Datenschutz** beschrieben.
 
-| `Section` | Feld | Erforderlich oder optional | BESCHREIBUNG |
+| `Section` | Feld | Erforderlich oder optional | Beschreibung |
 |--|--|--|--|
 | Wiederherstellung | Zeitpunktwiederherstellung für Container aktivieren | Optional | Point-in-Time-Wiederherstellung bietet Schutz vor versehentlichem Löschen oder Beschädigungen, da Sie Blockblobdaten in einem früheren Zustand wiederherstellen können. Weitere Informationen finden Sie unter [Zeitpunktwiederherstellung – Blockblobs](../blobs/point-in-time-restore-overview.md).<br /><br />Das Aktivieren der Zeitpunktwiederherstellung ermöglicht auch die Blobversionsierung, das vorläufig gelöschte Blob und den Blobänderungsfeed. Diese erforderlichen Features können sich auf die Kosten auswirken. Weitere Informationen finden Sie unter [Preise und Abrechnung](../blobs/point-in-time-restore-overview.md#pricing-and-billing) für die Zeitpunktwiederherstellung. |
 | Wiederherstellung | Aktivieren von „Vorläufiges Löschen“ für Blobs | Optional | Das Feature für das vorläufige Löschen von Blobs schützt einzelne Blobs, Momentaufnahmen oder Versionen vor einer versehentlichen Löschung oder Überschreibung, weil die gelöschten Daten für einen Aufbewahrungszeitraum im System beibehalten werden. Während des Aufbewahrungszeitraums können Sie den Zustand eines vorläufig gelöschten Objekts zum Zeitpunkt der Löschung wiederherstellen. Weitere Informationen finden Sie unter [Vorläufiges Löschen von Blobs](../blobs/soft-delete-blob-overview.md).<br /><br />Microsoft empfiehlt die Aktivierung des vorläufigen Löschens von Blobs für Ihre Speicherkonten und die Festlegung eines Aufbewahrungszeitraums von mindestens sieben Tagen. |

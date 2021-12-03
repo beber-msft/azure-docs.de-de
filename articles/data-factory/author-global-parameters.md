@@ -4,16 +4,16 @@ description: Festlegen von globalen Parametern für jede Azure Data Factory-Umge
 ms.service: data-factory
 ms.subservice: authoring
 ms.topic: conceptual
-author: minhe-msft
-ms.author: hemin
+author: joshuha-msft
+ms.author: joowen
 ms.date: 05/12/2021
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: f57b33f94bff98714969639e935ae5010a5762cd
-ms.sourcegitcommit: e8c34354266d00e85364cf07e1e39600f7eb71cd
+ms.openlocfilehash: 3205d5c3be7fe13cbaa4b881a3de6bffc15e9fd8
+ms.sourcegitcommit: 05c8e50a5df87707b6c687c6d4a2133dc1af6583
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2021
-ms.locfileid: "129218147"
+ms.lasthandoff: 11/16/2021
+ms.locfileid: "132550910"
 ---
 # <a name="global-parameters-in-azure-data-factory"></a>Globale Parameter in Azure Data Factory
 
@@ -114,5 +114,5 @@ Set-AzDataFactoryV2 -InputObject $dataFactory -Force
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-* Informieren Sie sich über den [CI/CD-Prozess (Continuous Integration/Deployment)](continuous-integration-delivery.md) von Azure Data Factory.
+* Informieren Sie sich über den [CI/CD-Prozess (Continuous Integration/Deployment)](continuous-integration-delivery-improvements.md) von Azure Data Factory.
 * Informieren Sie sich über die Nutzung der [Ausdruckssprache für die Ablaufsteuerung](control-flow-expression-language-functions.md).

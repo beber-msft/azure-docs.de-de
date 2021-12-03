@@ -5,14 +5,15 @@ services: bastion
 author: cherylmc
 ms.service: bastion
 ms.topic: tutorial
-ms.date: 09/07/2021
+ms.date: 10/12/2021
 ms.author: cherylmc
-ms.openlocfilehash: 0bac9ef5d9a636fb4772352c93de537d21483139
-ms.sourcegitcommit: 92889674b93087ab7d573622e9587d0937233aa2
+ms.custom: ignite-fall-2021
+ms.openlocfilehash: 7d2e071fd7dc368df867b17a53f9e994ee5c16a6
+ms.sourcegitcommit: 702df701fff4ec6cc39134aa607d023c766adec3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "130179298"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "131430969"
 ---
 # <a name="tutorial-configure-bastion-and-connect-to-a-windows-vm"></a>Tutorial: Konfigurieren von Bastion und Herstellen einer Verbindung mit einer Windows-VM
 
@@ -64,7 +65,7 @@ Sie können beim Erstellen dieser Konfiguration die folgenden Beispielwerte verw
 | --- | --- |
 | Name | VNet1-bastion |
 | + Subnetzname | AzureBastionSubnet |
-| AzureBastionSubnet-Adressen | Ein Subnetz innerhalb Ihres VNet-Adressraums mit einer Subnetzmaske von „/27“ oder mehr.<br> Beispiel: 10.1.1.0/26.  |
+| AzureBastionSubnet-Adressen | Ein Subnetz innerhalb Ihres VNET-Adressraums mit einer Subnetzmaske von „/26“ oder höher.<br> Beispiel: 10.1.1.0/26.  |
 | Tarif/SKU | Standard |
 | Instanzanzahl (Hostskalierung)| 3 oder größer |
 | Öffentliche IP-Adresse |  Neu erstellen |
@@ -96,7 +97,7 @@ In diesem Abschnitt erfahren Sie, wie Sie das Bastionhostobjekt in Ihrem VNET er
 
 * **Region**: Die öffentliche Azure-Region, in der die Ressource erstellt wird. Wählen Sie die Region aus, in der sich Ihr virtuelles Netzwerk befindet.
 
-* **Tarif**: Der Tarif wird auch als **SKU** bezeichnet. Für dieses Tutorial wählen wir die **Standard**-SKU in der Dropdownliste aus. Wenn Sie die Standard-SKU auswählen, können Sie die Anzahl der Instanzen für die Skalierung des Hosts konfigurieren. Von der Basic-SKU wird die Hostskalierung nicht unterstützt. Weitere Informationen finden Sie unter [Konfigurationseinstellungen – SKU](configuration-settings.md#skus). Die Standard-SKU befindet sich in der Vorschauversion.
+* **Tarif**: Der Tarif wird auch als **SKU** bezeichnet. Für dieses Tutorial wählen wir die **Standard**-SKU in der Dropdownliste aus. Wenn Sie die Standard-SKU auswählen, können Sie die Anzahl der Instanzen für die Skalierung des Hosts konfigurieren. Von der Basic-SKU wird die Hostskalierung nicht unterstützt. Weitere Informationen finden Sie unter [Konfigurationseinstellungen – SKU](configuration-settings.md#skus).
 
 * **Anzahl der Instanzen**: Dies ist die Einstellung für die **Hostskalierung**, die in Inkrementen von Skalierungseinheiten konfiguriert wird. Verwenden Sie den Schieberegler, um die Anzahl der Instanzen zu konfigurieren. Wenn Sie die Basic-Tarif-SKU angegeben haben, können Sie diese Einstellung nicht konfigurieren. Weitere Informationen finden Sie unter [Konfigurationseinstellungen – Hostskalierung](configuration-settings.md#instance). In diesem Tutorial können Sie die gewünschte Anzahl der Instanzen auswählen. Berücksichtigen Sie dabei jedoch die [Preis](https://azure.microsoft.com/pricing/details/azure-bastion)-Überlegungen für Skalierungseinheiten.
 
@@ -118,7 +119,7 @@ Wahrscheinlich haben Sie noch kein AzureBastionSubnet konfiguriert. So konfiguri
 1. Erstellen Sie ein Subnetz unter Verwendung der folgenden Richtlinien:
 
    * Das Subnetz muss **AzureBastionSubnet** heißen.
-   * Das Subnetz muss mindestens die Größe „/27“ haben. Für die Standard-SKU empfehlen wir „/26“ oder höher, um zukünftige zusätzliche Hostskalierungsinstanzen zu unterstützen.
+   * Das Subnetz muss mindestens die Größe „/26“ haben. Für die Standard-SKU empfehlen wir „/26“ oder höher, um zukünftige zusätzliche Hostskalierungsinstanzen zu unterstützen.
 
    :::image type="content" source="./media/tutorial-create-host-portal/bastion-subnet.png" alt-text="Screenshot des Subnetzes „AzureBastionSubnet“.":::
 

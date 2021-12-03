@@ -1,19 +1,19 @@
 ---
 title: Visuelles Überwachen von Azure Data Factory
 description: Erfahren Sie, wie Sie Azure Data Factorys visuell überwachen.
-author: minhe-msft
-ms.author: hemin
+author: joshuha-msft
+ms.author: joowen
 ms.reviewer: jburchel
 ms.service: data-factory
 ms.subservice: monitoring
 ms.topic: conceptual
 ms.date: 07/30/2021
-ms.openlocfilehash: 6e781316d6aa58961360882d9d11fa6df05640fb
-ms.sourcegitcommit: 0770a7d91278043a83ccc597af25934854605e8b
+ms.openlocfilehash: 79dcf37a5f70e68bddfc165ea8798994c7af9798
+ms.sourcegitcommit: 8946cfadd89ce8830ebfe358145fd37c0dc4d10e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "124750534"
+ms.lasthandoff: 11/05/2021
+ms.locfileid: "131845530"
 ---
 # <a name="visually-monitor-azure-data-factory"></a>Visuelles Überwachen von Azure Data Factory
 

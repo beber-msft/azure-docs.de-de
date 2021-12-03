@@ -90,6 +90,8 @@
       href: uwp-react.md
 - name: Konzepte
   items:
+    - name: Verfügbarkeitszonen
+      href: availability-zones.md
     - name: Transport Layer Security (TLS)
       href: notification-hubs-tls12.md
     - name: Anleitung für eine unternehmensbezogene Pusharchitektur
@@ -161,7 +163,7 @@
   items:
     - name: .NET
       href: /dotnet/api/microsoft.azure.notificationhubs
-    - name: Azure-Befehlszeilenschnittstelle
+    - name: Azure CLI
       href: /cli/azure/notification-hub
     - name: PowerShell
       href: /powershell/module/az.notificationhubs
@@ -186,7 +188,7 @@
     - name: Stack Overflow
       href: 'https://stackoverflow.com/questions/tagged/azure-notificationhub'
     - name: Anfordern eines Features
-      href: 'https://feedback.azure.com/forums/218849-notification-hubs'
+      href: 'https://feedback.azure.com/d365community/forum/405a1b30-8b26-ec11-b6e6-000d3a4f0789'
     - name: Regionale Verfügbarkeit
       href: 'https://azure.microsoft.com/regions/services/'
     - name: Supportoptionen

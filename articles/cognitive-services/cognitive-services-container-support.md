@@ -5,18 +5,18 @@ description: Hier erfahren Sie, wie Cognitive Services mithilfe von Docker-Conta
 services: cognitive-services
 author: aahill
 manager: nitinme
-ms.custom: seodec18, cog-serv-seo-aug-2020
+ms.custom: cog-serv-seo-aug-2020, ignite-fall-2021
 ms.service: cognitive-services
 ms.topic: article
-ms.date: 09/24/2021
+ms.date: 10/28/2021
 ms.author: aahi
 keywords: lokal, Docker, Container, Kubernetes
-ms.openlocfilehash: 84e3a1690f68e9327eef3297f522535eb866aa7f
-ms.sourcegitcommit: 692382974e1ac868a2672b67af2d33e593c91d60
+ms.openlocfilehash: 8758a4688e66a1000c142ab775e563ff829bc79b
+ms.sourcegitcommit: 512e6048e9c5a8c9648be6cffe1f3482d6895f24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "130215951"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "132158280"
 ---
 # <a name="azure-cognitive-services-containers"></a>Azure Cognitive Services-Container
 
@@ -50,10 +50,10 @@ Azure Cognitive Services-Container bieten den folgenden Satz von Docker-Containe
 | Dienst |  Container | BESCHREIBUNG | Verfügbarkeit |
 |--|--|--|--|
 | [LUIS][lu-containers] |  **LUIS** ([Image](https://go.microsoft.com/fwlink/?linkid=2043204&clcid=0x409)) | Lädt Ihr trainiertes oder veröffentlichtes Language Understanding-Modell (auch als LUIS-App bezeichnet) in einen Docker-Container und ermöglicht den Zugriff auf die Abfragevorhersagen von den API-Endpunkten des Containers. Sie können Abfrageprotokolle vom Container erfassen und wieder in das [LUIS-Portal](https://www.luis.ai) hochladen, um die Vorhersagegenauigkeit der App zu verbessern. | Allgemein verfügbar |
-| [Textanalyse][ta-containers-keyphrase] | **Schlüsselbegriffserkennung** ([Bild](https://go.microsoft.com/fwlink/?linkid=2018757&clcid=0x409)) | Extrahiert die Schlüsselbegriffe, um die wichtigsten Punkte zu ermitteln. Wenn der eingegebene Text beispielsweise „Das Essen war köstlich, und es gab hervorragendes Personal“ lautet, gibt die API die Kernpunkte „Essen“ und „hervorragendes Personal“ zurück. | Vorschau |
-| [Textanalyse][ta-containers-language] |  **Textsprachenerkennung** ([Image](https://go.microsoft.com/fwlink/?linkid=2018759&clcid=0x409)) | Erkennt die Sprache von Eingabetexten für bis zu 120 Sprachen und meldet einen einzigen Sprachcode für jedes Dokument, das auf Anforderung gesendet wird. Der Sprachcode ist mit einem Wert kombiniert, der die Stärke der Bewertung angibt. | Allgemein verfügbar |
-| [Textanalyse][ta-containers-sentiment] | **Standpunktanalyse v3** ([Image](https://go.microsoft.com/fwlink/?linkid=2018654&clcid=0x409)) | Analysiert unformatierten Text auf Hinweise auf positive oder negative Stimmungen. Von dieser Version der Standpunktanalyse werden für jedes Dokument und jeden darin enthaltenen Satz Stimmungsbezeichnungen (beispielsweise *Positiv* oder *Negativ*) zurückgegeben. |  Allgemein verfügbar |
-| [Textanalyse][ta-containers-health] |  **Text Analytics for Health** | Extraktion und Bezeichnung medizinischer Informationen aus unstrukturiertem klinischem Text. | Vorschau |
+| [Sprachdienst][ta-containers-keyphrase] | **Schlüsselbegriffserkennung** ([Bild](https://go.microsoft.com/fwlink/?linkid=2018757&clcid=0x409)) | Extrahiert die Schlüsselbegriffe, um die wichtigsten Punkte zu ermitteln. Wenn der eingegebene Text beispielsweise „Das Essen war köstlich, und es gab hervorragendes Personal“ lautet, gibt die API die Kernpunkte „Essen“ und „hervorragendes Personal“ zurück. | Vorschau |
+| [Sprachdienst][ta-containers-language] |  **Textsprachenerkennung** ([Image](https://go.microsoft.com/fwlink/?linkid=2018759&clcid=0x409)) | Erkennt die Sprache von Eingabetexten für bis zu 120 Sprachen und meldet einen einzigen Sprachcode für jedes Dokument, das auf Anforderung gesendet wird. Der Sprachcode ist mit einem Wert kombiniert, der die Stärke der Bewertung angibt. | Allgemein verfügbar |
+| [Sprachdienst][ta-containers-sentiment] | **Standpunktanalyse** ([Bild](https://go.microsoft.com/fwlink/?linkid=2018654&clcid=0x409)) | Analysiert unformatierten Text auf Hinweise auf positive oder negative Stimmungen. Von dieser Version der Standpunktanalyse werden für jedes Dokument und jeden darin enthaltenen Satz Stimmungsbezeichnungen (beispielsweise *Positiv* oder *Negativ*) zurückgegeben. |  Allgemein verfügbar |
+| [Sprachdienst][ta-containers-health] |  **Text Analytics for Health** | Extraktion und Bezeichnung medizinischer Informationen aus unstrukturiertem klinischem Text. | Vorschau |
 | [Translator][tr-containers] | **Translator** | Übersetzt Text in verschiedene Sprachen und Dialekte. | Beschränkte Vorschauversion. [Zugriff anfordern](https://aka.ms/csgate-translator). | 
 
 ### <a name="speech-containers"></a>Speech-Container
@@ -72,14 +72,11 @@ Azure Cognitive Services-Container bieten den folgenden Satz von Docker-Containe
 
 ### <a name="vision-containers"></a>Vision-Container
 
-> [!WARNING]
-> Am 11. Juni 2020 kündigte Microsoft an, dass keine Technologie zur Gesichtserkennung mehr an die Polizeibehörden in den USA verkauft wird, bis es eine strenge, auf den Menschenrechten basierende Regelung gibt. Daher dürfen Kunden keine Gesichtserkennungsfeatures oder in Azure-Diensten enthaltenen Funktionen (wie Gesichtserkennung oder Video Indexer) verwenden, wenn es sich bei dem Kunden um eine Polizeibehörde in den USA handelt oder wenn der Kunde die Nutzung derartiger Dienste durch oder für eine Polizeibehörde zulässt.
 
 | Dienst |  Container | BESCHREIBUNG | Verfügbarkeit |
 |--|--|--|--|
 | [Maschinelles Sehen][cv-containers] | **Read OCR** ([Image](https://hub.docker.com/_/microsoft-azure-cognitive-services-vision-read)) | Mit dem Read OCR-Container können Sie gedruckten und handschriftlichen Text aus Bildern und Dokumenten mit Unterstützung für die Dateiformate JPEG, PNG, BMP, PDF und TIFF extrahieren. Weitere Informationen finden Sie in der Dokumentation zur [Lese-API](./computer-vision/overview-ocr.md). | Beschränkte Vorschauversion. [Zugriff anfordern][request-access]. |
 | [Räumliche Analyse][spa-containers] | **Räumliche Analyse** ([Image](https://hub.docker.com/_/microsoft-azure-cognitive-services-vision-spatial-analysis)) | Analysiert in Echtzeit gestreamte Videodaten, um räumliche Bezüge zwischen Personen, ihre Bewegungen und ihre Interaktionen mit Objekten in der physischen Umgebung zu verstehen. | Vorschau |
-| [Gesichtserkennung][fa-containers] | **Gesichtserkennung** | Erkennt menschliche Gesichter in Bildern und identifiziert zugehörige Attribute wie Gesichtsmerkmale (z.B. Nasen und Augen), Geschlecht, Alter und andere vom Computer vorhergesagte Gesichtsmerkmale. Zusätzlich zur Erkennung kann die Gesichtserkennung über eine Zuverlässigkeitsbewertung überprüfen, ob zwei Gesichter in einem oder verschiedenen Bildern identisch sind, oder Gesichter mit einer Datenbank vergleichen, um festzustellen, ob ein ähnliches oder identisches Gesicht bereits vorhanden ist. Sie kann auch ähnliche Gesichter in Gruppen mit gemeinsamen Gesichtsmerkmalen organisieren. | Nicht verfügbar |
 
 <!--
 |[Personalizer](./personalizer/what-is-personalizer.md) |F0, S0|**Personalizer** ([image](https://go.microsoft.com/fwlink/?linkid=2083928&clcid=0x409))|Azure Personalizer is a cloud-based API service that allows you to choose the best experience to show to your users, learning from their real-time behavior.|
@@ -88,9 +85,8 @@ Azure Cognitive Services-Container bieten den folgenden Satz von Docker-Containe
 Darüber hinaus werden einige Container im Angebot [einer Ressource für mehrere Dienste](cognitive-services-apis-create-account.md) von Cognitive Services unterstützt. Sie können eine einzelne All-In-One-Ressource von Cognitive Services erstellen und denselben Abrechnungsschlüssel für alle unterstützten Dienste verwenden:
 
 * Maschinelles Sehen
-* Gesicht
 * LUIS
-* Textanalyse
+* Sprachdienst
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -120,10 +116,9 @@ Installieren und erkunden Sie die Funktionalität der Container in Azure Cogniti
 
 * [Container für die Anomalieerkennung][ad-containers]
 * [Container für maschinelles Sehen][cv-containers]
-* [Container für die Gesichtserkennung][fa-containers]
 * [Container für Language Understanding (LUIS)][lu-containers]
 * [Container für die Speech Services-API][sp-containers]
-* [Container für die Textanalyse][ta-containers]
+* [Container für Sprachdienst][ta-containers]
 * [Übersetzer-Container][tr-containers]
 
 <!--* [Personalizer containers](https://go.microsoft.com/fwlink/?linkid=2083928&clcid=0x409)
@@ -131,7 +126,6 @@ Installieren und erkunden Sie die Funktionalität der Container in Azure Cogniti
 
 [ad-containers]: anomaly-Detector/anomaly-detector-container-howto.md
 [cv-containers]: computer-vision/computer-vision-how-to-install-containers.md
-[fa-containers]: ./face/overview.md
 [lu-containers]: luis/luis-container-howto.md
 [sp-containers]: speech-service/speech-container-howto.md
 [spa-containers]: ./computer-vision/spatial-analysis-container.md
@@ -141,10 +135,10 @@ Installieren und erkunden Sie die Funktionalität der Container in Azure Cogniti
 [sp-containers-tts]: speech-service/speech-container-howto.md?tabs=tts
 [sp-containers-ctts]: speech-service/speech-container-howto.md?tabs=ctts
 [sp-containers-ntts]: speech-service/speech-container-howto.md?tabs=ntts
-[ta-containers]: text-analytics/how-tos/text-analytics-how-to-install-containers.md
-[ta-containers-keyphrase]: text-analytics/how-tos/text-analytics-how-to-install-containers.md?tabs=keyphrase
-[ta-containers-language]: text-analytics/how-tos/text-analytics-how-to-install-containers.md?tabs=language
-[ta-containers-sentiment]: text-analytics/how-tos/text-analytics-how-to-install-containers.md?tabs=sentiment
-[ta-containers-health]: text-analytics/how-tos/text-analytics-how-to-install-containers.md?tabs=health
+[ta-containers]: language-service/overview.md#deploy-on-premises-using-docker-containers
+[ta-containers-keyphrase]: language-service/key-phrase-extraction/how-to/use-containers.md
+[ta-containers-language]: language-service/language-detection/how-to/use-containers.md
+[ta-containers-sentiment]: language-service/sentiment-opinion-mining/how-to/use-containers.md
+[ta-containers-health]: language-service/text-analytics-for-health/how-to/use-containers.md
 [tr-containers]: translator/containers/translator-how-to-install-container.md
 [request-access]: https://aka.ms/csgate

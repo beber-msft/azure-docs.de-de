@@ -1,19 +1,19 @@
 ---
 title: Einrichten von Diagnoseprotokollen über die Azure Monitor-REST-API
 description: Erfahren Sie, wie Sie Diagnoseprotokolle für Azure Data Factory mithilfe der Azure Monitor-REST-API einrichten.
-author: minhe-msft
-ms.author: hemin
+author: joshuha-msft
+ms.author: joowen
 ms.reviewer: jburchel
 ms.service: data-factory
 ms.subservice: monitoring
 ms.topic: conceptual
 ms.date: 09/02/2021
-ms.openlocfilehash: a78d3e68841e4463d4f66f24821b5e42c7650f44
-ms.sourcegitcommit: 03e84c3112b03bf7a2bc14525ddbc4f5adc99b85
+ms.openlocfilehash: 41b7a817b35b15ad18d962f5fb073fac76118444
+ms.sourcegitcommit: 8946cfadd89ce8830ebfe358145fd37c0dc4d10e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2021
-ms.locfileid: "129400437"
+ms.lasthandoff: 11/05/2021
+ms.locfileid: "131842832"
 ---
 # <a name="set-up-diagnostic-logs-via-the-azure-monitor-rest-api"></a>Einrichten von Diagnoseprotokollen über die Azure Monitor-REST-API
 
@@ -91,7 +91,7 @@ https://management.azure.com/{resource-id}/providers/microsoft.insights/diagnost
 }
 ```
 
-| Eigenschaft | Typ | BESCHREIBUNG |
+| Eigenschaft | type | BESCHREIBUNG |
 | --- | --- | --- |
 | **storageAccountId** |String | Die Ressourcen-ID des Speicherkontos, an das Diagnoseprotokolle gesendet werden sollen. |
 | **serviceBusRuleId** |String | Die Service Bus-Regel-ID des Service Bus-Namespace, in dem Event Hubs für das Streaming von Diagnoseprotokollen erstellt werden sollen. Die Regel-ID weist das Format `{service bus resource ID}/authorizationrules/{key name}` auf.|

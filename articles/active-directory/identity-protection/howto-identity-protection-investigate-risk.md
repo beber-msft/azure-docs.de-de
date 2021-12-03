@@ -11,12 +11,12 @@ author: MicrosoftGuyJFlo
 manager: karenhoran
 ms.reviewer: sahandle
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0151f4de30c3bf96fa8c0dca77c90282115c70d7
-ms.sourcegitcommit: 7854045df93e28949e79765a638ec86f83d28ebc
+ms.openlocfilehash: 776e98d414a62e63b6d472df45f52a66b52b0e62
+ms.sourcegitcommit: 677e8acc9a2e8b842e4aef4472599f9264e989e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "122864371"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "132349260"
 ---
 # <a name="how-to-investigate-risk"></a>Anleitung: Untersuchen eines Risikos
 
@@ -87,13 +87,12 @@ Mit den Informationen im Bericht „Risikoerkennungen“ können Administratoren
 - Informationen zu den einzelnen Risikoerkennungen, einschließlich des Typs.
 - Andere, gleichzeitig ausgelöste Risiken
 - Ort des Anmeldeversuchs
-- Links zu weiteren Details von Microsoft Cloud App Security (MCAS).
+- Ausgehender Link zu weiteren Details aus Microsoft Defender for Cloud-Apps.
 
 Administratoren können dann zum Risiko- oder Anmeldebericht des Benutzers zurückkehren, um basierend auf gesammelten Informationen Aktionen auszuführen.
 
 > [!NOTE] 
 > Unser System erkennt möglicherweise, dass das Risikoereignis, das zur Risikobewertung „Risikobenutzer“ beigetragen hat, falsch positiv war oder das Benutzerrisiko durch die Richtliniendurchsetzung behoben wurde, wie z. B. das Abschließen einer MFA-Eingabeaufforderung oder die Änderung in ein sicheres Kennwort. Aus diesem Grund wird der Risikostatus von unserem System verworfen, und es wird ein Risikodetail angezeigt, dass die KI die Anmeldung als sicher bestätigt, sodass dies nicht mehr zum Risiko des Benutzers beiträgt. 
-
 
 ## <a name="next-steps"></a>Nächste Schritte
 

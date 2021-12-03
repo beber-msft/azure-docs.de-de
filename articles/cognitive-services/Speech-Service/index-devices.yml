@@ -5,18 +5,18 @@ metadata:
   title: 'Dokumentation zu Speech-Geräten: Tutorials, API-Referenz – Azure Cognitive Services | Microsoft-Dokumentation'
   titleSuffix: Azure Cognitive Services
   services: cognitive-services
-  author: PatrickFarley
+  author: eric-urban
   manager: nitinme
   ms.service: speech-service
   ms.topic: landing-page
   ms.date: 03/10/2020
-  ms.author: pafarley
-  ms.openlocfilehash: 4d1f1b0644fbc8e951893183be75c3996995e1f1
-  ms.sourcegitcommit: f2d0e1e91a6c345858d3c21b387b15e3b1fa8b4c
+  ms.author: eur
+  ms.openlocfilehash: f5b13858e7536a1c3c3ecdab55c30ddcd8f2d8c9
+  ms.sourcegitcommit: 2cc9695ae394adae60161bc0e6e0e166440a0730
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 09/07/2021
-  ms.locfileid: "123544037"
+  ms.lasthandoff: 11/03/2021
+  ms.locfileid: "131510545"
 landingContent:
 - title: Informationen zum Speech Devices SDK
   linkLists:
@@ -37,7 +37,7 @@ landingContent:
   - linkListType: how-to-guide
     links:
     - text: Entwerfen eines Mikrofonarrays
-      url: speech-devices-sdk-microphone.md
+      url: speech-sdk-microphone.md
     - text: Einrichten des Roobo v1-Kits
       url: speech-devices-sdk-roobo-v1.md
 - title: Verweis

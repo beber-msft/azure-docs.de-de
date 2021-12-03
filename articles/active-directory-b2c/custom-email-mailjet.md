@@ -3,21 +3,21 @@ title: Benutzerdefinierte E-Mail-Überprüfung mit Mailjet
 titleSuffix: Azure AD B2C
 description: Erfahren Sie, wie Sie Mailjet integrieren, um die Überprüfungs-E-Mail anzupassen, die an Ihre Kunden gesendet wird, wenn sie sich für die Verwendung Ihrer Azure AD B2C-fähigen Anwendungen registrieren.
 services: active-directory-b2c
-author: msmimart
-manager: celestedg
+author: kengaderdus
+manager: CelesteDG
 ms.service: active-directory
 ms.workload: identity
 ms.topic: how-to
-ms.date: 09/15/2021
-ms.author: mimart
+ms.date: 11/10/2021
+ms.author: kengaderdus
 ms.subservice: B2C
 zone_pivot_groups: b2c-policy-type
-ms.openlocfilehash: c8b7a30cfa47634aeb2eace9ee1c8d3ad2d388c9
-ms.sourcegitcommit: f6e2ea5571e35b9ed3a79a22485eba4d20ae36cc
+ms.openlocfilehash: 93b4487d2bf4d4af1638917f5d88f906dc3b758a
+ms.sourcegitcommit: c434baa76153142256d17c3c51f04d902e29a92e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128564247"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "132179524"
 ---
 # <a name="custom-email-verification-with-mailjet"></a>Benutzerdefinierte E-Mail-Überprüfung mit Mailjet
 
@@ -37,15 +37,14 @@ Für die benutzerdefinierte E-Mail-Überprüfung ist die Verwendung eines E-Mail
 
 ## <a name="create-a-mailjet-account"></a>Erstellen eines Mailjet-Kontos
 
-Wenn Sie noch nicht über ein Mailjet-Konto verfügen, müssen Sie zuerst ein solches Konto einrichten (Azure-Kunden können 6.000 E-Mails mit einer Beschränkung von 200 E-Mails pro Tag freischalten). 
+Wenn Sie noch nicht über ein Mailjet-Konto verfügen, müssen Sie zuerst ein solches Konto einrichten (Azure-Kunden können 6.000 E-Mails mit einer Beschränkung von 200 E-Mails pro Tag freischalten).
 
 1. Folgen Sie den Anweisungen zur Einrichtung unter [Erstellen eines Mailjet-Kontos](https://www.mailjet.com/guides/azure-mailjet-developer-resource-user-guide/enabling-mailjet/).
 1. [Registrieren und validieren](https://www.mailjet.com/guides/azure-mailjet-developer-resource-user-guide/enabling-mailjet/#how-to-configure-mailjet-for-use) Sie Ihre Absender-E-Mail-Adresse oder Domäne, um E-Mails senden zu können.
-2. Navigieren Sie zur [Seite für die API-Schlüsselverwaltung](https://app.mailjet.com/account/api_keys). Notieren Sie sich den **API-Schlüssel** und den **geheimen Schlüssel** zur Verwendung in einem späteren Schritt. Beide Schlüssel werden bei der Erstellung Ihres Kontos automatisch generiert.  
+2. Navigieren Sie zur [Seite für die API-Schlüsselverwaltung](https://app.mailjet.com/account/api_keys). Notieren Sie sich den **API-Schlüssel** und den **geheimen Schlüssel** zur Verwendung in einem späteren Schritt. Beide Schlüssel werden bei der Erstellung Ihres Kontos automatisch generiert.
 
 > [!IMPORTANT]
 > Mit Mailjet können Kunden E-Mails von freigegebenen und [dedizierten IP-Adressen](https://documentation.mailjet.com/hc/articles/360043101973-What-is-a-dedicated-IP) senden. Bei Verwendung dedizierter IP-Adressen müssen die IP-Adressen zunächst „aufgewärmt“ werden, um Ihre eigene Reputation aufzubauen. Weitere Informationen finden Sie unter [Wie wärme ich meine IP auf?](https://documentation.mailjet.com/hc/articles/1260803352789-How-do-I-warm-up-my-IP-).
-
 
 ## <a name="create-azure-ad-b2c-policy-key"></a>Erstellen des Azure AD B2C-Richtlinienschlüssels
 
@@ -156,7 +155,6 @@ Wenn Sie ein Mailjet-Konto erstellt und den Mailjet-API-Schlüssel in einem Azur
                        <td width="24" style="border-bottom:1px solid #e3e3e3;">&nbsp;</td>
                        <td id="PageFooterContainer" width="585" valign="top" colspan="6" style="border-bottom:1px solid #e3e3e3;padding:0px;">
 
-
                        </td>
 
                        <td width="29" style="border-bottom:1px solid #e3e3e3;">&nbsp;</td>
@@ -180,6 +178,7 @@ Wenn Sie ein Mailjet-Konto erstellt und den Mailjet-API-Schlüssel in einem Azur
 1. Wählen Sie rechts oben die Option **Speichern und veröffentlichen** aus, und wählen Sie dann **Ja, Änderungen veröffentlichen** aus.
 1. Notieren Sie sich die **Vorlagen-ID** der von Ihnen erstellten Vorlage zur Verwendung in einem späteren Schritt. Diese ID geben Sie an, wenn Sie [die Anspruchstransformation hinzufügen](#add-the-claims-transformation).
 
+[!INCLUDE [active-directory-b2c-important-for-custom-email-provider](../../includes/active-directory-b2c-important-for-custom-email-provider.md)]
 
 ## <a name="add-azure-ad-b2c-claim-types"></a>Hinzufügen von Azure AD B2C-Anspruchstypen
 
@@ -187,7 +186,7 @@ Fügen Sie in Ihrer Richtlinie im `<ClaimsSchema>`-Element in `<BuildingBlocks>`
 
 Diese Anspruchstypen sind erforderlich, um die E-Mail-Adresse mit einem OTP-Code (One-Time Password, Einmalkennwort) zu generieren und zu überprüfen.
 
-```XML
+```xml
 <!--
 <BuildingBlocks>
   <ClaimsSchema> -->
@@ -222,7 +221,7 @@ Fügen Sie im `<ClaimsTransformations>`-Element in `<BuildingBlocks>` die folgen
 * Aktualisieren Sie den Adresswert `Messages.0.From.Email`. Verwenden Sie eine gültige E-Mail-Adresse, um zu verhindern, dass die Überprüfungs-E-Mail als Spam markiert wird.
 * Aktualisieren Sie den Wert des Betreffzeilen-Eingabeparameters `Messages.0.Subject` mit einer für Ihre Organisation geeigneten Betreffzeile.
 
-```XML
+```xml
 <!-- 
 <BuildingBlocks>
   <ClaimsTransformations> -->
@@ -256,7 +255,7 @@ Fügen Sie im `<ClaimsTransformations>`-Element in `<BuildingBlocks>` die folgen
 
 Fügen Sie unterhalb der Anspruchstransformationen in `<BuildingBlocks>` die folgende [ContentDefinition](contentdefinitions.md) hinzu, um auf den Daten-URI der Version 2.1.2 zu verweisen:
 
-```XML
+```xml
 <!--
 <BuildingBlocks> -->
   <ContentDefinitions>
@@ -286,7 +285,7 @@ Das folgende Beispielanzeigesteuerelement ist für Folgendes konfiguriert:
 
 Fügen Sie der Richtlinie unter „content definitions“ in `<BuildingBlocks>` das folgende [DisplayControl](display-controls.md)-Element vom Typ [VerificationControl](display-control-verification.md) hinzu.
 
-```XML
+```xml
 <!--
 <BuildingBlocks> -->
   <DisplayControls>
@@ -326,7 +325,7 @@ Mit dem technischen Profil `GenerateOtp` wird ein Code für die E-Mail-Adresse g
 
 Fügen Sie dem `<ClaimsProviders>`-Element die folgenden technischen Profile hinzu.
 
-```XML
+```xml
 <!--
 <ClaimsProviders> -->
   <ClaimsProvider>
@@ -374,7 +373,7 @@ Mit diesem technischen REST-API-Profil wird der E-Mail-Inhalt (im Mailjet-Format
 
 Fügen Sie wie bei den technischen Profilen für Einmalkennwörter dem `<ClaimsProviders>`-Element die folgenden technischen Profile hinzu.
 
-```XML
+```xml
 <ClaimsProvider>
   <DisplayName>RestfulProvider</DisplayName>
   <TechnicalProfiles>
@@ -404,22 +403,15 @@ Fügen Sie wie bei den technischen Profilen für Einmalkennwörter dem `<ClaimsP
 
 ## <a name="make-a-reference-to-the-displaycontrol"></a>Erstellen eines Verweises auf das DisplayControl-Element
 
-Fügen Sie im letzten Schritt einen Verweis auf das erstellte DisplayControl-Element hinzu. Ersetzen Sie Ihre selbstbestätigten technischen Profile `LocalAccountSignUpWithLogonEmail` und `LocalAccountDiscoveryUsingEmailAddress` durch Folgendes. Wenn Sie eine ältere Version der Azure AD B2C-Richtlinie verwendet haben. In diesen technischen Profilen wird `DisplayClaims` mit einem Verweis auf „DisplayControl“ verwendet.
+Fügen Sie im letzten Schritt einen Verweis auf das erstellte DisplayControl-Element hinzu. Überschreiben Sie Ihre bestehenden `LocalAccountSignUpWithLogonEmail` und `LocalAccountDiscoveryUsingEmailAddress` selbstbestätigten technischen Profile, die in der Basisrichtlinie konfiguriert sind, mit dem folgenden XML-Schnipsel. Wenn Sie eine frühere Version der Azure AD B2C-Richtlinie verwendet haben, verwenden diese technischen Profile `DisplayClaims` mit einem Verweis auf die `DisplayControl`.
 
 Weitere Informationen finden Sie unter [Selbstbestätigtes technisches Profil](restful-technical-profile.md) und [DisplayControl](display-controls.md).
 
-```XML
+```xml
 <ClaimsProvider>
   <DisplayName>Local Account</DisplayName>
   <TechnicalProfiles>
     <TechnicalProfile Id="LocalAccountSignUpWithLogonEmail">
-      <Metadata>
-        <!--OTP validation error messages-->
-        <Item Key="UserMessageIfSessionDoesNotExist">You have exceeded the maximum time allowed.</Item>
-        <Item Key="UserMessageIfMaxRetryAttempted">You have exceeded the number of retries allowed.</Item>
-        <Item Key="UserMessageIfInvalidCode">You have entered the wrong code.</Item>
-        <Item Key="UserMessageIfSessionConflict">Cannot verify the code, please try again later.</Item>
-      </Metadata>
       <DisplayClaims>
         <DisplayClaim DisplayControlReferenceId="emailVerificationControl" />
         <DisplayClaim ClaimTypeReferenceId="displayName" Required="true" />
@@ -430,13 +422,6 @@ Weitere Informationen finden Sie unter [Selbstbestätigtes technisches Profil](r
       </DisplayClaims>
     </TechnicalProfile>
     <TechnicalProfile Id="LocalAccountDiscoveryUsingEmailAddress">
-      <Metadata>
-        <!--OTP validation error messages-->
-        <Item Key="UserMessageIfSessionDoesNotExist">You have exceeded the maximum time allowed.</Item>
-        <Item Key="UserMessageIfMaxRetryAttempted">You have exceeded the number of retries allowed.</Item>
-        <Item Key="UserMessageIfInvalidCode">You have entered the wrong code.</Item>
-        <Item Key="UserMessageIfSessionConflict">Cannot verify the code, please try again later.</Item>
-      </Metadata>
       <DisplayClaims>
         <DisplayClaim DisplayControlReferenceId="emailVerificationControl" />
       </DisplayClaims>
@@ -454,7 +439,7 @@ Zum Lokalisieren der E-Mail müssen Sie lokalisierte Zeichenfolgen an Mailjet od
 1. Ändern Sie die Anspruchstransformation `GenerateEmailRequestBody`, um Eingabeansprüche mit dem folgenden XML-Codeausschnitt zu verwenden.
 1. Aktualisieren Sie Ihre Mailjet-Vorlage so, dass anstelle aller Zeichenfolgen, die von Azure AD B2C lokalisiert werden, dynamische Parameter verwendet werden.
 
-    ```XML
+    ```xml
     <ClaimsTransformation Id="GetLocalizedStringsForEmail" TransformationMethod="GetLocalizedStringsTransformation">
       <OutputClaims>
         <OutputClaim ClaimTypeReferenceId="subject" TransformationClaimType="email_subject" />
@@ -493,7 +478,7 @@ Zum Lokalisieren der E-Mail müssen Sie lokalisierte Zeichenfolgen an Mailjet od
     <!--
     <BuildingBlocks> -->
       <Localization Enabled="true">
-        <SupportedLanguages DefaultLanguage="en" MergeBehavior="Append">
+        <SupportedLanguages DefaultLanguage="en" MergeBehavior="ReplaceAll">
           <SupportedLanguage>en</SupportedLanguage>
           <SupportedLanguage>es</SupportedLanguage>
         </SupportedLanguages>
@@ -550,12 +535,12 @@ Zum Lokalisieren der E-Mail müssen Sie lokalisierte Zeichenfolgen an Mailjet od
       <InputClaimsTransformation ReferenceId="GetLocalizedStringsForEmail" />
     </InputClaimsTransformations>
     ```
-    
+
 ## <a name="optional-localize-the-ui"></a>[Optional] Lokalisieren der Benutzeroberfläche
 
-Mithilfe des Localization-Elements können Sie mehrere Gebietsschemas oder Sprachen in der Richtlinie für die User Journeys unterstützen. Die Lokalisierungsunterstützung in Richtlinien ermöglicht es Ihnen, sprachspezifische Zeichenfolgen sowohl für [Anzeigesteuerelemente zur Überprüfung von Benutzeroberflächenelementen](localization-string-ids.md#verification-display-control-user-interface-elements) als auch für [Fehlermeldungen für Einmalkennwort](localization-string-ids.md#one-time-password-error-messages) bereitzustellen. Fügen Sie Ihren „LocalizedResources“ folgendes „LocalizedString“ hinzu. 
+Mithilfe des Localization-Elements können Sie mehrere Gebietsschemas oder Sprachen in der Richtlinie für die User Journeys unterstützen. Die Lokalisierungsunterstützung in Richtlinien ermöglicht es Ihnen, sprachspezifische Zeichenfolgen sowohl für [Anzeigesteuerelemente zur Überprüfung von Benutzeroberflächenelementen](localization-string-ids.md#verification-display-control-user-interface-elements) als auch für [Fehlermeldungen für Einmalkennwort](localization-string-ids.md#one-time-password-error-messages) bereitzustellen. Fügen Sie Ihren „LocalizedResources“ folgendes „LocalizedString“ hinzu.
 
-```XML
+```xml
 <LocalizedResources Id="api.custom-email.en">
   <LocalizedStrings>
     ...
@@ -573,10 +558,11 @@ Mithilfe des Localization-Elements können Sie mehrere Gebietsschemas oder Sprac
     <LocalizedString ElementType="ClaimType" ElementId="emailVerificationCode" StringId="DisplayName">Verification Code</LocalizedString>
     <LocalizedString ElementType="ClaimType" ElementId="emailVerificationCode" StringId="UserHelpText">Verification code received in the email.</LocalizedString>
     <LocalizedString ElementType="ClaimType" ElementId="emailVerificationCode" StringId="AdminHelpText">Verification code received in the email.</LocalizedString>
-    <LocalizedString ElementType="ClaimType" ElementId="email" StringId="DisplayName">Eamil</LocalizedString>
+    <LocalizedString ElementType="ClaimType" ElementId="email" StringId="DisplayName">Email</LocalizedString>
     <!-- Email validation error messages-->
     <LocalizedString ElementType="ErrorMessage" StringId="UserMessageIfSessionDoesNotExist">You have exceeded the maximum time allowed.</LocalizedString>
     <LocalizedString ElementType="ErrorMessage" StringId="UserMessageIfMaxRetryAttempted">You have exceeded the number of retries allowed.</LocalizedString>
+    <LocalizedString ElementType="ErrorMessage" StringId="UserMessageIfMaxNumberOfCodeGenerated">You have exceeded the number of code generation attempts allowed.</LocalizedString>
     <LocalizedString ElementType="ErrorMessage" StringId="UserMessageIfInvalidCode">You have entered the wrong code.</LocalizedString>
     <LocalizedString ElementType="ErrorMessage" StringId="UserMessageIfSessionConflict">Cannot verify the code, please try again later.</LocalizedString>
     <LocalizedString ElementType="ErrorMessage" StringId="UserMessageIfVerificationFailedRetryAllowed">The verification has failed, please try again.</LocalizedString>
@@ -584,13 +570,10 @@ Mithilfe des Localization-Elements können Sie mehrere Gebietsschemas oder Sprac
 </LocalizedResources>
 ```
 
-Nachdem Sie die lokalisierten Zeichenfolgen hinzugefügt haben, entfernen Sie die Metadaten für OTP-Validierungsfehlermeldungen aus den technischen Profilen „LocalAccountSignUpWithLogonEmail“ und „LocalAccountDiscoveryUsingEmailAddress“.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Ein Beispiel für eine Richtlinie für die benutzerdefinierte E-Mail-Überprüfung finden Sie auf GitHub:
-
-- [Custom email verification - DisplayControls](https://github.com/azure-ad-b2c/samples/tree/master/policies/custom-email-verifcation-displaycontrol) (Benutzerdefinierte E-Mail-Überprüfung – Display Controls)
+- Ein Beispiel für eine [Benutzerdefinierte E-Mail-Überprüfung - DisplayControls](https://github.com/azure-ad-b2c/samples/tree/master/policies/custom-email-verifcation-displaycontrol/policy/Mailjet) finden Sie auf GitHub.
 - Informationen zur Verwendung einer benutzerdefinierten REST-API oder eines HTTP-basierten SMTP-E-Mail-Anbieters finden Sie unter [Definieren eines technischen RESTful-Profils in einer benutzerdefinierten Azure AD B2C-Richtlinie](restful-technical-profile.md).
 
 ::: zone-end

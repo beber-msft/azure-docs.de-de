@@ -3,22 +3,24 @@ title: Einbetten eines Player-Widgets in Power BI – Azure Video Analyzer
 description: Sie können Azure Video Analyzer für fortlaufende oder ereignisbasierte Videoaufzeichnungen verwenden. In diesem Artikel wird beschrieben, wie Sie Videos in Microsoft Power BI einbetten, um eine anpassbare Benutzeroberfläche für Ihre Benutzer bereitzustellen.
 ms.service: azure-video-analyzer
 ms.topic: how-to
-ms.date: 08/06/2021
-ms.openlocfilehash: 38fcd60352fe151637e0e7f8fa4dfe9159b12915
-ms.sourcegitcommit: f6e2ea5571e35b9ed3a79a22485eba4d20ae36cc
+ms.date: 11/04/2021
+ms.custom: ignite-fall-2021
+ms.openlocfilehash: bb367735097200da273ab908d4a3205d62798d5b
+ms.sourcegitcommit: e41827d894a4aa12cbff62c51393dfc236297e10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128620709"
+ms.lasthandoff: 11/04/2021
+ms.locfileid: "131560205"
 ---
 # <a name="embed-player-widget-in-power-bi"></a>Einbetten des Player-Widgets in Power BI
+
 
 Mit Azure Video Analyzer können Sie Videos und die zugehörigen Metadaten für den Rückschluss in Ihrer Video Analyzer Cloudressource [aufzeichnen](detect-motion-record-video-clips-cloud.md). Video Analyzer verfügt über ein [Player-Widget](player-widget.md), ein einfach einzubettendes Widget, mit dem Client-Apps Videos und Metadaten für den Rückschluss wiedergeben können.
 
 Dashboards stellen eine aufschlussreiche Möglichkeit dar, Ihr Geschäft zu überwachen und Ihre wichtigsten Metriken in einer Übersicht anzuzeigen. Ein Power BI-Dashboard ist ein leistungsfähiges Tool zur Kombination von Videos mit mehreren Datenquellen, einschließlich Telemetriedaten von IoT Hub. In diesem Tutorial erfahren Sie, wie Sie mithilfe des [Microsoft Power BI](https://powerbi.microsoft.com/)-Webdiensts ein oder mehrere Player-Widgets zu einem Dashboard hinzufügen können.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="./media/power-bi/embed-block-diagram.png" alt-text="Blockdiagramm, um einen Widget für einen Azure Video Analyzer Player in Microsoft Power BI einzubetten.":::
+> :::image type="content" source="./media/power-bi/embed-block-diagram.svg" alt-text="Blockdiagramm, um einen Widget für einen Azure Video Analyzer Player in Microsoft Power BI einzubetten.":::
 
 ## <a name="suggested-pre-reading"></a>Empfohlene Lektüre zur Vorbereitung
 

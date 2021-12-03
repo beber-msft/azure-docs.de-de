@@ -3,20 +3,20 @@ title: Erkennen von Absichten anhand gesprochener Sprache mit dem Speech SDK C#
 titleSuffix: Azure Cognitive Services
 description: In diesem Leitfaden erfahren Sie, wie Sie mit dem Speech SDK für C# Absichten anhand gesprochener Sprache erkennen können.
 services: cognitive-services
-author: PatrickFarley
+author: eric-urban
 manager: nitinme
 ms.service: cognitive-services
 ms.subservice: speech-service
 ms.topic: conceptual
 ms.date: 02/10/2020
-ms.author: pafarley
+ms.author: eur
 ms.custom: devx-track-csharp
-ms.openlocfilehash: 6dbd19a63ba3439b4219c9a40a885c8aaa2e3027
-ms.sourcegitcommit: f2d0e1e91a6c345858d3c21b387b15e3b1fa8b4c
+ms.openlocfilehash: 8b831d1e6c945528b917d7a0b21955e33be52f6d
+ms.sourcegitcommit: 362359c2a00a6827353395416aae9db492005613
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2021
-ms.locfileid: "123535615"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "132484314"
 ---
 # <a name="how-to-recognize-intents-from-speech-using-the-speech-sdk-for-c"></a>Erkennen von Absichten anhand gesprochener Sprache mit dem Speech SDK für C#
 
@@ -158,14 +158,14 @@ Anstatt einzelne Absichten hinzuzufügen, können Sie auch die Methode `AddAllIn
 
 ## <a name="start-recognition"></a>Starten der Erkennung
 
-Sobald die Erkennung erstellt und die Absichten hinzugefügt wurden, kann die Erkennung beginnen. Das Speech SDK unterstützt sowohl einstufige als auch fortlaufende Erkennung.
+Sobald die Erkennung erstellt und die Absichten hinzugefügt wurden, kann die Erkennung beginnen. Das Speech SDK unterstützt sowohl die Erkennung beim Start als auch die fortlaufende Erkennung.
 
 | Erkennungsmodus | Aufzurufende Methoden | Ergebnis |
 | ---------------- | --------------- | ------ |
-| Einstufig | `RecognizeOnceAsync()` | Gibt die erkannte Absicht (falls vorhanden) nach einer Äußerung zurück. |
+| Beim Start | `RecognizeOnceAsync()` | Gibt die erkannte Absicht (falls vorhanden) nach einer Äußerung zurück. |
 | Fortlaufend | `StartContinuousRecognitionAsync()`<br>`StopContinuousRecognitionAsync()` | Erkennt mehrere Äußerungen; gibt Ereignisse (z. B. `IntermediateResultReceived`) aus, wenn Ergebnisse verfügbar sind. |
 
-Die Anwendung verwendet den einstufigen Modus und ruft daher `RecognizeOnceAsync()` auf, um die Erkennung zu beginnen. Das Ergebnis ist ein `IntentRecognitionResult`-Objekt, das Informationen über die erkannte Absicht enthält. Die LUIS JSON-Antwort wird durch den folgenden Ausdruck extrahiert:
+Die Anwendung verwendet den Modus „Beim Start“ und ruft daher `RecognizeOnceAsync()` auf, um die Erkennung zu beginnen. Das Ergebnis ist ein `IntentRecognitionResult`-Objekt, das Informationen über die erkannte Absicht enthält. Die LUIS JSON-Antwort wird durch den folgenden Ausdruck extrahiert:
 
 ```csharp
 result.Properties.GetProperty(PropertyId.LanguageUnderstandingServiceResponse_JsonResult)

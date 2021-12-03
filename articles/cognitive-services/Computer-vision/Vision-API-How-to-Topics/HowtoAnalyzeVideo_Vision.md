@@ -3,20 +3,18 @@ title: Analysieren von Videos nahezu in Echtzeit – maschinelles Sehen
 titleSuffix: Azure Cognitive Services
 description: Erfahren Sie, wie Sie nahezu in Echtzeit Analysen für Frames aus einem Livevideostream durchführen, indem Sie die Maschinelles Sehen-API verwenden.
 services: cognitive-services
-author: KellyDF
 manager: nitinme
 ms.service: cognitive-services
 ms.subservice: computer-vision
 ms.topic: sample
 ms.date: 09/09/2019
-ms.author: kefre
 ms.custom: seodec18, devx-track-csharp
-ms.openlocfilehash: 0c86c9f2ffece02ed026d1052929836e42c82434
-ms.sourcegitcommit: ce9178647b9668bd7e7a6b8d3aeffa827f854151
+ms.openlocfilehash: bb35a93a2cfbd7fc90e614161eb7a95a5098871b
+ms.sourcegitcommit: 61f87d27e05547f3c22044c6aa42be8f23673256
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109810100"
+ms.lasthandoff: 11/09/2021
+ms.locfileid: "132063682"
 ---
 # <a name="analyze-videos-in-near-real-time"></a>Analysieren von Videos nahezu in Echtzeit
 
@@ -247,5 +245,5 @@ Die Bild-, Sprach-, Video- und Textanalysefunktionen von VideoFrameAnalyzer nutz
 
 In diesem Artikel haben Sie erfahren, wie Sie mithilfe der Dienste für Gesichtserkennung und maschinelles Sehen nahezu in Echtzeit Analysen von Livevideostreams ausführen. Außerdem haben Sie gelernt, wie unser Beispielcode Sie bei Ihrem Einstieg unterstützt.
 
-Wir freuen uns über Ihr Feedback und Ihre Vorschläge im [GitHub-Repository](https://github.com/Microsoft/Cognitive-Samples-VideoFrameAnalysis/). Umfassenderes API-Feedback können Sie uns über unsere [UserVoice](https://feedback.azure.com/forums/932041-azure-cognitive-services?category_id=395743)-Website zukommen lassen.
+Wir freuen uns über Ihr Feedback und Ihre Vorschläge im [GitHub-Repository](https://github.com/Microsoft/Cognitive-Samples-VideoFrameAnalysis/). Umfassenderes API-Feedback können Sie uns über unsere [UserVoice](https://feedback.azure.com/d365community/forum/09041fae-0b25-ec11-b6e6-000d3a4f0858)-Website zukommen lassen.
 

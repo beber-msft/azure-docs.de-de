@@ -2,13 +2,13 @@
 title: Verwaltete Service Fabric-Cluster
 description: Verwaltete Service Fabric-Cluster sind eine Weiterentwicklung des Azure Service Fabric-Clusterressourcenmodells, das die Bereitstellung und Clusterverwaltung optimiert.
 ms.topic: overview
-ms.date: 5/10/2021
-ms.openlocfilehash: 12f5c7bd16e8738aaadfb8ca9aeed491bab5b8e0
-ms.sourcegitcommit: 7854045df93e28949e79765a638ec86f83d28ebc
+ms.date: 10/22/2021
+ms.openlocfilehash: 5c94254e470e625a844b345c452e252fcd69b626
+ms.sourcegitcommit: 677e8acc9a2e8b842e4aef4472599f9264e989e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "122866916"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "132308122"
 ---
 # <a name="service-fabric-managed-clusters"></a>Verwaltete Service Fabric-Cluster
 
@@ -61,7 +61,7 @@ Verwaltete Service Fabric-Cluster sind sowohl in der SKU „Basic“ als auch �
 
 | Feature | Basic | Standard |
 | ------- | ----- | -------- |
-| Netzwerkressource (SKU für [Load Balancer](../load-balancer/skus.md), [Öffentliche IP-Adresse](../virtual-network/public-ip-addresses.md)) | Basic | Standard |
+| Netzwerkressource (SKU für [Load Balancer](../load-balancer/skus.md), [Öffentliche IP-Adresse](../virtual-network/ip-services/public-ip-addresses.md)) | Basic | Standard |
 | Mindestanzahl Knoten (VM-Instanz) | 3 | 5 |
 | Maximale Anzahl Knoten pro Knotentyp | 100 | 1000 |
 | Maximale Anzahl Knotentypen | 1 | 20 |
@@ -70,17 +70,8 @@ Verwaltete Service Fabric-Cluster sind sowohl in der SKU „Basic“ als auch �
 
 ## <a name="feature-support"></a>Featureunterstützung
 
-Die Funktionen verwalteter Cluster werden noch erweitert. Aktuell wird Folgendes unterstützt:
+Die Funktionen verwalteter Cluster werden noch erweitert. Weitere Informationen finden Sie unter [Konfigurationsoptionen für verwaltete Service Fabric-Cluster](how-to-managed-cluster-configuration.md) oder [Microsoft.ServiceFabric-Ressourcentypen](/azure/templates/microsoft.servicefabric/allversions) für verwaltete Cluster.
 
-* [Anwendungsbereitstellung mit ARM-Vorlagen](how-to-managed-cluster-app-deployment-template.md)
-* [Anwendungsgeheimnisse](how-to-managed-cluster-application-secrets.md)
-* [Automatische Upgrades für Betriebssystemimages](how-to-managed-cluster-configuration.md#enable-automatic-os-image-upgrades)
-* [Verfügbarkeitszonenübergreifende Bereitstellung](how-to-managed-cluster-availability-zones.md)
-* Auswahl von [Datenträgerverschlüsselung](how-to-enable-managed-cluster-disk-encryption.md) und [verwaltetem Datenträgertyp](how-to-managed-cluster-managed-disk.md)
-* Unterstützung verwalteter Identitäten für [verwaltete Clusterknotentypen](how-to-managed-identity-managed-cluster-virtual-machine-scale-sets.md) sowie für die [Anwendungsauthentifizierung](how-to-managed-cluster-application-managed-identity.md)
-* [NSG-Regeln und andere Netzwerkoptionen](how-to-managed-cluster-networking.md)
-* [Ausschließlich zustandslose Knotentypen](how-to-managed-cluster-stateless-node-type.md)
-* [VM-Skalierungsgruppenerweiterungen](how-to-managed-cluster-vmss-extension.md) für Knotentypen
 
 ## <a name="next-steps"></a>Nächste Schritte
 

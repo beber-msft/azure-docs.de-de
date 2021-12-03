@@ -6,9 +6,13 @@
       href: devtest-lab-overview.md
 - name: Schnellstart
   items:
+    - name: 'Erstellen eines Labs: Portal'
+      href: devtest-lab-create-lab.md
     - name: 'Erstellen eines Labs: Resource Manager-Vorlage'
       displayName: Resource Manager
       href: create-lab-windows-vm-template.md
+    - name: 'Erstellen eines Labs: REST-API'
+      href: quickstarts/create-lab-rest.md
 - name: Tutorials
   items:
     - name: Einrichten eines Labs
@@ -71,8 +75,6 @@
   items:
     - name: Konfigurieren eines Labs
       items:
-        - name: Erstellen eines Labs
-          href: devtest-lab-create-lab.md
         - name: Erstellen eines netzwerkisolierten Labs
           href: network-isolation.md
         - name: Erstellen oder Ändern von Labs mithilfe einer Resource Manager-Vorlage

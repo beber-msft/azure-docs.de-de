@@ -6,21 +6,21 @@ ms.service: storage
 ms.topic: how-to
 ms.author: normesta
 ms.reviewer: dineshm
-ms.date: 09/04/2020
+ms.date: 11/04/2021
 ms.subservice: blobs
 ms.custom: devx-track-js
-ms.openlocfilehash: ab3fe82252ee416aa47ff32a244fb9bf6de23f2b
-ms.sourcegitcommit: bee590555f671df96179665ecf9380c624c3a072
+ms.openlocfilehash: 3cfa4113d0b2307c6683b8a103d3480ed5dfb41c
+ms.sourcegitcommit: 8946cfadd89ce8830ebfe358145fd37c0dc4d10e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2021
-ms.locfileid: "129668426"
+ms.lasthandoff: 11/05/2021
+ms.locfileid: "131843177"
 ---
 # <a name="static-website-hosting-in-azure-storage"></a>Hosten von statischen Websites in Azure Storage
 
-Sie können statische Inhalte (HTML, CSS, JavaScript und Bilddateien) direkt über einen Speichercontainer namens *$web* bereitstellen. Das Hosten von Inhalten in Azure Storage ermöglicht die Verwendung serverloser Architekturen mit [Azure Functions](../../azure-functions/functions-overview.md) und anderen PaaS-Diensten (Platform-as-a-Service). Das statische Hosting von Websites mit Azure Storage ist eine ideale Option für Fälle, in denen Sie keinen Webserver zum Rendern von Inhalten benötigen.
+Sie können statische Inhalte (HTML, CSS, JavaScript und Bilddateien) direkt über einen Speichercontainer namens *$web* bereitstellen. Das Hosten von Inhalten in Azure Storage ermöglicht die Verwendung serverloser Architekturen mit [Azure Functions](../../azure-functions/functions-overview.md) und anderen PaaS-Diensten (Platform-as-a-Service). Das statische Hosting von Websites mit Azure Storage ist eine ideale Option für Fälle, in denen Sie keinen Webserver zum Rendern von Inhalten benötigen. 
 
-[Static Web Apps von App Service](https://azure.microsoft.com/services/app-service/static/) sind eine hervorragend Alternative zum statischen Hosting von Websites mit Azure Storage, die sich auch für Fälle eignet, in denen Sie keinen Webserver zum Rendern von Inhalten benötigen. Static Web Apps von App Service bieten Ihnen einen vollständig verwalteten Continuous Integration- und Continuous Delivery-Workflow (CI/CD) von der GitHub-Quelle bis zur globalen Bereitstellung.
+[!INCLUDE [static websites vs static web apps](../../../includes/storage-blob-static-website-vs-static-web-app.md)]
 
 Wenn Sie einen Webserver zum Rendern von Inhalten benötigen, können Sie [Azure App Service](https://azure.microsoft.com/services/app-service/)verwenden.
 
@@ -145,7 +145,7 @@ Sie können ein [benutzerdefiniertes SSL-Zertifikat](./static-website-content-de
 
 ##### <a name="how-do-i-add-custom-headers-and-rules-with-a-static-website"></a>Wie füge ich benutzerdefinierte Header und Regeln für die statische Website hinzu?
 
-Sie können den Hostheader für eine statische Website konfigurieren, indem Sie [Azure CDN – Verizon Premium](../../cdn/cdn-verizon-premium-rules-engine.md) verwenden. Wir freuen uns auf Ihr Feedback, das Sie uns [hier](https://feedback.azure.com/forums/217298-storage/suggestions/34959124-allow-adding-headers-to-static-website-hosting-in) senden können.
+Sie können den Hostheader für eine statische Website konfigurieren, indem Sie [Azure CDN – Verizon Premium](../../cdn/cdn-verizon-premium-rules-engine.md) verwenden. Wir freuen uns auf Ihr Feedback, das Sie uns [hier](https://feedback.azure.com/d365community/idea/694b08ef-3525-ec11-b6e6-000d3a4f0f84) senden können.
 
 ##### <a name="why-am-i-getting-an-http-404-error-from-a-static-website"></a>Warum erhalte ich einen HTTP 404-Fehler von einer statischen Website?
 

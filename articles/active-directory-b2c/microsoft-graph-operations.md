@@ -9,22 +9,22 @@ ms.service: active-directory
 ms.workload: identity
 ms.topic: how-to
 ms.date: 10/08/2021
-ms.custom: project-no-code
+ms.custom: project-no-code, ignite-fall-2021, b2c-support
 ms.author: kengaderdus
 ms.subservice: B2C
-ms.openlocfilehash: 306aef9867025ef4c40495871ed9bffbd287d3e3
-ms.sourcegitcommit: 91915e57ee9b42a76659f6ab78916ccba517e0a5
+ms.openlocfilehash: c7d64e4991a71849f8a0269dcfa8eff32164ef75
+ms.sourcegitcommit: 838413a8fc8cd53581973472b7832d87c58e3d5f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "130036377"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "132133712"
 ---
 # <a name="manage-azure-ad-b2c-with-microsoft-graph"></a>Verwalten von Azure AD B2C mit Microsoft Graph
 
 Mit Microsoft Graph können Sie Ressourcen in Ihrem Azure AD B2C-Verzeichnis verwalten. In der Microsoft Graph-API werden die folgenden Vorgänge für die Verwaltung von Azure AD B2C-Ressourcen unterstützt (einschließlich Benutzern, Identitätsanbietern, Benutzerflows, benutzerdefinierten Richtlinien und Richtlinienschlüsseln). Jeder Link in den folgenden Abschnitten bezieht sich auf die entsprechende Seite in der Referenz zur Microsoft Graph-API für diesen Vorgang. 
 
 > [!NOTE]
-> Sie können auch programmgesteuert ein Azure AD B2C-Verzeichnis selbst erstellen, zusammen mit der entsprechenden Azure-Ressource, die mit einem Azure-Abonnement verknüpft ist. Diese Funktionalität wird nicht über die Microsoft Graph-API bereitgestellt, sondern über die Azure-REST-API. Weitere Informationen finden Sie unter [B2C-Mandanten: Erstellen](/rest/api/activedirectory/b2ctenants/create).
+> Sie können auch programmgesteuert ein Azure AD B2C-Verzeichnis selbst erstellen, zusammen mit der entsprechenden Azure-Ressource, die mit einem Azure-Abonnement verknüpft ist. Diese Funktionalität wird nicht über die Microsoft Graph-API bereitgestellt, sondern über die Azure-REST-API. Weitere Informationen finden Sie unter [B2C-Mandanten: Erstellen](/rest/api/activedirectory/b2c-tenants/create).
 
 Sehen Sie sich dieses Video an, um mehr über die Migration von Azure AD B2C-Benutzern mithilfe der Microsoft Graph API zu erfahren.
 
@@ -35,6 +35,9 @@ Sehen Sie sich dieses Video an, um mehr über die Migration von Azure AD B2C-Ben
 Zum Verwenden der MS Graph-API und Interagieren mit Ressourcen auf Ihrem Azure AD B2C-Mandanten benötigen Sie eine Anwendungsregistrierung, bei der die erforderlichen Berechtigungen gewährt werden. Führen Sie die Schritte im Artikel [Verwalten von Azure AD B2C mit Microsoft Graph](microsoft-graph-get-started.md) aus, um eine Anwendungsregistrierung zu erstellen, die von Ihrer Verwaltungsanwendung genutzt werden kann. 
 
 ## <a name="user-management"></a>Benutzerverwaltung
+> [!NOTE]
+> Azure AD B2C unterstützt derzeit keine erweiterten Abfragefunktionen für Verzeichnisobjekte. Dies bedeutet, dass keine Unterstützung für `$count`, `$search`Abfrageparameter und Not (`not`), Not equals (`ne`) und Ends with (`endsWith`) im Abfrageparameter `$filter` gibt. Weitere Informationen finden Sie unter [Abfrageparameter in Microsoft Graph](/graph/query-parameters) und [ erweiterte Abfragefunktionen in Microsoft Graph](/graph/aad-advanced-queries).
+
 
 - [Auflisten von Benutzern](/graph/api/user-list)
 - [Erstellen eines Consumerbenutzers](/graph/api/user-post-users)
@@ -253,4 +256,4 @@ Das [Ausführen von API-Aufrufen mithilfe der Microsoft Graph-SDKs](/graph/sdks/
 <!-- LINK -->
 
 [graph-objectIdentity]: /graph/api/resources/objectidentity
-[graph-user]: (https://docs.microsoft.com/graph/api/resources/user)
+[graph-user]: /graph/api/resources/user

@@ -3,21 +3,21 @@ title: Installieren und Ausführen von Docker-Containern für die APIs des Speec
 titleSuffix: Azure Cognitive Services
 description: Verwenden Sie die Docker-Container für den Speech-Dienst, um Spracherkennung, Transkription, Generierung und mehr lokal durchzuführen.
 services: cognitive-services
-author: aahill
+author: eric-urban
 manager: nitinme
 ms.service: cognitive-services
 ms.subservice: speech-service
 ms.topic: conceptual
-ms.date: 09/01/2021
-ms.author: aahi
+ms.date: 10/11/2021
+ms.author: eur
 ms.custom: cog-serv-seo-aug-2020
 keywords: Lokal, Docker, Container
-ms.openlocfilehash: da62c081a79211eb6eb56229eab856c89841746c
-ms.sourcegitcommit: c27f71f890ecba96b42d58604c556505897a34f3
+ms.openlocfilehash: 3297231244cd5323c0218dcce02ac20453456685
+ms.sourcegitcommit: 1a0fe16ad7befc51c6a8dc5ea1fe9987f33611a1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2021
-ms.locfileid: "129533694"
+ms.lasthandoff: 11/05/2021
+ms.locfileid: "131867169"
 ---
 # <a name="install-and-run-docker-containers-for-the-speech-service-apis"></a>Installieren und Ausführen von Docker-Containern für die APIs des Speech-Diensts 
 
@@ -30,11 +30,11 @@ Mit Speech-Containern können Kunden eine Speech-basierte Anwendungsarchitektur 
 
 | Container | Features | Neueste Version | Releasestatus |
 |--|--|--|--|
-| Spracherkennung | Analysiert die Stimmung und transkribiert kontinuierliche Echtzeitsprach- oder Batchaudioaufzeichnungen mit Zwischenergebnissen.  | 2.15.0 | Allgemein verfügbar |
-| Benutzerdefinierte Spracherkennung | Verwendet ein benutzerdefiniertes Modell aus dem [Custom Speech-Portal](https://speech.microsoft.com/customspeech) und transkribiert kontinuierliche Echtzeitsprach- oder Batchaudioaufzeichnungen in Text mit Zwischenergebnissen. | 2.15.0 | Allgemein verfügbar |
+| Spracherkennung | Analysiert die Stimmung und transkribiert kontinuierliche Echtzeitsprach- oder Batchaudioaufzeichnungen mit Zwischenergebnissen.  | 2.16.0 | Allgemein verfügbar |
+| Benutzerdefinierte Spracherkennung | Verwendet ein benutzerdefiniertes Modell aus dem [Custom Speech-Portal](https://speech.microsoft.com/customspeech) und transkribiert kontinuierliche Echtzeitsprach- oder Batchaudioaufzeichnungen in Text mit Zwischenergebnissen. | 2.16.0 | Allgemein verfügbar |
 | Text-zu-Sprache | Konvertiert Text in natürlich klingende Sprache mit Nur-Text-Eingaben oder SSML (Speech Synthesis Markup Language, Markupsprache für Sprachsynthese). | 1.15.0 | Allgemein verfügbar |
 | Speech-Sprachenerkennung | Erkennen der in Audiodateien gesprochenen Sprache | 1.3.0 | preview |
-| Text-zu-Sprache (neuronal) | Konvertiert Text mithilfe von Deep Neural Network-Technologie in natürlich klingende Sprache, die eine natürlichere synthetische Sprache ermöglicht. | 1.9.0 | Allgemein verfügbar |
+| Text-zu-Sprache (neuronal) | Konvertiert Text mithilfe von Deep Neural Network-Technologie in natürlich klingende Sprache, die eine natürlichere synthetische Sprache ermöglicht. | 1.10.0 | Allgemein verfügbar |
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -311,18 +311,18 @@ diarize_speech_config.set_service_property(
 
 
 #### <a name="analyze-sentiment-on-the-speech-to-text-output"></a>Analysieren der Stimmung bei der Spracherkennungsausgabe 
-Ab Version v2.6.0 des Spracherkennungs-Containers sollten Sie den TextAnalytics 3.0 API-Endpunkt anstelle des Vorschauendpunkts verwenden. Beispiel:
+Ab Version v2.6.0 des Spracherkennungs-Containers sollten Sie den Sprachdienst 3.0-API-Endpunkt anstelle des Vorschauendpunkts verwenden. Beispiel:
 * `https://westus2.api.cognitive.microsoft.com/text/analytics/v3.0/sentiment`
 * `https://localhost:5000/text/analytics/v3.0/sentiment`
 
 > [!NOTE]
-> Die Textanalyse `v3.0`-API ist nicht mit Textanalyse `v3.0-preview.1` abwärtskompatibel. Um die Unterstützung für die neueste Standpunktanalysefunktion zu erhalten, verwenden Sie `v2.6.0` des Spracherkennungs-Containerimages und Textanalyse `v3.0`.
+> Die Sprachdienst `v3.0`-API ist nicht abwärtskompatibel mit `v3.0-preview.1`. Um die Unterstützung für die neueste Standpunktanalysefunktion zu erhalten, verwenden Sie `v2.6.0` des Spracherkennungs-Containerimages und Sprachdienst `v3.0`.
 
-Ab v2.2.0 des Spracherkennungscontainers können Sie die [API für die Standpunktanalyse v3](../text-analytics/how-tos/text-analytics-how-to-sentiment-analysis.md) in der Ausgabe aufrufen. Um die Standpunktanalyse aufrufen zu können, benötigen Sie einen Textanalyse-API-Ressourcenendpunkt. Beispiel: 
+Ab v2.2.0 des Spracherkennungscontainers können Sie die [API für die Standpunktanalyse v3](../text-analytics/how-tos/text-analytics-how-to-sentiment-analysis.md) in der Ausgabe aufrufen. Um die Standpunktanalyse aufrufen zu können, benötigen Sie einen Sprachdienst-API-Ressourcenendpunkt. Beispiel: 
 * `https://westus2.api.cognitive.microsoft.com/text/analytics/v3.0-preview.1/sentiment`
 * `https://localhost:5000/text/analytics/v3.0-preview.1/sentiment`
 
-Wenn Sie auf einen Textanalyseendpunkt in der Cloud zugreifen, benötigen Sie einen Schlüssel. Wenn Sie die Textanalyse lokal ausführen, müssen Sie diesen möglicherweise nicht bereitstellen.
+Wenn Sie auf einen Sprachdienstendpunkt in der Cloud zugreifen, benötigen Sie einen Schlüssel. Wenn Sie die Sprachdienstfeatures lokal ausführen, ist dies möglicherweise nicht notwendig.
 
 Der Schlüssel und der Endpunkt werden wie im folgenden Beispiel als Argumente an den Speech-Container übergeben.
 
@@ -339,7 +339,7 @@ CloudAI:SentimentAnalysisSettings:SentimentAnalysisApiKey={SENTIMENT_APIKEY}
 Dieser Befehl:
 
 * Führt dieselben Schritte aus wie der obige Befehl.
-* Speichert einen Textanalyse-API-Endpunkt und einen Schlüssel zum Senden von Standpunktanalyseanforderungen. 
+* Speichert einen Sprachdienst-API-Endpunkt und einen Schlüssel zum Senden von Standpunktanalyseanforderungen. 
 
 #### <a name="phraselist-v2-on-the-speech-to-text-output"></a>Phraselist v2 für die Spracherkennungsausgabe 
 
@@ -541,13 +541,13 @@ Weitere Informationen zur Verwendung der Protokolle WSS und HTTPS finden Sie unt
 
 #### <a name="analyze-sentiment"></a>Analysieren von Stimmungen
 
-Wenn Sie Ihre Anmeldeinformationen für die Textanalyse-API [in den Container](#analyze-sentiment-on-the-speech-to-text-output) eingegeben haben, können Sie das Speech SDK verwenden, um Spracherkennungsanforderungen mit Standpunktanalyse zu senden. Sie können die API-Antworten so konfigurieren, dass sie entweder ein *einfaches* oder *detailliertes* Format verwenden.
+Wenn Sie Ihre Anmeldeinformationen für die Sprachdienst-API [in den Container](#analyze-sentiment-on-the-speech-to-text-output) eingegeben haben, können Sie das Speech SDK verwenden, um Spracherkennungsanforderungen mit Standpunktanalyse zu senden. Sie können die API-Antworten so konfigurieren, dass sie entweder ein *einfaches* oder *detailliertes* Format verwenden.
 > [!NOTE]
 > Bei v1.13 des Speech Service Python SDK ist ein Problem mit der Standpunktanalyse bekannt. Verwenden Sie v1.12.x oder früher, wenn Sie eine Standpunktanalyse im Speech Service Python SDK verwenden.
 
 # <a name="simple-format"></a>[Einfaches Format](#tab/simple-format)
 
-Fügen Sie `"Sentiment"` als Wert für `Simple.Extensions` hinzu, um den Speech-Client für die Verwendung eines einfachen Formats zu konfigurieren. Wenn Sie eine bestimmte Modellversion für die Textanalyse auswählen möchten, ersetzen Sie `'latest'` in der `speechcontext-phraseDetection.sentimentAnalysis.modelversion`-Eigenschaftskonfiguration.
+Fügen Sie `"Sentiment"` als Wert für `Simple.Extensions` hinzu, um den Speech-Client für die Verwendung eines einfachen Formats zu konfigurieren. Wenn Sie eine bestimmte Modellversion für den Sprachdienst auswählen möchten, ersetzen Sie `'latest'` in der `speechcontext-phraseDetection.sentimentAnalysis.modelversion`-Eigenschaftskonfiguration.
 
 ```python
 speech_config.set_service_property(
@@ -581,7 +581,7 @@ speech_config.set_service_property(
 
 # <a name="detailed-format"></a>[Detailliertes Format](#tab/detailed-format)
 
-Fügen Sie `"Sentiment"` als Wert für `Detailed.Extensions`, `Detailed.Options` oder beides hinzu, um den Speech-Client für die Verwendung eines detaillierten Formats zu konfigurieren. Wenn Sie eine bestimmte Modellversion für die Textanalyse auswählen möchten, ersetzen Sie `'latest'` in der `speechcontext-phraseDetection.sentimentAnalysis.modelversion`-Eigenschaftskonfiguration.
+Fügen Sie `"Sentiment"` als Wert für `Detailed.Extensions`, `Detailed.Options` oder beides hinzu, um den Speech-Client für die Verwendung eines detaillierten Formats zu konfigurieren. Wenn Sie eine bestimmte Modellversion für die Stimmungsanalyse auswählen möchten, ersetzen Sie `'latest'` in der `speechcontext-phraseDetection.sentimentAnalysis.modelversion`-Eigenschaftskonfiguration.
 
 ```python
 speech_config.set_service_property(
@@ -666,7 +666,7 @@ Wenn Sie beabsichtigen, mehrere Container mit offengelegten Ports auszuführen, 
 
 Sie können diesen Container und einen anderen Azure Cognitive Services-Container zusammen auf dem Host ausführen. Sie können auch mehrere Container desselben Cognitive Services-Containers ausführen.
 
-[!INCLUDE [Validate container is running - Container's API documentation](../../../includes/cognitive-services-containers-api-documentation.md)]
+[!INCLUDE [Validate container is running - Container API documentation](../../../includes/cognitive-services-containers-api-documentation.md)]
 
 ## <a name="stop-the-container"></a>Beenden des Containers
 
@@ -677,6 +677,9 @@ Sie können diesen Container und einen anderen Azure Cognitive Services-Containe
 Beim Starten oder Ausführen des Containers können Probleme auftreten. Verwenden Sie eine [Bereitstellung](speech-container-configuration.md#mount-settings) für die Ausgabe, und aktivieren Sie die Protokollierung. Auf diese Weise kann der Container Protokolldateien generieren, die bei der Behebung von Problemen helfen.
 
 [!INCLUDE [Cognitive Services FAQ note](../containers/includes/cognitive-services-faq-note.md)]
+
+[!INCLUDE [Diagnostic container](../containers/includes/diagnostics-container.md)]
+
 
 ## <a name="billing"></a>Abrechnung
 

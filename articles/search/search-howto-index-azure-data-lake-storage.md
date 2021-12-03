@@ -2,17 +2,18 @@
 title: Indizieren von Daten aus Azure Data Lake Storage Gen2
 titleSuffix: Azure Cognitive Search
 description: Richten Sie einen Azure Data Lake Storage Gen2-Indexer ein, um die Indizierung von Inhalten und Metadaten für die Volltextsuche in Azure Cognitive Search zu automatisieren.
-author: markheff
-ms.author: maheff
+author: gmndrg
+ms.author: gimondra
+manager: nitinme
 ms.service: cognitive-search
 ms.topic: conceptual
 ms.date: 10/01/2021
-ms.openlocfilehash: a0ad2bcbccac87d19a5026ae72416f6d793bad90
-ms.sourcegitcommit: 079426f4980fadae9f320977533b5be5c23ee426
+ms.openlocfilehash: 59b3d06af79d1b2c6f12f7dbb843ae31f203cab6
+ms.sourcegitcommit: 591ffa464618b8bb3c6caec49a0aa9c91aa5e882
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "129418744"
+ms.lasthandoff: 11/06/2021
+ms.locfileid: "131894144"
 ---
 # <a name="index-data-from-azure-data-lake-storage-gen2"></a>Indizieren von Daten aus Azure Data Lake Storage Gen2
 

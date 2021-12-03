@@ -3,16 +3,14 @@ title: Archivierte Versionshinweise für Azure HDInsight
 description: Die archivierten Versionshinweise für Azure HDInsight. Rufen Sie Tipps zur Entwicklung und Details für Hadoop, Spark, R Server, Hive und mehr ab.
 ms.service: hdinsight
 ms.topic: conceptual
-ms.custom:
-- hdinsightactive
-- references_regions
+ms.custom: hdinsightactive, references_regions
 ms.date: 07/27/2021
-ms.openlocfilehash: e7e3442f397b4d3cfbb79f2f852269affdf3badc
-ms.sourcegitcommit: 0046757af1da267fc2f0e88617c633524883795f
+ms.openlocfilehash: b6c80fca815523cdf4ec61d7e66417999fed5d91
+ms.sourcegitcommit: 362359c2a00a6827353395416aae9db492005613
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122340041"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "132484145"
 ---
 # <a name="archived-release-notes"></a>Archivierte Versionshinweise
 
@@ -440,7 +438,7 @@ Diese Version gilt für HDInsight 3.6 und 4.0. Das HDInsight-Release wird über 
 Von HDInsight werden jetzt virtuelle Azure-Computer für die Clusterbereitstellung verwendet. Ab diesem Release werden von neu erstellten HDInsight-Clustern Azure-VM-Skalierungsgruppen verwendet. Die Änderung wird schrittweise eingeführt. Dabei ist nicht mit einem Breaking Change zu rechnen. Weitere Informationen zu [Azure-VM-Skalierungsgruppen](../virtual-machine-scale-sets/overview.md).
  
 #### <a name="reboot-vms-in-hdinsight-cluster"></a>Neustarten von virtuellen Computern im HDInsight-Cluster
-In dieser Version wird das Neustarten von virtuellen Computern in einem HDInsight-Cluster unterstützt, um nicht reagierende Knoten neu starten zu können. Momentan ist dies nur per API möglich, an der PowerShell- und CLI-Unterstützung wird jedoch bereits gearbeitet. Weitere Informationen zur API finden Sie in [dieser Dokumentation](https://github.com/Azure/azure-rest-api-specs/codeowners/master/specification/hdinsight/resource-manager/Microsoft.HDInsight/stable/2018-06-01-preview/virtualMachines.json).
+In dieser Version wird das Neustarten von virtuellen Computern in einem HDInsight-Cluster unterstützt, um nicht reagierende Knoten neu starten zu können. Momentan ist dies nur per API möglich, an der PowerShell- und CLI-Unterstützung wird jedoch bereits gearbeitet. Weitere Informationen zur API finden Sie in [dieser Dokumentation](https://github.com/Azure/azure-rest-api-specs/blob/main/specification/hdinsight/resource-manager/Microsoft.HDInsight/stable/2021-06-01/virtualMachines.json).
  
 ### <a name="deprecation"></a>Eingestellte Unterstützung
 #### <a name="deprecation-of-spark-21-and-22-in-hdinsight-36-spark-cluster"></a>Einstellung der Unterstützung von Spark 2.1 und 2.2 für Spark-Cluster in HDInsight 3.6

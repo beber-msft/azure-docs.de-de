@@ -4,14 +4,14 @@ description: Es wird beschrieben, wie Sie eine C#-ASP.NET-App in Azure mit Azure
 ms.assetid: 03c584f1-a93c-4e3d-ac1b-c82b50c75d3e
 ms.devlang: csharp
 ms.topic: tutorial
-ms.date: 10/05/2021
+ms.date: 11/08/2021
 ms.custom: devx-track-csharp, mvc, devcenter, vs-azure, seodec18
-ms.openlocfilehash: 818ab11d64468a945d85f5b15f6b39dc1664a424
-ms.sourcegitcommit: c27f71f890ecba96b42d58604c556505897a34f3
+ms.openlocfilehash: 72ea37f483055ae3bcb97520efa7f2a4fb704037
+ms.sourcegitcommit: 61f87d27e05547f3c22044c6aa42be8f23673256
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2021
-ms.locfileid: "129536219"
+ms.lasthandoff: 11/09/2021
+ms.locfileid: "132058861"
 ---
 # <a name="tutorial-deploy-an-aspnet-app-to-azure-with-azure-sql-database"></a>Tutorial: Bereitstellen einer ASP.NET-App in Azure mit Azure SQL-Datenbank
 
@@ -34,9 +34,9 @@ In diesem Tutorial lernen Sie Folgendes:
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Für dieses Tutorial benötigen Sie Folgendes:
+Zum Abschließen dieses Tutorials benötigen Sie Folgendes:
 
-Installieren Sie <a href="https://www.visualstudio.com/downloads/" target="_blank">Visual Studio 2019</a> mit der Workload **ASP.NET und Webentwicklung**.
+Installieren Sie <a href="https://www.visualstudio.com/downloads/" target="_blank">Visual Studio 2022</a> mit der Workload **ASP.NET und Webentwicklung**.
 
 Falls Sie Visual Studio bereits installiert haben, können Sie die Workloads in Visual Studio hinzufügen, indem Sie auf **Extras** > **Get Tools and Features** (Tools und Features abrufen) klicken.
 
@@ -433,7 +433,7 @@ In diesem Tutorial haben Sie Folgendes gelernt:
 Im nächsten Tutorial erfahren Sie, wie Sie ganz einfach die Sicherheit Ihrer Verbindung mit Azure SQL-Datenbank verbessern.
 
 > [!div class="nextstepaction"]
-> [Access SQL Database securely using managed identities for Azure resources](app-service-web-tutorial-connect-msi.md) (Sicheres Zugreifen auf SQL-Datenbank mithilfe verwalteter Identitäten für Azure-Ressourcen)
+> [Access SQL Database securely using managed identities for Azure resources](tutorial-connect-msi-sql-database.md) (Sicheres Zugreifen auf SQL-Datenbank mithilfe verwalteter Identitäten für Azure-Ressourcen)
 
 Weitere Ressourcen:
 

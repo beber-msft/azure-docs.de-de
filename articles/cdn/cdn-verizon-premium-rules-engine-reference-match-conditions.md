@@ -2,17 +2,17 @@
 title: Übereinstimmungsbedingungen der Regel-Engine für Azure CDN Premium von Verizon
 description: Referenzdokumentation zu den Übereinstimmungsbedingungen der Regel-Engine für Azure Content Delivery Network Premium von Verizon.
 services: cdn
-author: asudbring
+author: duongau
 ms.service: azure-cdn
 ms.topic: article
 ms.date: 05/26/2020
-ms.author: allensu
-ms.openlocfilehash: efd6e6a93cd4ca79e6c4b6de69f8514e2d71b252
-ms.sourcegitcommit: f28ebb95ae9aaaff3f87d8388a09b41e0b3445b5
+ms.author: duau
+ms.openlocfilehash: 2c0c509b2e2fedabb779e135fc3234d116df6b57
+ms.sourcegitcommit: 677e8acc9a2e8b842e4aef4472599f9264e989e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2021
-ms.locfileid: "84323313"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "132282061"
 ---
 # <a name="azure-cdn-from-verizon-premium-rules-engine-match-conditions"></a>Übereinstimmungsbedingungen der Regel-Engine für Azure CDN Premium von Verizon
 
@@ -60,7 +60,7 @@ Diese Übereinstimmungsbedingungen dienen dazu, Anforderungen anhand des Benutze
 | [Is Smartphone?](https://docs.vdms.com/cdn/Content/HRE/M/D-Is-Smartphone.htm) (Smartphone?) | Bestimmt Anforderungen, indem geprüft wird, ob das Gerät ein Smartphone ist
 | [Is Tablet?](https://docs.vdms.com/cdn/Content/HRE/M/D-Is-Tablet.htm) (Tablet?) | Bestimmt Anforderungen, indem geprüft wird, ob das Gerät ein Tablet ist |
 | [Is Touchscreen?](https://docs.vdms.com/cdn/Content/HRE/M/D-Is-Touchscreen.htm) (Touchscreen?) | Bestimmt Anforderungen, indem geprüft wird, ob das primäre Zeigegerät des Geräts ein Touchscreen ist |
-| [Is Windows Phone?](https://docs.vdms.com/cdn/Content/HRE/M/D-Is-Windows-Phone.htm) (Windows Phone?) | Bestimmt Anforderungen, indem geprüft wird, ob es sich bei dem Gerät um ein Windows Mobile 6.5-Gerät/Windows Phone 7 oder höher handelt |
+| [Is Windows Phone?](https://docs.vdms.com/cdn/Content/HRE/M/D-Is-Windows-Phone.htm) (Windows Phone?) | Bestimmt Anforderungen, indem geprüft wird, ob es sich bei dem Gerät um ein Windows Handy 6.5 / Windows Phone 7 oder höher handelt. |
 | [Is Wireless Device?](https://docs.vdms.com/cdn/Content/HRE/M/D-Is-Wireless-Device.htm) (Kabelloses Gerät?) | Bestimmt Anforderungen, indem geprüft wird, ob das Gerät kabellos ist 
 | Marketing Name | Bestimmt Anforderungen, indem geprüft wird, ob der Marketingname des Geräts mit Folgendem übereinstimmt: <br> **-** Einem bestimmten Wert ([Marketing Name Literal](https://docs.vdms.com/cdn/Content/HRE/M/D-Marketing-Name-Literal.htm), „Marketingname, wörtlich“) <br> **-** Einem regulären Ausdruck ([Marketing Name Regex](https://docs.vdms.com/cdn/Content/HRE/M/D-Marketing-Name-Regex.htm), „Marketingname, RegEx“) <br> **-** Einem bestimmten Muster ([Marketing Name Wildcard](https://docs.vdms.com/cdn/Content/HRE/M/D-Marketing-Name-Wildcard.htm), „Marketingname, Platzhalter“) |
 | Mobile Browser | Bestimmt Anforderungen, indem geprüft wird, ob der Browser des Geräts mit Folgendem übereinstimmt: <br> **-** Einem bestimmten Wert ([Mobile Browser Literal](https://docs.vdms.com/cdn/Content/HRE/M/D-Mobile-Browser-Literal.htm), „Mobiler Browser, wörtlich“) <br> **-** Einem regulären Ausdruck ([Mobile Browser Regex](https://docs.vdms.com/cdn/Content/HRE/M/D-Mobile-Browser-Regex.htm), „Mobiler Browser, RegEx“) <br> **-** Einem bestimmten Muster ([Mobile Browser Wildcard](https://docs.vdms.com/cdn/Content/HRE/M/D-Mobile-Browser-Wildcard.htm), „Mobiler Browser, Platzhalter“) |

@@ -5,24 +5,24 @@ metadata:
   title: 'Dokumentation zu Unterhaltungsszenarien: Tutorials, API-Referenz – Azure Cognitive Services | Microsoft-Dokumentation'
   titleSuffix: Azure Cognitive Services
   services: cognitive-services
-  author: PatrickFarley
+  author: eric-urban
   manager: nitinme
   ms.service: speech-service
   ms.topic: landing-page
   ms.date: 03/16/2020
-  ms.author: pafarley
-  ms.openlocfilehash: bedbfc9578a6a729474ff24a1a2bc0b7caf76be9
-  ms.sourcegitcommit: f2d0e1e91a6c345858d3c21b387b15e3b1fa8b4c
+  ms.author: eur
+  ms.openlocfilehash: eb3dc09228b375ae6774ae400bdb5ea1f5fd6ee0
+  ms.sourcegitcommit: 05c8e50a5df87707b6c687c6d4a2133dc1af6583
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 09/07/2021
-  ms.locfileid: "123543892"
+  ms.lasthandoff: 11/16/2021
+  ms.locfileid: "132550644"
 landingContent:
 - title: Informationen zur Unterhaltungstranskription (Besprechungsszenario)
   linkLists:
   - linkListType: overview
     links:
-    - text: Worum handelt es sich bei der Unterhaltungstranskription in Besprechungen?
+    - text: Was ist Unterhaltungstranskription?
       url: conversation-transcription.md
   - linkListType: quickstart
     links:

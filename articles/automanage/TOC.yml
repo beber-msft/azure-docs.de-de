@@ -13,23 +13,25 @@
     - name: Automanage für Windows Server
       href: automanage-windows-server.md
       items:
-        - name: "Automanage für Windows\_Server-Dienste (Vorschauversion)"
+        - name: Automanage für Windows Server-Dienste
           href: automanage-windows-server-services-overview.md
         - name: Hotpatch für neue virtuelle Computer
           href: automanage-hotpatch.md
+        - name: SMB über QUIC
+          href: automanage-smb-over-quic.md
     - name: "Automanage für Server mit Azure\_Arc-Unterstützung"
       href: automanage-arc.md
-    - name: Automanage-Konto
-      href: automanage-account.md
 - name: Anleitung
   expanded: true
   items:
-    - name: Erstellen benutzerdefinierter Einstellungen
-      href: virtual-machines-custom-preferences.md
+    - name: Erstellen eines benutzerdefinierten Profils
+      href: virtual-machines-custom-profile.md
     - name: Aktivieren auf virtuellen Computern per Azure Policy
       href: virtual-machines-policy-enable.md
     - name: Aktivieren auf virtuellen Computern über eine ARM-Vorlage
       href: arm-deploy.md
+    - name: Aktualisieren von Computern auf die neueste Automanage-Version
+      href: automanage-upgrade.md
     - name: Behandeln von Problemen mit Onboardingfehlern
       href: common-errors.md
     - name: Reparieren eines fehlerhaften Automanage-Kontos
@@ -42,4 +44,4 @@
     - name: Häufig gestellte Fragen
       href: faq.yml
     - name: Framework für die Cloudeinführung (Cloud Adoption Framework)
-      href: /azure/cloud-adoption-framework/manage/azure-server-management
+      href: /azure/cloud-adoption-framework/manage/azure-server-management/

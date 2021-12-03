@@ -1,19 +1,19 @@
 ---
 title: Installieren der Lösung „Azure Data Factory-Analyse“ über den Azure Marketplace
 description: Erfahren Sie wie die Lösung „Azure Data Factory-Analytics“ über den Azure Marketplace installieren können.
-author: minhe-msft
-ms.author: hemin
+author: joshuha-msft
+ms.author: joowen
 ms.reviewer: jburchel
 ms.service: data-factory
 ms.subservice: monitoring
 ms.topic: conceptual
 ms.date: 09/02/2021
-ms.openlocfilehash: 7c93ae2808629bf7b4413e6cb703e2c42863c0f7
-ms.sourcegitcommit: 03e84c3112b03bf7a2bc14525ddbc4f5adc99b85
+ms.openlocfilehash: 07e60aef3e6e3a968d22f76351d00cb722e99f78
+ms.sourcegitcommit: 8946cfadd89ce8830ebfe358145fd37c0dc4d10e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2021
-ms.locfileid: "129400551"
+ms.lasthandoff: 11/05/2021
+ms.locfileid: "131850411"
 ---
 # <a name="install-azure-data-factory-analytics-solution-from-azure-marketplace"></a>Installieren der Lösung „Azure Data Factory-Analyse“ über den Azure Marketplace
 

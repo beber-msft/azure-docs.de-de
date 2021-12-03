@@ -2,20 +2,20 @@
 title: Ausdrücke und Funktionen
 titleSuffix: Azure Data Factory & Azure Synapse
 description: Dieser Artikel enthält Informationen zu Ausdrücken und Funktionen, die Sie beim Erstellen von Pipelineentitäten in Azure Data Factory und Azure Synapse Analytics verwenden können.
-author: minhe-msft
-ms.author: hemin
+author: joshuha-msft
+ms.author: joowen
 ms.reviewer: jburchel
 ms.service: data-factory
 ms.subservice: orchestration
 ms.custom: synapse
 ms.topic: conceptual
 ms.date: 09/09/2021
-ms.openlocfilehash: 9b378b4cfb9bb35f1fb2a555afed195ac6b84dc3
-ms.sourcegitcommit: f6e2ea5571e35b9ed3a79a22485eba4d20ae36cc
+ms.openlocfilehash: 9365387bbe4086294a2345b45d707af9806b7c97
+ms.sourcegitcommit: 8946cfadd89ce8830ebfe358145fd37c0dc4d10e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128678685"
+ms.lasthandoff: 11/05/2021
+ms.locfileid: "131842984"
 ---
 # <a name="expressions-and-functions-in-azure-data-factory-and-azure-synapse-analytics"></a>Ausdrücke und Funktionen in Azure Data Factory und Azure Synapse Analytics
 

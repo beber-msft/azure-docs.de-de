@@ -1,17 +1,18 @@
 ---
-title: Verwenden der Visual Studio Code-Erweiterung bei Azure Video Analyzer
-description: In diesem Referenzartikel wird erläutert, wie Sie die verschiedenen Funktionen des Azure Video Analyzer-Visual Studio Code verwenden.
+title: Verwenden der Visual Studio Code-Erweiterung für Azure Video Analyzer
+description: In diesem Referenzartikel wird erläutert, wie Sie die verschiedenen Funktionen der Visual Studio Code-Erweiterung für Azure Video Analyzer verwenden.
 ms.service: azure-video-analyzer
 ms.topic: reference
-ms.date: 06/01/2021
-ms.openlocfilehash: cec3b6549b854cf321390b7598d36b5a4b12378b
-ms.sourcegitcommit: 3941df51ce4fca760797fa4e09216fcfb5d2d8f0
+ms.date: 11/04/2021
+ms.custom: ignite-fall-2021
+ms.openlocfilehash: b0faa61b724420ad04cc489d51539c134569dd05
+ms.sourcegitcommit: 677e8acc9a2e8b842e4aef4472599f9264e989e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "114604342"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "132287113"
 ---
-# <a name="use-azure-video-analyzer-visual-studio-code-extension"></a>Verwenden der Visual Studio Code-Erweiterung bei Azure Video Analyzer
+# <a name="visual-studio-code-extension-for-azure-video-analyzer"></a>Verwenden der Visual Studio Code-Erweiterung für Azure Video Analyzer
 
 Azure Video Analyzer ist eine Plattform, welche das Erstellen von Videoanalyseprogrammen vereinfacht, und die zugehörige Visual Studio Code-Erweiterung ist ein Tool, um das Lernen dieser Plattform zu vereinfachen.  Dieser Artikel ist ein Verweis auf die verschiedenen Funktionen, welche von der Erweiterung angeboten werden.  Es werden die Grundlagen folgender Themen behandelt:
 
@@ -19,7 +20,7 @@ Azure Video Analyzer ist eine Plattform, welche das Erstellen von Videoanalysepr
 * Livepipelines: Erstellung, Aktivierung, Deaktivierung, Löschung, Anzeigen des JSON-Code
 * Bearbeiten einer Pipelinetopologie: Module, Parameter, Systemvariablen, Verbindungen, Validierung
 
-Wenn Sie die Erweiterung nicht für die Verbindung mit Ihrem Edgegerät eingerichtet haben, befolgen Sie die Schnellstartanleitung für die [Azure Video Analyzer Visual Studio Code-Erweiterung](./create-pipeline-vs-code-extension.md).
+Wenn Sie die Erweiterung nicht für die Verbindung mit Ihrem Edgegerät eingerichtet haben, befolgen Sie die Schnellstartanleitung für die [Verwendung der Visual Studio Code-Erweiterung für Azure Video Analyzer](./edge/use-visual-studio-code-extension.md).
 
 ## <a name="managing-pipelines-topology"></a>Verwalten der Pipelinetopologie
 
@@ -35,7 +36,7 @@ Wenn Sie den zugrunde liegenden JSON-Code hinter einer vorhandenen Topologie anz
 
 ## <a name="live-pipelines"></a>Livepipelines
 
-Um eine Livepipeline zu erstellen, klicken Sie links unter Pipelinetopologien mit der rechten Maustaste auf den Namen der Topologie und wählen Sie `Create live pipeline` aus.  Sie müssen dann einen Namen für die Livepipeline und alle erforderlichen Parameter eingeben, bevor Sie fortfahren.  Rechts oben können Sie entweder auf `Save` klicken, um es in einem inaktiven Zustand zu speichern, oder auf `Save and activate`, um die Livepipeline sofort zu starten. 
+Um eine Livepipeline zu erstellen, klicken Sie links unter Pipelinetopologien mit der rechten Maustaste auf den Namen der Topologie und wählen Sie `Create live pipeline` aus.  Sie müssen dann einen Namen für die Live-Pipeline und alle erforderlichen Parameter eingeben, bevor Sie fortfahren.  Rechts oben können Sie entweder auf `Save` klicken, um es in einem inaktiven Zustand zu speichern, oder auf `Save and activate`, um die Livepipeline sofort zu starten. 
 
 Klicken Sie zum Aktivieren einer vorhandenen Livepipeline links unter Pipelinetopologien mit der rechten Maustaste auf den Namen der Livepipeline und wählen Sie `Activate live pipeline` aus.
 
@@ -47,7 +48,7 @@ Wenn Sie den zugrunde liegenden JSON-Code hinter einer vorhandenen Topologie anz
 
 ## <a name="editing-a-topology"></a>Bearbeiten einer Topologie 
 
-Pipelinetopologien werden aus einer Vielzahl von Teilen erstellt.  Informationen zu diesen Teilen finden Sie in der Dokumentation zum [Pipelinekonzept](./pipeline.md). In diesem Abschnitt geht es um die Teile der Schnittstelle, mit denen Sie eine Topologie erstellen oder bearbeiten können.
+Pipelinetopologien werden aus einer Vielzahl von Teilen erstellt. Informationen zu diesen Teilen finden Sie in der Dokumentation zum [Pipeline](pipeline.md)-Konzept. In diesem Abschnitt geht es um die Teile der Schnittstelle, mit denen Sie eine Topologie erstellen oder bearbeiten können.
 
 ### <a name="modules"></a>Module
 
@@ -81,4 +82,4 @@ Beim Erstellen einer Reihe von Livepipelines gibt es wahrscheinlich Fälle, in d
 
 Wenn Sie eine Topologie erstellen, müssen Sie die verschiedenen Module miteinander verbinden.  Dies erfolgt mit Verbindungen.  Ziehen Sie vom Kreis am Rand eines Moduls auf den Kreis des nächsten Moduls, in das Daten fließen sollen.  Dadurch wird eine Verbindung hergestellt.
 
-Standardmäßig senden Verbindungen alle Daten von einem Modul an ein anderes.  Wenn Sie nur bestimmte Datentypen senden möchten, können Sie mit der linken Maustaste auf die Verbindung klicken und die gesendeten Ausgabetypen bearbeiten.  Auswählbare Datentypen sind Video, Audio und Anwendung.
+Standardmäßig senden Verbindungen alle Daten von einem Modul an ein anderes. Wenn Sie nur Audiodaten oder Anwendungsdaten senden möchten, können Sie mit der linken Maustaste auf die Verbindung klicken und die Ausgabetypen bearbeiten. Auswählbare Datentypen sind Video, Audio und Anwendung. Wenn Sie keinen der Ausgabetypen auswählen, werden alle anwendbaren Daten vom Absenderknoten aus gesendet.

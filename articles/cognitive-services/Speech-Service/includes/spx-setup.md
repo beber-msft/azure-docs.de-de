@@ -1,16 +1,17 @@
 ---
-author: v-demjoh
+author: eric-urban
 manager: nitinme
 ms.service: cognitive-services
 ms.topic: include
 ms.date: 04/28/2021
-ms.author: v-demjoh
-ms.openlocfilehash: 364ceacaea122e7ffda58ef0c7d4db072c8fee13
-ms.sourcegitcommit: 2d412ea97cad0a2f66c434794429ea80da9d65aa
+ms.author: eric-urban
+ms.custom: ignite-fall-2021
+ms.openlocfilehash: 197c186f87eacfb19412c12bc171b46fd59b0ef2
+ms.sourcegitcommit: 2cc9695ae394adae60161bc0e6e0e166440a0730
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2021
-ms.locfileid: "122262342"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "131501980"
 ---
 ## <a name="download-and-install"></a>Herunterladen und Installieren
 
@@ -33,7 +34,7 @@ Geben Sie `spx` ein, um die Hilfe für die Speech-Befehlszeilenschnittstelle anz
 ### <a name="font-limitations"></a>Schriftarteinschränkungen
 
 Unter Windows können von der Speech-Befehlszeilenschnittstelle nur Schriftarten angezeigt werden, die für die Eingabeaufforderung auf dem lokalen Computer verfügbar sind.
-Das [Windows-Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701) unterstützt alle Schriftarten, die von der Speech-Befehlszeilenschnittstelle interaktiv generiert werden.
+Das [Windows-Terminal](https://www.microsoft.com/p/windows-terminal/9n0dx20hk701) unterstützt alle Schriftarten, die von der Speech-Befehlszeilenschnittstelle interaktiv generiert werden.
 
 Bei der Ausgabe einer Datei können in einem Text-Editor wie Notepad oder einem Webbrowser wie Microsoft Edge ebenfalls alle Schriftarten angezeigt werden.
 

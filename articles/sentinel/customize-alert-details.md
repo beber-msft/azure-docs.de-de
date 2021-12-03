@@ -1,27 +1,30 @@
 ---
-title: Anpassen von Warnungsdetails in Azure Sentinel | Microsoft-Dokumentation
+title: Anpassen von Warnungsdetails in Microsoft Sentinel | Microsoft-Dokumentation
 description: Passen Sie basierend auf dem Inhalt der Warnungen den Namen und die Beschreibung von Warnungen sowie ihren Schweregrad und zugewiesene Taktiken an.
 services: sentinel
 documentationcenter: na
 author: yelevin
 manager: rkarlin
 editor: ''
-ms.service: azure-sentinel
-ms.subservice: azure-sentinel
+ms.service: microsoft-sentinel
+ms.subservice: microsoft-sentinel
 ms.devlang: na
 ms.topic: how-to
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 02/10/2021
+ms.date: 11/09/2021
 ms.author: yelevin
-ms.openlocfilehash: 0b6d64167451b3c7363d6bd80c5fafcd67b6fc5c
-ms.sourcegitcommit: 0046757af1da267fc2f0e88617c633524883795f
+ms.custom: ignite-fall-2021
+ms.openlocfilehash: 6ce94549c4e58e0a19fff40e944ece22f948f953
+ms.sourcegitcommit: 2ed2d9d6227cf5e7ba9ecf52bf518dff63457a59
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122339706"
+ms.lasthandoff: 11/16/2021
+ms.locfileid: "132521717"
 ---
-# <a name="customize-alert-details-in-azure-sentinel"></a>Anpassen von Warnungsdetails in Azure Sentinel 
+# <a name="customize-alert-details-in-microsoft-sentinel"></a>Anpassen von Warnungsdetails in Microsoft Sentinel 
+
+[!INCLUDE [Banner for top of topics](./includes/banner.md)]
 
 > [!IMPORTANT]
 >
@@ -37,7 +40,7 @@ Das unten beschriebene Verfahren ist Teil des Assistenten zum Erstellen von Anal
 
 ## <a name="how-to-customize-alert-details"></a>Anpassen von Warnungsdetails
 
-1. Wählen Sie im Azure Sentinel-Navigationsmenü die Option **Analysen** aus.
+1. Wählen Sie im Navigationsmenü von Microsoft Sentinel die Optionen **Analytik**.
 
 1. Wählen Sie eine geplante Abfrageregel aus, und klicken Sie auf **Bearbeiten**. Oder erstellen Sie eine neue Regel, indem Sie oben auf dem Bildschirm auf **Erstellen > Geplante Abfrageregel** klicken.
 
@@ -62,6 +65,6 @@ Das unten beschriebene Verfahren ist Teil des Assistenten zum Erstellen von Anal
 1. Wenn die Anpassung Ihrer Warnungsdetails abgeschlossen ist, fahren Sie mit der nächsten Registerkarte im Assistenten fort. Wenn Sie eine vorhandene Regel bearbeiten, klicken Sie auf die Registerkarte **Überprüfen und erstellen**. War die Regelüberprüfung erfolgreich, klicken Sie auf **Speichern**.
 
 ## <a name="next-steps"></a>Nächste Schritte
-In diesem Dokument haben Sie erfahren, wie Sie Warnungsdetails in Azure Sentinel-Analyseregeln anpassen. Weitere Informationen zu Azure Sentinel finden Sie in den folgenden Artikeln:
+In diesem Dokument haben Sie erfahren, wie Sie Warnungsdetails in Microsoft Sentinel-Analyseregeln anpassen. Weitere Informationen über Microsoft Sentinel finden Sie in den folgenden Artikeln:
 - Unter [Tutorial: Erstellen benutzerdefinierter Analyseregeln zum Erkennen von Bedrohungen](detect-threats-custom.md) können Sie sich ein Gesamtbild machen.
-- Erfahren Sie mehr über [Entitäten in Azure Sentinel](entities-in-azure-sentinel.md).
+- Erfahren Sie mehr über [Entitäten in Microsoft Sentinel](entities-in-azure-sentinel.md).

@@ -7,12 +7,12 @@ ms.author: sumuth
 ms.topic: tutorial
 ms.date: 12/10/2020
 ms.custom: mvc, devx-track-azurecli
-ms.openlocfilehash: 4cea156f52538a58ba5eea86ace6272848a05ae9
-ms.sourcegitcommit: 7d63ce88bfe8188b1ae70c3d006a29068d066287
+ms.openlocfilehash: a1c19100cad65c965c567c93c67db1033a4bba10
+ms.sourcegitcommit: 838413a8fc8cd53581973472b7832d87c58e3d5f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2021
-ms.locfileid: "114467168"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "132136843"
 ---
 # <a name="tutorial-deploy-django-app-on-aks-with-azure-database-for-postgresql---flexible-server"></a>Tutorial: Bereitstellen einer Django-App in AKS mit Azure Database for PostgreSQL – Flexible Server
 
@@ -59,7 +59,7 @@ Die folgende Beispielausgabe zeigt, dass die Ressourcengruppe erfolgreich erstel
 
 ## <a name="create-aks-cluster"></a>Erstellen eines ACS-Clusters
 
-Erstellen Sie mithilfe des Befehls [az aks create](/cli/azure/aks#az_aks_create) einen AKS-Cluster. Im folgenden Beispiel wird ein Cluster mit dem Namen *myAKSCluster* mit einem Knoten erstellt. Dieser Schritt dauert einige Minuten.
+Erstellen Sie mithilfe des Befehls [az aks create](/cli/azure/aks#az_aks_create) einen AKS-Cluster. Im folgenden Beispiel wird ein Cluster mit dem Namen *djangoappcluster* mit einem Knoten erstellt. Dieser Schritt dauert einige Minuten.
 
 ```azurecli-interactive
 az aks create --resource-group django-project --name djangoappcluster --node-count 1 --generate-ssh-keys
@@ -207,7 +207,7 @@ Stellen Sie Ihr Image in [Docker Hub](https://docs.docker.com/get-started/part3/
 >Führen Sie bei Verwendung von Azure Container Registry (ACR) den Befehl ```az aks update``` aus, um das ACR-Konto mit dem AKS-Cluster zu verknüpfen.
 >
 >```azurecli-interactive
->az aks update -n myAKSCluster -g django-project --attach-acr <your-acr-name>
+>az aks update -n djangoappcluster -g django-project --attach-acr <your-acr-name>
 > ```
 >
 
@@ -242,7 +242,7 @@ spec:
         env:
         - name: DATABASE_HOST
           value: "SERVERNAME.postgres.database.azure.com"
-        - name: DATABASE_USERNAME
+        - name: DATABASE_USER
           value: "YOUR-DATABASE-USERNAME"
         - name: DATABASE_PASSWORD
           value: "YOUR-DATABASE-PASSWORD"
@@ -294,7 +294,7 @@ Wenn die Anwendung ausgeführt wird, macht ein Kubernetes-Dienst das Anwendungs-
 Verwenden Sie zum Überwachen des Fortschritts den Befehl [kubectl get service](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get) mit dem Argument `--watch`.
 
 ```azurecli-interactive
-kubectl get service django-app --watch
+kubectl get service python-svc --watch
 ```
 
 Zu Beginn wird die externe IP-Adresse (*EXTERNAL-IP*) für den Dienst *django-app* mit dem Status *ausstehend* angezeigt.

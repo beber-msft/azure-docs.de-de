@@ -3,8 +3,8 @@ title: 'Schnellstart: Erstellen einer CI/CD-Pipeline für Python mit Azure DevOp
 description: DevOps Starter erleichtert die ersten Schritte mit Azure. Damit können Sie eine App in einem Azure-Dienst Ihrer Wahl in einigen wenigen Schritten starten.
 services: vsts
 documentationcenter: vs-devops-build
-author: mlearned
-ms.author: mlearned
+author: georgewallace
+ms.author: gwallace
 manager: gwallace
 ms.date: 03/24/2020
 ms.prod: devops
@@ -12,16 +12,13 @@ ms.technology: devops-cicd
 ms.topic: quickstart
 ms.workload: web
 ms.tgt_pltfrm: na
-ms.custom:
-- mvc
-- devx-track-python
-- mode-api
-ms.openlocfilehash: d236eadd4c1c3bbda5a781d00de43e4ed3dc88b9
-ms.sourcegitcommit: 49b2069d9bcee4ee7dd77b9f1791588fe2a23937
+ms.custom: mvc, devx-track-python, mode-api
+ms.openlocfilehash: 3f6fda9367ba27acbd47fcb316541d1b3d50aafc
+ms.sourcegitcommit: 61f87d27e05547f3c22044c6aa42be8f23673256
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "107533270"
+ms.lasthandoff: 11/09/2021
+ms.locfileid: "132061642"
 ---
 # <a name="create-a-cicd-pipeline-for-python-with-azure-devops-starter"></a>Erstellen einer CI/CD-Pipeline für Python mit Azure DevOps Starter
 

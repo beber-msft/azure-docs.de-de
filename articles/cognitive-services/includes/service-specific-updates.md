@@ -1,18 +1,18 @@
 ---
 title: include file
-author: erhopf
+author: PatrickFarley
 manager: nitinme
 ms.service: cognitive-services
 ms.topic: include
-ms.date: 07/09/2020
-ms.author: erhopf
+ms.date: 10/28/2021
+ms.author: pafarley
 ms.custom: include
-ms.openlocfilehash: a339a3ea7eeafd3b8e6a740614ff4ca10aba38fd
-ms.sourcegitcommit: 5f659d2a9abb92f178103146b38257c864bc8c31
+ms.openlocfilehash: 324f1a9e0506f8119ea81f8a4887d5a0d3908721
+ms.sourcegitcommit: 702df701fff4ec6cc39134aa607d023c766adec3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2021
-ms.locfileid: "122336071"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "131521463"
 ---
 ## <a name="service-specific-updates"></a>Dienstspezifische Updates 
 
@@ -21,4 +21,4 @@ ms.locfileid: "122336071"
 * [Language Understanding (LUIS)](../LUIS/whats-new.md)
 * [Personalisierung](../personalizer/whats-new.md)
 * [QnA Maker](../qnamaker/whats-new.md)
-* [Textanalyse](../text-analytics/whats-new.md)
+* [Sprachdienst](../language-service/whats-new.md)

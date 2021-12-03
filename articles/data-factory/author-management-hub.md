@@ -4,15 +4,15 @@ description: Verwalten Sie Ihre Verbindungen, Ihre Konfiguration für die Quellc
 ms.service: data-factory
 ms.subservice: authoring
 ms.topic: conceptual
-author: minhe-msft
-ms.author: hemin
+author: joshuha-msft
+ms.author: joowen
 ms.date: 04/27/2021
-ms.openlocfilehash: 4c9b56a206a4ae515fdf8eae66dabf8dfafa1fcb
-ms.sourcegitcommit: e8c34354266d00e85364cf07e1e39600f7eb71cd
+ms.openlocfilehash: 9c25ccdababc228be0f3509084fdba8090a1b649
+ms.sourcegitcommit: 8946cfadd89ce8830ebfe358145fd37c0dc4d10e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2021
-ms.locfileid: "129218128"
+ms.lasthandoff: 11/05/2021
+ms.locfileid: "131844618"
 ---
 # <a name="management-hub-in-azure-data-factory"></a>Verwaltungshub in Azure Data Factory
 

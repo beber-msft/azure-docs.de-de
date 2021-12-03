@@ -11,12 +11,12 @@ ms.workload: identity
 ms.topic: tutorial
 ms.date: 05/06/2021
 ms.author: jeedes
-ms.openlocfilehash: 888f5d195cde3b226e4a25c5e46ed916e654c0b0
-ms.sourcegitcommit: 0770a7d91278043a83ccc597af25934854605e8b
+ms.openlocfilehash: 60b5f21a03176d3488162b87cffc6aa229b1d687
+ms.sourcegitcommit: 677e8acc9a2e8b842e4aef4472599f9264e989e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "124809221"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "132295628"
 ---
 # <a name="tutorial-azure-active-directory-integration-with-itslearning"></a>Tutorial: Azure Active Directory-Integration von itslearning
 
@@ -78,24 +78,21 @@ Gehen Sie wie folgt vor, um das einmalige Anmelden von Azure AD im Azure-Portal 
 
 4. Führen Sie im Abschnitt **Grundlegende SAML-Konfiguration** die folgenden Schritte aus:
 
-    
-    a. Geben Sie im Textfeld **Bezeichner (Entitäts-ID)** die folgende URL ein: `urn:mace:saml2v2.no:services:com.itslearning`.
+    1. Geben Sie im Textfeld **Bezeichner (Entitäts-ID)** die folgende URL ein: `urn:mace:saml2v2.no:services:com.itslearning`.
 
-    b. Geben Sie im Textfeld **Antwort-URL** eine der folgenden URLs ein:
-    
-    | Antwort-URL |
-    |-------------|
-    | `https://www.itsltest.com/elogin/AssertionConsumerService.aspx` |
-    | `https://www.itslearning.com/elogin/AssertionConsumerService.aspx` |
-    | 
-    
-    c. Geben Sie im Textfeld **Anmelde-URL** eine der folgenden URLs ein:
-    
-    | Anmelde-URL |
-    |-------------|
-    | `https://www.itslearning.com/index.aspx` |
-    | `https://us1.itslearning.com/index.aspx` |
-    |
+    1. Geben Sie im Textfeld **Antwort-URL** eine der folgenden URLs ein:
+
+       | Antwort-URL |
+       |-------------|
+       | `https://www.itsltest.com/elogin/AssertionConsumerService.aspx` |
+       | `https://www.itslearning.com/elogin/AssertionConsumerService.aspx` |
+
+    1. Geben Sie im Textfeld **Anmelde-URL** eine der folgenden URLs ein:
+
+       | Anmelde-URL |
+       |-------------|
+       | `https://www.itslearning.com/index.aspx` |
+       | `https://us1.itslearning.com/index.aspx` |
 
 5. Klicken Sie auf der Seite **Einmaliges Anmelden (SSO) mit SAML einrichten** im Abschnitt **SAML-Signaturzertifikat** auf **Herunterladen**, um den Ihren Anforderungen entsprechenden **Verbundmetadaten-XML**-Code aus den verfügbaren Optionen herunterzuladen und auf Ihrem Computer zu speichern.
 
@@ -149,4 +146,4 @@ In diesem Abschnitt testen Sie die Azure AD-Konfiguration für einmaliges Anmel
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Nach dem Konfigurieren von itslearning können Sie die Sitzungssteuerung erzwingen, die in Echtzeit vor der Exfiltration und Infiltration vertraulicher Unternehmensdaten schützt. Die Sitzungssteuerung basiert auf bedingtem Zugriff. [Hier](/cloud-app-security/proxy-deployment-any-app) erfahren Sie, wie Sie die Sitzungssteuerung mit Microsoft Cloud App Security erzwingen.
+Nach dem Konfigurieren von itslearning können Sie die Sitzungssteuerung erzwingen, die in Echtzeit vor der Exfiltration und Infiltration vertraulicher Unternehmensdaten schützt. Die Sitzungssteuerung basiert auf bedingtem Zugriff. [Erfahren Sie, wie Sie die Sitzungssteuerung mit Microsoft Defender for Cloud Apps erzwingen.](/cloud-app-security/proxy-deployment-any-app)

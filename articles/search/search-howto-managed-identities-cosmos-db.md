@@ -2,17 +2,18 @@
 title: Einrichten einer Verbindung mit einem Cosmos DB-Konto mithilfe einer verwalteten Identität
 titleSuffix: Azure Cognitive Search
 description: Hier erfahren Sie, wie Sie mithilfe einer verwalteten Identität eine Indexerverbindung mit einem Cosmos DB-Konto einrichten.
-author: markheff
-ms.author: maheff
+author: gmndrg
+ms.author: gimondra
+manager: nitinme
 ms.service: cognitive-search
 ms.topic: conceptual
 ms.date: 07/02/2021
-ms.openlocfilehash: 38709d7799d09e38fdebc8eebd7484504ce4ebd2
-ms.sourcegitcommit: 2d412ea97cad0a2f66c434794429ea80da9d65aa
+ms.openlocfilehash: 6fbd0e851055271d8c5fcf42a970f085ede015c2
+ms.sourcegitcommit: 591ffa464618b8bb3c6caec49a0aa9c91aa5e882
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2021
-ms.locfileid: "122350359"
+ms.lasthandoff: 11/06/2021
+ms.locfileid: "131894334"
 ---
 # <a name="set-up-an-indexer-connection-to-a-cosmos-db-database-using-a-managed-identity"></a>Einrichten einer Indexerverbindung mit einer Cosmos DB-Datenbank mithilfe einer verwalteten Identität
 

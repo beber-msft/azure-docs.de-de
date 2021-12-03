@@ -11,12 +11,12 @@ ms.custom: references_regions
 ms.devlang: ''
 ms.topic: conceptual
 ms.date: 09/24/2021
-ms.openlocfilehash: e66333fa1174eb9a614f2028641a83a8391e39e0
-ms.sourcegitcommit: 91915e57ee9b42a76659f6ab78916ccba517e0a5
+ms.openlocfilehash: 31f42cb2dd8405a08477fd6ee9048f42e80e44be
+ms.sourcegitcommit: 8946cfadd89ce8830ebfe358145fd37c0dc4d10e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "130047981"
+ms.lasthandoff: 11/05/2021
+ms.locfileid: "131851282"
 ---
 # <a name="known-issues-with-azure-sql-managed-instance"></a>Bekannte Probleme mit Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
@@ -28,11 +28,12 @@ In diesem Artikel werden die derzeit bekannten Probleme mit [Azure SQL Managed I
 
 |Problem  |Entdeckt am  |Status  |Gelöst am  |
 |---------|---------|---------|---------|
+|[Bei Verwendung der SQL Server-Authentifizierung werden Benutzernamen mit „@“ nicht unterstützt](#when-using-sql-server-authentication-usernames-with--are-not-supported)|Oktober 2021|||
 |[Irreführende Fehlermeldung im Azure-Portal, die das erneute Erstellen des Dienstprinzipals vorschlägt](#misleading-error-message-on-azure-portal-suggesting-recreation-of-the-service-principal)|September 2021|||
 |[Das Ändern des Verbindungstyps wirkt sich nicht auf Verbindungen über den Endpunkt der Failovergruppe aus.](#changing-the-connection-type-does-not-affect-connections-through-the-failover-group-endpoint)|Jan 2021|Mit Problemumgehung||
 |[Die Prozedur „sp_send_dbmail“ kann zu vorübergehenden Fehlern führen, wenn der Parameter @query verwendet wird.](#procedure-sp_send_dbmail-may-transiently-fail-when--parameter-is-used)|Jan 2021|Mit Problemumgehung||
 |[Verteilte Transaktionen können nach dem Entfernen einer verwalteten Instanz aus der Serververtrauensgruppe ausgeführt werden.](#distributed-transactions-can-be-executed-after-removing-managed-instance-from-server-trust-group)|Oktober 2020|Mit Problemumgehung||
-|[Verteilte Transaktionen können nach dem Skalierungsvorgang einer verwalteten Instanz nicht ausgeführt werden.](#distributed-transactions-cannot-be-executed-after-managed-instance-scaling-operation)|Oktober 2020|Mit Problemumgehung||
+|[Verteilte Transaktionen können nach dem Skalierungsvorgang einer verwalteten Instanz nicht ausgeführt werden.](#distributed-transactions-cannot-be-executed-after-managed-instance-scaling-operation)|Oktober 2020|Gelöst|Mai 2021|
 |[SQL Managed Instance mit demselben Namen wie der zuvor gelöschte logische Server kann nicht erstellt werden](#cannot-create-sql-managed-instance-with-the-same-name-as-logical-server-previously-deleted)|August 2020|Mit Problemumgehung||
 |[BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql)/[OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql) in Azure SQL und die `BACKUP`/`RESTORE`-Anweisung in SQL Managed Instance können keine verwalteten Azure AD-Identitäten verwenden, um sich für Azure Storage zu authentifizieren.|Sep 2020|Mit Problemumgehung||
 |[Der Dienstprinzipal kann nicht auf Azure AD und Azure Key Vault zugreifen](#service-principal-cannot-access-azure-ad-and-akv)|August 2020|Mit Problemumgehung||
@@ -315,6 +316,10 @@ using (var scope = new TransactionScope())
 
 
 ## <a name="no-resolution"></a>Keine Lösung vorhanden
+
+### <a name="when-using-sql-server-authentication-usernames-with--are-not-supported"></a>Bei Verwendung der SQL Server-Authentifizierung werden Benutzernamen mit „@“ nicht unterstützt
+
+Benutzernamen, die das @-Symbol in der Mitte enthalten (z. B. „abc@xy“), können sich nicht mit der SQL Server-Authentifizierung anmelden.
 
 ### <a name="misleading-error-message-on-azure-portal-suggesting-recreation-of-the-service-principal"></a>Irreführende Fehlermeldung im Azure-Portal, die das erneute Erstellen des Dienstprinzipals vorschlägt
 

@@ -1,29 +1,32 @@
 ---
-title: Zusammenarbeiten in Microsoft Teams mit einem Azure Sentinel-Incidentteam | Microsoft-Dokumentation
-description: Erfahren Sie, wie Sie über Azure Sentinel eine Verbindung zu Microsoft Teams herstellen, um mit anderen Personen in Ihrem Team mithilfe von Azure Sentinel-Daten zusammenzuarbeiten.
+title: Zusammenarbeiten in Microsoft Teams mit einem Microsoft Sentinel-Incidentteam | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie über Microsoft Sentinel eine Verbindung mit Microsoft Teams herstellen, um mit anderen Personen in Ihrem Team mithilfe von Azure Sentinel-Daten zusammenzuarbeiten.
 services: sentinel
 documentationcenter: na
 author: batamig
 manager: rkarlin
 editor: ''
-ms.service: azure-sentinel
-ms.subservice: azure-sentinel
+ms.service: microsoft-sentinel
+ms.subservice: microsoft-sentinel
 ms.devlang: na
 ms.topic: how-to
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 06/17/2021
+ms.date: 11/09/2021
 ms.author: bagol
-ms.openlocfilehash: 3aefed370606b80249eabeac35123223b2ad5255
-ms.sourcegitcommit: 0046757af1da267fc2f0e88617c633524883795f
+ms.custom: ignite-fall-2021
+ms.openlocfilehash: 2a6cdf796ee8fdb7302a7f7e00e517ce99004774
+ms.sourcegitcommit: 2ed2d9d6227cf5e7ba9ecf52bf518dff63457a59
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122339218"
+ms.lasthandoff: 11/16/2021
+ms.locfileid: "132518107"
 ---
 # <a name="collaborate-in-microsoft-teams-public-preview"></a>Zusammenarbeiten in Microsoft Teams (Public Preview)
 
-Azure Sentinel unterstützt eine direkte Integration in [Microsoft Teams](/microsoftteams/), sodass Sie bei bestimmten Incidents direkt in die Teamarbeit einsteigen können.
+[!INCLUDE [Banner for top of topics](./includes/banner.md)]
+
+Microsoft Azure SentinelSentinel unterstützt eine direkte Integration in [Microsoft Teams](/microsoftteams/), sodass Sie bei bestimmten Incidents direkt in die Teamarbeit einsteigen können.
 
 
 > [!IMPORTANT]
@@ -31,23 +34,23 @@ Azure Sentinel unterstützt eine direkte Integration in [Microsoft Teams](/micro
 
 ## <a name="overview"></a>Übersicht
 
-Die direkte Integration in Microsoft Teams über Azure Sentinel ermöglicht Ihren Teams eine nahtlose Zusammenarbeit innerhalb der gesamten Organisation und mit externen Projektbeteiligten.
+Die direkte Integration in Microsoft Teams über Microsoft Sentinel ermöglicht Ihren Teams eine nahtlose Zusammenarbeit innerhalb der gesamten Organisation und mit externen Projektbeteiligten.
 
-Verwenden Sie Microsoft Teams mit einem Azure Sentinel-*Incidentteam*, um Ihre Kommunikation und Koordination zwischen den relevanten Mitarbeitern zu zentralisieren. Incidentteams sind besonders als dedizierte Konferenzbrücke für laufende Incidents mit hohem Schweregrad hilfreich.
+Verwenden Sie Microsoft Teams mit einem Microsoft Sentinel-*Incidentteam*, um Ihre Kommunikation und Koordination zwischen den relevanten Mitarbeitern zu zentralisieren. Incidentteams sind besonders als dedizierte Konferenzbrücke für laufende Incidents mit hohem Schweregrad hilfreich.
 
-Organisationen, die Microsoft Teams bereits für Kommunikation und Zusammenarbeit verwenden, können die Azure Sentinel-Integration nutzen, um Sicherheitsdaten direkt in ihre Konversationen und tägliche Arbeit einzubringen. 
+Organisationen, die Microsoft Teams bereits für Kommunikation und Zusammenarbeit verwenden, können die Microsoft Sentinel-Integration nutzen, um Sicherheitsdaten direkt in ihre Konversationen und tägliche Arbeit einzubringen. 
 
-Ein Azure Sentinel-Incidentteam verfügt immer über die aktuellen Daten aus Azure Sentinel. Dadurch wird sichergestellt, dass Ihre Teams stets die relevantesten Daten zur Hand haben.
+Ein Microsoft Sentinel-Incidentteam verfügt immer über die aktuellen Daten aus Microsoft Sentinel. Dadurch wird sichergestellt, dass Ihre Teams stets die relevantesten Daten zur Hand haben.
 
 ## <a name="required-permissions"></a>Erforderliche Berechtigungen
 
-Zum Erstellen von Teams über Azure Sentinel gilt Folgendes:
+Für das Erstellen von Teams über Microsoft Sentinel gilt Folgendes:
 
-- Der Benutzer, der das Team erstellt, muss in Azure Sentinel über Schreibberechtigungen für Incidents verfügen. Die Rolle [Azure Sentinel-Antwortender](../role-based-access-control/built-in-roles.md#azure-sentinel-responder) ist beispielsweise die ideale mindestens erforderliche Rolle für diese Berechtigung.
+- Der Benutzer, der das Team erstellt, muss in Microsoft Sentinel über Schreibberechtigungen für Incidents verfügen. Die Rolle [Microsoft Sentinel-Antwortender](../role-based-access-control/built-in-roles.md#microsoft-sentinel-responder) ist beispielsweise die ideale mindestens erforderliche Rolle für diese Berechtigung.
 
 - Der Benutzer, der das Team erstellt, muss darüber hinaus auch über Berechtigungen zum Erstellen von Teams in Microsoft Teams verfügen.
 
-- Jeder Azure Sentinel-Benutzer, also Benutzer mit der Rolle [Leser](../role-based-access-control/built-in-roles.md#azure-sentinel-reader), [Antwortender](../role-based-access-control/built-in-roles.md#azure-sentinel-responder) oder [Mitwirkender](../role-based-access-control/built-in-roles.md#azure-sentinel-contributor), kann Zugriff auf das erstellte Team erhalten, indem er den Zugriff anfordert.
+- Jeder Microsoft Sentinel-Benutzer, also Benutzer mit der Rolle [Leser](../role-based-access-control/built-in-roles.md#microsoft-sentinel-reader), [Antwortender](../role-based-access-control/built-in-roles.md#microsoft-sentinel-responder) oder [Mitwirkender](../role-based-access-control/built-in-roles.md#microsoft-sentinel-contributor), kann Zugriff auf das erstellte Team erhalten, indem er den Zugriff anfordert.
 
 ## <a name="use-an-incident-team-to-investigate"></a>Untersuchungen mithilfe eines Incidentteams
 
@@ -55,7 +58,7 @@ Führen Sie Untersuchungen zusammen mit einem *Incidentteam* durch, indem Sie Mi
 
 **So erstellen Sie Ihr Incidentteam:**
 
-1. Wählen Sie in Azure Sentinel im Raster **Threat Management** > **Incidents** den Incident aus, den Sie gerade untersuchen.
+1. Wählen Sie in Microsoft Sentinel im Raster **Bedrohungsmanagement** > **Incidents** den Incident aus, den Sie gerade untersuchen.
 
 1. Wählen Sie am unteren Rand des Incidentbereichs, der auf der rechten Seite angezeigt wird, **Aktionen** > **Team erstellen** aus.
 
@@ -94,7 +97,7 @@ Setzen Sie die Konversation über die Untersuchung in Teams so lange wie nötig 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen finden Sie unter:
+Weitere Informationen finden Sie unter
 
-- [Tutorial: Untersuchen von Vorfällen mit Azure Sentinel](investigate-cases.md)
+- [Tutorial: Untersuchen von Incidents mit Microsoft Sentinel](investigate-cases.md)
 - [Übersicht über Teams und Kanäle in Microsoft Teams](/microsoftteams/teams-channels-overview/)

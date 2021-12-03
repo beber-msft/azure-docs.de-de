@@ -3,12 +3,12 @@ title: Sicherheitslösungen für Azure VMware Solution
 description: Erfahren Sie mehr über führende Sicherheitslösungen für Ihre private Azure VMware Solution-Cloud.
 ms.topic: how-to
 ms.date: 09/15/2021
-ms.openlocfilehash: 5cad678a7f928fb1e96bce2a613ff1dab85d0711
-ms.sourcegitcommit: f6e2ea5571e35b9ed3a79a22485eba4d20ae36cc
+ms.openlocfilehash: 38ad70f673eb56fb8c7804b87815c64257f5423e
+ms.sourcegitcommit: 05c8e50a5df87707b6c687c6d4a2133dc1af6583
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128598465"
+ms.lasthandoff: 11/16/2021
+ms.locfileid: "132547201"
 ---
 # <a name="security-solutions-for-azure-vmware-solution"></a>Sicherheitslösungen für Azure VMware Solution
 
@@ -19,3 +19,5 @@ Unsere Sicherheitspartner verfügen über branchenführende Lösungen in VMware-
 Weitere Informationen zu diesen Lösungen finden Sie hier:
 
 - [Bitdefender](https://businessinsights.bitdefender.com/expanding-security-support-for-azure-vmware-solution)
+- [Trend Micro Deep Security](https://www.trendmicro.com/en_us/business/products/hybrid-cloud/deep-security.html)
+- [Check Point](https://www.checkpoint.com/cloudguard/cloud-network-security/iaas-public-cloud-security/)

@@ -1,17 +1,17 @@
 ---
 title: 'Tutorial: Konfigurieren des Netzwerks in einem Azure FXT Edge Filer-Cluster'
 description: Hier erfahren Sie, wie Sie nach Erstellung des Azure FXT Edge Filer-Clusters die Netzwerkeinstellungen anpassen.
-author: ekpgh
-ms.author: v-erkel
+author: femila
+ms.author: femila
 ms.service: fxt-edge-filer
 ms.topic: tutorial
 ms.date: 10/07/2021
-ms.openlocfilehash: c723214962e67ef04f9cf7659f63d29af87a4732
-ms.sourcegitcommit: bee590555f671df96179665ecf9380c624c3a072
+ms.openlocfilehash: a51f6654c8e82a46c1a31f2dd030cd2d5af754cd
+ms.sourcegitcommit: 677e8acc9a2e8b842e4aef4472599f9264e989e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2021
-ms.locfileid: "129670048"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "132347302"
 ---
 # <a name="tutorial-configure-the-clusters-network-settings"></a>Tutorial: Konfigurieren der Netzwerkeinstellungen des Clusters
 
@@ -151,7 +151,7 @@ Geben Sie auf der Einstellungsseite **Cluster** (Cluster) > **Administrative Net
 * DNS-Domänenname
 * DNS-Suchdomänen
 
-Ausführlichere Informationen finden Sie in der Anleitung zur Clusterkonfiguration unter [DNS Settings](<https://azure.github.io/Avere/legacy/ops_guide/4_7/html/gui_admin_network.html#gui-dns>) (DNS-Einstellungen).
+Ausführlichere Informationen finden Sie in der Anleitung zur Clusterkonfiguration unter [DNS Settings](https://azure.github.io/Avere/legacy/ops_guide/4_7/html/gui_admin_network.html#gui-dns) (DNS-Einstellungen).
 
 ## <a name="next-steps"></a>Nächste Schritte
 

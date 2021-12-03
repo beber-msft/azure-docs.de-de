@@ -2,15 +2,17 @@
 title: Analysieren von Livevideos ohne Aufzeichnung - Azure
 description: Eine Pipelinetopologie kann auch nur verwendet werden, um Analysen aus einem Livevideostream zu extrahieren, ohne dass dieser am Edge oder in der Cloud aufgezeichnet werden muss. Dieses Konzept wird in diesem Artikel erläutert.
 ms.topic: conceptual
-ms.date: 06/01/2021
-ms.openlocfilehash: 8444759d231153419873679624645a96e07058ce
-ms.sourcegitcommit: d43193fce3838215b19a54e06a4c0db3eda65d45
+ms.date: 11/04/2021
+ms.custom: ignite-fall-2021
+ms.openlocfilehash: 6230c565e7f193264c0640a3a278b2812f20ad7d
+ms.sourcegitcommit: 8946cfadd89ce8830ebfe358145fd37c0dc4d10e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "122515701"
+ms.lasthandoff: 11/05/2021
+ms.locfileid: "131847069"
 ---
 # <a name="analyzing-live-videos-without-recording"></a>Analysieren von Livevideos ohne Aufzeichnung
+
 
 ## <a name="suggested-pre-reading"></a>Empfohlene Lektüre zur Vorbereitung 
 
@@ -22,12 +24,15 @@ ms.locfileid: "122515701"
 
 Sie können eine Pipelinetopologie verwenden, um Livevideos zu analysieren, ohne Teile des Videos in einer Datei oder einem Medienobjekt aufzuzeichnen. Die unten dargestellten Pipelinetopologien ähneln denen im Artikel zur [ereignisbasierten Videoaufzeichnung](event-based-video-recording-concept.md), aber ohne einen Senkenknoten für Videos oder Dateien.
 
+> [!NOTE]
+> Die Analyse von Live-Videos ist derzeit nur für das Edge-Modul und nicht für die Cloud verfügbar.
+
 ### <a name="motion-detection"></a>Bewegungserkennung
 
 Die unten gezeigte Pipelinetopologie besteht aus einem [RTSP-Quellen](pipeline.md#rtsp-source)-Knoten, einem Knoten für den [Bewegungserkennungsprozessor](pipeline.md#motion-detection-processor) und einem Knoten für die [IoT Hub-Nachrichtensenke](pipeline.md#iot-hub-message-sink) - Sie können die Einstellungen sehen, die in der [JSON-Darstellung](https://github.com/Azure/video-analyzer/blob/main/pipelines/live/topologies/motion-detection/topology.json) verwendet werden. Diese Topologie ermöglicht Ihnen das Erkennen von Bewegung im eingehenden Livevideostream und das Weiterleiten der Bewegungsereignisse an andere Apps und Dienste über den Senkenknoten für IoT Hub-Meldungen. Die externen Apps oder Dienste können eine Warnung auslösen oder eine Benachrichtigung an die entsprechenden Personen senden.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="./media/get-started-detect-motion-emit-events/motion-detection.svg" alt-text="Erkennen von Bewegungen in Livevideos":::
+> :::image type="content" source="./media/analyze-live-video-without-recording/motion-detection.svg" alt-text="Erkennen von Bewegungen in Livevideos":::
 
 ### <a name="analyzing-video-using-a-custom-vision-model"></a>Analysieren von Videos mit einem benutzerdefinierten Custom Vision-Modell 
 

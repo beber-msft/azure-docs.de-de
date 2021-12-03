@@ -2,20 +2,21 @@
 title: Übersicht über Token – Azure Active Directory B2C
 description: Hier finden Sie Informationen zu den in Azure Active Directory B2C verwendeten Token.
 services: active-directory-b2c
-author: msmimart
-manager: celestedg
+author: kengaderdus
+manager: CelesteDG
 ms.service: active-directory
 ms.workload: identity
 ms.topic: conceptual
 ms.date: 10/1/2021
-ms.author: mimart
+ms.author: kengaderdus
 ms.subservice: B2C
-ms.openlocfilehash: 391c9adc9b79c5263121cb3827aeec7f5f520338
-ms.sourcegitcommit: 87de14fe9fdee75ea64f30ebb516cf7edad0cf87
+ms.custom: b2c-support
+ms.openlocfilehash: ab1dfac449bd37fb88f533a824d35eb52e83ccb0
+ms.sourcegitcommit: 2ed2d9d6227cf5e7ba9ecf52bf518dff63457a59
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2021
-ms.locfileid: "129350319"
+ms.lasthandoff: 11/16/2021
+ms.locfileid: "132517594"
 ---
 # <a name="overview-of-tokens-in-azure-active-directory-b2c"></a>Übersicht über Token in Azure Active Directory B2C
 
@@ -137,6 +138,8 @@ https://contoso.b2clogin.com/contoso.onmicrosoft.com/b2c_1_signupsignin1/v2.0/.w
 ```
 
 Sie haben zwei Optionen, um zu ermitteln, welche Richtlinie zum Signieren eines Tokens verwendet wurde (und wo die Metadaten angefordert werden können). Zunächst einmal ist der Richtlinienname im Token im `tfp`-Anspruch (Standard) oder im `acr`-Anspruch (wie konfiguriert) enthalten. Sie können Ansprüche aus dem Hauptteil des JWT analysieren, indem Sie eine Base64-Decodierung auf den Hauptteil anwenden und die sich ergebende JSON-Zeichenfolge deserialisieren. Der Anspruch `tfp` bzw. `acr` ist der Name der Richtlinie, die zum Ausstellen des Tokens verwendet wurde. Die andere Option besteht darin, die Richtlinie beim Übermitteln der Anforderung im Wert des Parameters `state` zu codieren und später zu decodieren, um die verwendete Richtlinie zu bestimmen. Beide Methoden sind gültig.
+
+Azure AD B2C verwendet den RS256-Algorithmus, der auf der [RFC 3447-Spezifikation](https://www.rfc-editor.org/rfc/rfc3447#section-3.1) basiert. Der öffentliche Schlüssel besteht aus zwei Komponenten: dem RSA-Modul (`n`) und dem öffentlichen RSA-Exponenten (`e`). Sie können `n`- und `e`-Werte programmgesteuert in ein Zertifikatformat für die Tokenvalidierung konvertieren.
 
 Die Beschreibung der Signaturüberprüfung geht über den Rahmen dieses Dokuments hinaus. Hilfreiche Informationen zur Tokenvalidierung stehen jedoch in zahlreichen Open-Source-Bibliotheken zur Verfügung.
 

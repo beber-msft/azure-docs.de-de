@@ -3,19 +3,19 @@ title: Sprachunterstützung
 titleSuffix: Azure Cognitive Services
 description: Mit Azure Cognitive Services können Sie Anwendungen erstellen, die sehen und hören und mit Ihren Benutzern sprechen und diese verstehen können. Zwischen diesen Diensten werden mehr als drei Dutzend Sprachen unterstützt, sodass Benutzer auf natürliche Weise mit Ihrer Anwendung kommunizieren können.
 services: cognitive-services
-author: erhopf
+author: PatrickFarley
 manager: nitinme
 ms.service: cognitive-services
 ms.topic: conceptual
-ms.date: 03/31/2020
-ms.author: erhopf
+ms.date: 10/28/2021
+ms.author: pafarley
 ms.custom: seodec18
-ms.openlocfilehash: fd30e8f7489d320a307e2797f7488da828f32827
-ms.sourcegitcommit: e8b229b3ef22068c5e7cd294785532e144b7a45a
+ms.openlocfilehash: fce378ce24075a96d0b110a1386520649ff3b0bf
+ms.sourcegitcommit: 702df701fff4ec6cc39134aa607d023c766adec3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2021
-ms.locfileid: "123472252"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "131434216"
 ---
 # <a name="natural-language-support-for-azure-cognitive-services"></a>Unterstützung für natürliche Sprachen in Azure Cognitive Services
 
@@ -38,7 +38,7 @@ Die folgenden Cognitive Services-Instanzen sind sprachunabhängig und weisen kei
 
 * [Language Understanding (LUIS)](./luis/luis-language-support.md)
 * [QnA Maker](./qnamaker/overview/language-support.md)
-* [Textanalyse](./text-analytics/language-support.md)
+* [Sprachdienst](./text-analytics/language-support.md)
 * [Translator](./translator/language-support.md)
 
 ## <a name="speech"></a>Spracheingabe

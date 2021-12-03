@@ -7,6 +7,7 @@
       href: overview.md
     - name: Technische Übersicht und Funktionsübersicht
       href: technical-overview.md
+      displayName: 'Azure AD B2C architecture, SLA, Azure AD B2C high availability, Azure AD B2C SLA, HA'
     - name: Unterstützte Azure AD-Features
       href: supported-azure-ad-features.md
     - name: Neues in der Dokumentation
@@ -48,10 +49,11 @@
           href: ../active-directory/develop/authentication-vs-authorization.md?bc=%2fazure%2factive-directory-b2c%2fbread%2ftoc.json&toc=%2fazure%2factive-directory-b2c%2fTOC.json
         - name: Token
           href: ../active-directory/develop/security-tokens.md?bc=%2fazure%2factive-directory-b2c%2fbread%2ftoc.json&toc=%2fazure%2factive-directory-b2c%2fTOC.json
-        - name: Protokolle
+        - name: Anforderung zur Anwendungsauthentifizierung
           href: ../active-directory/develop/v2-app-types.md?bc=%2fazure%2factive-directory-b2c%2fbread%2ftoc.json&toc=%2fazure%2factive-directory-b2c%2fTOC.json
         - name: Authentifizierungsbibliothek
           href: ../active-directory/develop/msal-overview.md?bc=%2fazure%2factive-directory-b2c%2fbread%2ftoc.json&toc=%2fazure%2factive-directory-b2c%2fTOC.json
+          displayName: 'MSAL, client library, Microsoft Authentication Library'
     - name: Bewährte Methoden für Azure AD B2C
       href: best-practices.md
     - name: Anwendungstypen
@@ -81,7 +83,7 @@
           href: custom-policy-overview.md
     - name: API-Connectors
       href: api-connectors-overview.md
-      displayName: 'REST API, web API, API connectors'
+      displayName: 'REST API, web API, API connectors, Dynamic data retrieval, external data sources, external identity data source, outbound webhooks, third-party integration'
     - name: Benutzerkonten
       href: user-overview.md
     - name: Benutzerprofilattribute
@@ -222,7 +224,7 @@
           displayName: 'AD-FS, ADFS'
         - name: Amazon
           href: identity-provider-amazon.md
-        - name: Apple (Vorschau)
+        - name: Apple
           href: identity-provider-apple-id.md
         - name: Azure AD (ein Mandant)
           href: identity-provider-azure-ad-single-tenant.md
@@ -344,9 +346,9 @@
           items:
             - name: Azure Monitor
               href: azure-monitor.md
-            - name: Azure Sentinel
+            - name: Microsoft Sentinel
               href: azure-sentinel.md
-              displayName: 'log, logs, logging, events, Azure Monitor, Azure Sentinel, SIEM, threat hunting, Security, Security Orchestration'
+              displayName: 'log, logs, logging, events, Azure Monitor, Microsoft Sentinel, SIEM, threat hunting, Security, Security Orchestration'
         - name: Partner für Web Application Firewall
           items:
             - name: Akamai
@@ -396,12 +398,13 @@
       items:
         - name: Ändern von Benutzeroberflächen für die Registrierung
           href: add-api-connector.md
-          displayName: 'rest claims validation, validate'
+          displayName: 'rest claims validation, validate, third-party integration, outbound webhook, third-party integration'
         - name: Anreichern von Token mit externen Ansprüchen
           href: add-api-connector-token-enrichment.md
-          displayName: rest claims exchange
+          displayName: 'rest claims exchange, API connectors, Dynamic data retrieval, external data sources, external identity data source, outbound webhooks, third-party integration'
         - name: Schützen eines API-Connectors
           href: secure-rest-api.md
+          displayName: 'API connectors, Dynamic data retrieval, external data sources, external identity data source, outbound webhooks, third-party integration'
     - name: Problembehandlung
       items:
         - name: Erfassen von Protokollen mit Application Insights
@@ -593,6 +596,7 @@
       href: app-registrations-training-guide.md
     - name: Abrechnungsmodell
       href: billing.md
+      displayName: pricing model
     - name: Codebeispiele
       href: /samples/browse/?terms=b2c
     - name: Cookiedefinitionen
@@ -607,6 +611,7 @@
       displayName: Page version
     - name: Regionale Verfügbarkeit und Datenresidenz
       href: data-residency.md
+      displayName: 'SLA, Azure AD B2C high availability, Azure AD B2C SLA, high availability, HA'
     - name: Erstellen resilienter Lösungen
       items:
         - name: 'Azure AD B2C: Einführung in die Resilienz'
@@ -630,10 +635,11 @@
       href: 'https://azure.microsoft.com/roadmap/?category=security-identity'
     - name: Häufig gestellte Fragen
       href: ./faq.yml
+      displayName: FAQ
     - name: Hilfe
       href: ../active-directory/develop/developer-support-help-options.md
     - name: Preise
-      href: 'https://azure.microsoft.com/pricing/details/active-directory-b2c/'
+      href: 'https://azure.microsoft.com/pricing/details/active-directory/external-identities/'
     - name: Preisrechner
       href: 'https://azure.microsoft.com/pricing/calculator/'
     - name: Dienstupdates

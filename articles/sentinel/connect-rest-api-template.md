@@ -1,48 +1,51 @@
 ---
-title: Verbinden Ihrer Datenquelle mit der Azure Sentinel-Datensammler-API zur Erfassung von Daten | Microsoft-Dokumentation
-description: Hier erfahren Sie, wie Sie externe Systeme mit der Azure Sentinel-Datensammler-API verbinden, um deren Protokolldaten in benutzerdefinierten Protokollen in Ihrem Arbeitsbereich zu erfassen.
+title: Verbinden Sie Ihre Datenquelle mit der Microsoft Sentinel Data Collector API, um Daten zu übernehmen | Microsoft Docs
+description: Erfahren Sie, wie Sie externe Systeme mit der Microsoft Sentinel Data Collector API verbinden, um deren Protokolldaten in benutzerdefinierte Protokolle in Ihrem Arbeitsbereich einzuspeisen.
 services: sentinel
 documentationcenter: na
 author: yelevin
 manager: rkarlin
 editor: ''
-ms.service: azure-sentinel
-ms.subservice: azure-sentinel
+ms.service: microsoft-sentinel
+ms.subservice: microsoft-sentinel
 ms.devlang: na
 ms.topic: how-to
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 08/17/2021
+ms.date: 11/09/2021
 ms.author: yelevin
-ms.openlocfilehash: 3b268d95eed0456b858ab5d8d93b895faca1ee7b
-ms.sourcegitcommit: 91915e57ee9b42a76659f6ab78916ccba517e0a5
+ms.custom: ignite-fall-2021
+ms.openlocfilehash: 439bdac80e5fef514a7de7e9617be42738c6c420
+ms.sourcegitcommit: 2ed2d9d6227cf5e7ba9ecf52bf518dff63457a59
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "130038420"
+ms.lasthandoff: 11/16/2021
+ms.locfileid: "132524529"
 ---
-# <a name="connect-your-data-source-to-the-azure-sentinel-data-collector-api-to-ingest-data"></a>Verbinden Ihrer Datenquelle mit der Azure Sentinel-Datensammler-API zur Erfassung von Daten
+# <a name="connect-your-data-source-to-the-microsoft-sentinel-data-collector-api-to-ingest-data"></a>Verbinden Sie Ihre Datenquelle mit der Microsoft Sentinel Data Collector API, um Daten aufzunehmen
+
+[!INCLUDE [Banner for top of topics](./includes/banner.md)]
 
 [!INCLUDE [reference-to-feature-availability](includes/reference-to-feature-availability.md)]
 
-API-Integrationen von Drittanbietern rufen Daten per Pull aus den Datenquellen ihrer Produkte ab und stellen eine Verbindung mit der [Azure Monitor-Datensammler-API](../azure-monitor/logs/data-collector-api.md) von Azure Sentinel her, um die Daten per Push in benutzerdefinierte Protokolltabellen in Ihrem Azure Sentinel-Arbeitsbereich zu übertragen.
+API-Integrationen von Drittanbietern ziehen Daten aus den Datenquellen ihrer Produkte und stellen eine Verbindung zur Microsoft Sentinel [Azure Monitor Data Collector API](../azure-monitor/logs/data-collector-api.md) her, um die Daten in benutzerdefinierte Protokolltabellen in Ihrem Microsoft Sentinel-Arbeitsbereich zu übertragen.
 
-In den meisten Fällen finden Sie alle für die Konfiguration dieser Datenquellen erforderlichen Informationen zum Herstellen einer Verbindung mit Azure Sentinel in der Dokumentation des jeweiligen Anbieters.
+In den meisten Fällen finden Sie in der Dokumentation des jeweiligen Anbieters alle Informationen, die Sie benötigen, um diese Datenquellen für die Verbindung mit Microsoft Sentinel zu konfigurieren.
 
 Überprüfen Sie auf der Referenzseite für [Azure Sentinel-Datenconnectors](data-connectors-reference.md) im Abschnitt zu Ihrem Produkt, ob weitere Anweisungen vorhanden sind. Zudem finden Sie dort Links zu den Anweisungen Ihres Anbieters.
 
 > [!NOTE]
-> Daten werden am geografischen Standort des Arbeitsbereichs gespeichert, in dem Sie Azure Sentinel ausführen.
+> Die Daten werden an dem geografischen Ort gespeichert, an dem sich der Arbeitsbereich befindet, auf dem Sie Microsoft Sentinel ausführen.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- Sie benötigen Lese- und Schreibberechtigungen für den Azure Sentinel-Arbeitsbereich.
+- Sie müssen über Lese- und Schreibberechtigungen für den Microsoft Sentinel-Arbeitsbereich verfügen.
 
 - Sie müssen über Leseberechtigungen für freigegebene Schlüssel für den Arbeitsbereich verfügen. [Weitere Informationen zu Arbeitsbereichsschlüsseln](../azure-monitor/agents/agent-windows.md)
 
 ## <a name="configure-and-connect-your-data-source"></a>Konfigurieren und Verbinden Ihrer Datenquelle
 
-1. Klicken Sie im Navigationsmenü des Azure Sentinel-Portals auf **Datenconnectors**.
+1. Wählen Sie im Microsoft Sentinel-Portal im Navigationsmenü die Option **Datenkonnektoren**.
 
 1. Wählen Sie im Katalog der Datenconnectors Ihr Produkt aus, und klicken Sie anschließend auf die Schaltfläche **Connectorseite öffnen**.
 
@@ -62,10 +65,10 @@ Es kann bis zu 20 Minuten dauern, bis Ihre Protokolle in Log Analytics angezeig
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In diesem Dokument haben Sie erfahren, wie Sie externe Datenquellen mit der Azure Sentinel-Datensammler-API verbinden. Wenn Sie die Vorteile der integrierten Funktionen dieser Datenconnectors in vollem Umfang nutzen möchten, klicken Sie auf der Datenconnectorseite auf die Registerkarte **Nächste Schritte**. Dort finden Sie einige vorgefertigte Beispielabfragen, Arbeitsmappen und Vorlagen für Analyseregeln, die Ihnen die Suche nach nützlichen Informationen erleichtern.
+In diesem Dokument haben Sie gelernt, wie man externe Datenquellen mit der Microsoft Sentinel Data Collector API verbindet. Wenn Sie die Vorteile der integrierten Funktionen dieser Datenconnectors in vollem Umfang nutzen möchten, klicken Sie auf der Datenconnectorseite auf die Registerkarte **Nächste Schritte**. Dort finden Sie einige vorgefertigte Beispielabfragen, Arbeitsmappen und Vorlagen für Analyseregeln, die Ihnen die Suche nach nützlichen Informationen erleichtern.
 
-Weitere Informationen zu Azure Sentinel finden Sie in den folgenden Artikeln:
+Weitere Informationen über Microsoft Sentinel finden Sie in den folgenden Artikeln:
 
 - Erfahren Sie, wie Sie [Einblick in Ihre Daten und potenzielle Bedrohungen erhalten](get-visibility.md).
-- Beginnen Sie mit der [Erkennung von Bedrohungen mithilfe von Azure Sentinel](detect-threats-built-in.md).
+- Erste Schritte [Erkennung von Bedrohungen mit Microsoft Sentinel](detect-threats-built-in.md).
 - [Verwenden Sie Arbeitsmappen](monitor-your-data.md), um Ihre Daten zu überwachen.

@@ -9,12 +9,13 @@ ms.subservice: forms-recognizer
 ms.topic: quickstart
 ms.date: 09/14/2021
 ms.author: sajagtap
-ms.openlocfilehash: bb1c2ee770380b5f8689b1dd8f25712293a0bcb2
-ms.sourcegitcommit: 692382974e1ac868a2672b67af2d33e593c91d60
+ms.custom: ignite-fall-2021
+ms.openlocfilehash: dc4f54a6ab42089068c3db8b7fe64bfada59adf5
+ms.sourcegitcommit: 677e8acc9a2e8b842e4aef4472599f9264e989e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "130220212"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "132290683"
 ---
 # <a name="get-started-form-recognizer-studio--preview"></a>Erste Schritte: Formularerkennung Studio | Vorschau
 
@@ -23,12 +24,18 @@ ms.locfileid: "130220212"
 
 [Formularerkennung Studio (Vorschau)](https://formrecognizer.appliedai.azure.com/) ist ein Onlinetool für das grafische Erkunden und Kennenlernen der Features des Diensts „Formularerkennung“ und das Integrieren in Ihre Anwendungen. Steigen Sie ein, indem Sie die vortrainierten Modelle mit Beispieldokumenten oder Ihren eigenen Dokumenten erkunden. Erstellen Sie Projekte für die Entwicklung von benutzerdefinierten Formularmodellen, und verweisen Sie in Ihren Anwendungen darauf, indem Sie die Informationen zum [Python SDK (Vorschau)](try-v3-python-sdk.md) und in anderen Schnellstartanleitungen verwenden.
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="migrating-from-the-sample-labeling-tool"></a>Migrieren vom Tool für die Beschriftung von Beispielen
+
+Wenn Sie zuvor das [Tool für die Beschriftung von Beispielen](try-sample-label-tool.md) genutzt haben, überspringen Sie die Voraussetzungen, um [**sich bei der Studio-Vorschauversion anzumelden**](try-v3-form-recognizer-studio.md#sign-into-the-form-recognizer-studio-preview) und Ihr vorhandenes Azure-Konto sowie Formularerkennungs- oder Cognitive Services-Ressourcen mit Studio zu verwenden. 
+
+Wenn Sie Ihre vorhandenen benutzerdefinierten Projekte zu Studio migrieren möchten, fahren Sie mit dem Abschnitt [**Erste Schritte mit dem benutzerdefinierten Modell**](try-v3-form-recognizer-studio.md#custom-model-basics) fort, um ein neues Projekt zu erstellen und es auf den gleichen Speicherort in Azure Blob Storage zu verweisen (vorausgesetzt Sie haben in Azure Zugriff darauf). Nachdem Sie ein neues Projekt konfiguriert haben, lädt Studio alle Dokumente und Zwischendateien zum Beschriften und Trainieren.
+
+## <a name="minimum-prerequisites-for-new-users"></a>Mindestvoraussetzungen für neue Benutzer
 
 * Ein aktives [**Azure-Konto**](https://azure.microsoft.com/free/cognitive-services/).  Falls Sie noch kein Konto haben, können Sie ein [**kostenloses Konto erstellen**](https://azure.microsoft.com/free/).
 * Eine [**Formularerkennung**](https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesFormRecognizer) oder [**Cognitive Services Multi-Service**](https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesAllInOne) Ressource.
 
-## <a name="additional-steps-for-custom-projects"></a>Zusätzliche Schritte für benutzerdefinierte Projekte
+## <a name="additional-prerequisites-for-custom-projects"></a>Zusätzliche Voraussetzungen für benutzerdefinierte Projekte
 
 Neben dem Azure-Konto und einer Formularerkennung- oder Cognitive Services-Ressource benötigen Sie Folgendes:
 
@@ -106,6 +113,14 @@ In der Layoutansicht:
 
 ## <a name="prebuilt-models"></a>Vordefinierte Modelle
 
+Sie können zwischen mehreren vordefinierten Modellen wählen, von denen jedes über mehrere unterstützte Felder verfügt. Welches Modell für den Analysevorgang verwendet wird, hängt vom Typ des zu analysierenden Dokuments ab. Hier sind die vordefinierten Modelle angegeben, die vom Dienst Formularerkennung derzeit unterstützt werden:
+
+* [🆕 **Allgemeines Dokument:**](https://formrecognizer.appliedai.azure.com/studio/prebuilt?formType=document) Analysieren und Extrahieren von Text, Tabellen, Strukturen, Schlüssel-Wert-Paaren und benannten Entitäten
+* [**Rechnung:**](https://formrecognizer.appliedai.azure.com/studio/prebuilt?formType=invoice) Extrahieren von Text, Auswahlmarkierungen, Tabellen, Schlüssel-Wert-Paaren und wichtigen Informationen aus Rechnungen
+* [**Beleg**](https://formrecognizer.appliedai.azure.com/studio/prebuilt?formType=receipt): Extrahieren von Text und wichtigen Informationen aus Belegen
+* [**Ausweisdokument:**](https://formrecognizer.appliedai.azure.com/studio/prebuilt?formType=idDocument) Extrahieren von Text und wichtigen Informationen aus Führerscheinen und Reisepässen
+* [**Visitenkarte:**](https://formrecognizer.appliedai.azure.com/studio/prebuilt?formType=businessCard) Extrahieren von Text und wichtigen Informationen aus Visitenkarten
+
 Gehen Sie in der Ansicht mit den vordefinierten Modellen wie folgt vor:
 
 1. Wählen Sie auf der Startseite von Studio eines der vordefinierten Modelle aus. In diesem Beispiel verwenden wir das Rechnungsmodell.
@@ -126,7 +141,7 @@ Gehen Sie in der Ansicht mit den vordefinierten Modellen wie folgt vor:
 
 Für die Erstellung benutzerdefinierter Modelle konfigurieren Sie zunächst Ihr Projekt:
 
-1. Wählen Sie auf der Studio-Startseite das Projekt für ein benutzerdefiniertes Formular aus, um die entsprechende Startseite zu öffnen.
+1. Wählen Sie auf der Studio-Startseite das [Projekt für ein benutzerdefiniertes Formular](https://formrecognizer.appliedai.azure.com/studio/customform/projects) aus, um die entsprechende Startseite zu öffnen.
 
 1. Verwenden Sie den Befehl „Projekt erstellen“, um den Konfigurations-Assistenten für neue Projekte zu starten.
 
@@ -142,7 +157,7 @@ Gehen Sie nach dem Schritt für die Projekterstellung in der Phase für das benu
 
 1. Definieren Sie in der Bezeichnungsansicht die Bezeichnungen und die zugehörigen Typen, die Sie extrahieren möchten.
 
-1. Wählen Sie den Text im Dokument aus, und klicken Sie in der Dropdownliste oder im Bereich „Bezeichnungen“ auf die Bezeichnung.
+1. Wählen Sie den Text im Dokument und dann in der Dropdownliste oder im Bereich „Bezeichnungen“ die Bezeichnung aus.
 
 1. Versehen Sie vier weitere Dokumente mit Bezeichnungen, damit Sie mindestens über fünf bezeichnete Dokumente verfügen.
 
@@ -180,7 +195,7 @@ Verwenden Sie dynamische Tabellen, um die variable Anzahl von Werten (Zeilen) f�
 
 1. Fügen Sie die Anzahl von Spalten (Feldern) und Zeilen (für Daten) hinzu, die Sie benötigen.
 
-1. Wählen Sie den Text auf Ihrer Seite aus, und klicken Sie dann auf die Zelle, die dem Text zugewiesen werden soll. Wiederholen Sie diesen Vorgang für alle Zeilen und Spalten auf allen Seiten Ihrer gesamten Dokumente.
+1. Wählen Sie den Text auf Ihrer Seite und dann die Zelle aus, die dem Text zugewiesen werden soll. Wiederholen Sie diesen Vorgang für alle Zeilen und Spalten auf allen Seiten Ihrer gesamten Dokumente.
 
 :::image border="true" type="content" source="../media/quickstarts/custom-tables-dynamic.gif" alt-text="Formularerkennung: Beispiel für die Bezeichnung als dynamische Tabelle":::
 
@@ -192,7 +207,7 @@ Verwenden Sie feste Tabellen, um eine bestimmte Sammlung mit Werten für eine be
 
 1. Fügen Sie die Anzahl von Spalten und Zeilen hinzu, die Sie für die beiden Gruppen von Feldern benötigen.
 
-1. Wählen Sie den Text auf Ihrer Seite aus, und klicken Sie dann auf die Zelle, um sie dem Text zuzuweisen. Wiederholen Sie diesen Vorgang für andere Dokumente.
+1. Wählen Sie den Text auf Ihrer Seite und dann die Zelle aus, die dem Text zugewiesen werden soll. Wiederholen Sie diesen Vorgang für andere Dokumente.
 
 :::image border="true" type="content" source="../media/quickstarts/custom-tables-fixed.gif" alt-text="Formularerkennung: Beispiel für die Bezeichnung als feste Tabelle":::
 
@@ -204,7 +219,7 @@ Gehen Sie wie folgt vor, um eine Bezeichnung für die Signaturerkennung hinzuzuf
 
 1. Verwenden Sie den Befehl „Region“, um an der erwarteten Position der Signatur einen rechteckigen Bereich zu erstellen.
 
-1. Wählen Sie den gezeichneten Bereich aus, und klicken Sie auf die Typbezeichnung „Signature“ (Signatur), um sie Ihrem gezeichneten Bereich zuzuweisen. Wiederholen Sie diesen Vorgang für andere Dokumente.
+1. Wählen Sie den gezeichneten Bereich und die Typbezeichnung „Signature“ (Signatur) aus, um sie Ihrem gezeichneten Bereich zuzuweisen. Wiederholen Sie diesen Vorgang für andere Dokumente.
 
 :::image border="true" type="content" source="../media/quickstarts/custom-signature.gif" alt-text="Formularerkennung: Beispiel für die Bezeichnung zur Signaturerkennung":::
 

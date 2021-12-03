@@ -10,7 +10,7 @@
   items:
     - name: Starten Ihrer ersten App
       href: quickstart.md
-    - name: Erstellen und Ausführen von Microservices
+    - name: Erstellen und Ausführen von Apps
       expanded: true
       items:
         - name: Einführung in die Beispiel-App
@@ -96,10 +96,14 @@
           href: how-to-deploy-powershell.md
     - name: Verwalten
       items:
+        - name: Starten oder Beenden eines Diensts
+          href: how-to-start-stop-service.md
         - name: 'Starten, Beenden und Löschen einer App'
           href: how-to-start-stop-delete.md
-        - name: Verwenden von beständigem Speicher
-          href: how-to-persistent-storage.md
+        - name: Verwenden von integriertem beständigem Speicher
+          href: how-to-built-in-persistent-storage.md
+        - name: Verwenden von benutzerdefiniertem beständigem Speicher
+          href: how-to-custom-persistent-storage.md
         - name: Ermitteln öffentlicher IP-Ausgangsadressen
           href: how-to-outbound-public-ip.md
     - name: Skalieren
@@ -142,6 +146,8 @@
           href: how-to-appdynamics-java-agent-monitor.md
         - name: Überwachen von App-Lebenszyklusereignissen
           href: monitor-app-lifecycle-events.md
+        - name: Logback mit benutzerdefiniertem beständigem Speicher
+          href: how-to-write-log-to-custom-persistent-storage.md
     - name: Netzwerk
       items:
         - name: Bereitstellen von Azure Spring Cloud in einem virtuellen Netzwerk
@@ -149,7 +155,7 @@
         - name: Zugreifen auf eine Anwendung im privaten Netzwerk
           href: access-app-virtual-network.md
         - name: Verfügbarmachen von Anwendungen für das Internet
-          href: expose-apps-gateway-azure-firewall.md
+          href: expose-apps-gateway.md
         - name: Konfigurieren von Palo Alto
           href: how-to-configure-palo-alto.md
         - name: Kundenzuständigkeiten für die Ausführung von Azure Spring Cloud im VNET
@@ -176,8 +182,6 @@
           href: how-to-github-actions.md
         - name: Authentifizierung mit Key Vault in GitHub-Aktionen
           href: github-actions-key-vault.md
-        - name: "Bereitstellen einer Azure\_Spring\_Cloud-Instanz mit Terraform"
-          href: how-to-provision-azure-spring-cloud-instance-terraform.md
     - name: Problembehandlung
       items:
         - name: Selbstdiagnose und Problembehandlung
@@ -186,6 +190,10 @@
           href: how-to-self-diagnose-running-in-vnet.md
         - name: Handbuch zur Problembehandlung
           href: troubleshoot.md
+        - name: Manuelles Erfassen von Heapspeicherabbildern/Threadspeicherabbildern/JFR
+          href: how-to-capture-dumps.md
+        - name: Auf JVM-Optionen basierende Problembehandlung
+          href: tutorial-dump-jvm-options.md
     - name: Migrieren
       items:
         - name: Spring Cloud

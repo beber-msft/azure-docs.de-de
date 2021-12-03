@@ -2,18 +2,18 @@
 title: Skalierung der SNAT-Ports mit Azure NAT Gateway
 description: Sie können die Azure Firewall mit NAT Gateway integrieren, damit Sie die SNAT-Ports erhöhen können.
 services: firewall
-author: jocortems
+author: KumudD
 ms.service: firewall
 ms.topic: how-to
 ms.date: 04/23/2021
-ms.author: jocorte
+ms.author: kumud
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 2070ab097407e377df123260965d7066512c1153
-ms.sourcegitcommit: 692382974e1ac868a2672b67af2d33e593c91d60
+ms.openlocfilehash: 30d1da573bec205212658fa6aff5ac3b71ad2e50
+ms.sourcegitcommit: e1037fa0082931f3f0039b9a2761861b632e986d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "130228749"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "132399008"
 ---
 # <a name="scale-snat-ports-with-azure-nat-gateway"></a>Skalierung der SNAT-Ports mit Azure NAT Gateway
 
@@ -28,7 +28,7 @@ Sobald eine NAT-Gateway-Ressource mit einem Azure Firewall-Subnetz verbunden ist
 Es gibt keine doppelte NAT mit dieser Architektur. Azure Firewall Instanzen senden den Datenverkehr mithilfe ihrer privaten IP-Adresse an das NAT-Gateway, anstatt die öffentliche IP-Adresse Azure Firewall.
 
 > [!NOTE]
-> Die Verwendung von Azure NAT Gateway ist derzeit nicht kompatibel mit Azure Firewall, wenn Sie [Azure Firewall über mehrere Verfügbarkeitszonen hinweg](deploy-availability-zone-powershell.md) bereitgestellt haben. Erfahren Sie mehr über [Azure NAT Gateway und Verfügbarkeitszonen](../virtual-network/nat-gateway/nat-gateway-resource.md#cross-zone-outbound-scenarios-not-supported).
+> Die Verwendung von Azure NAT Gateway ist derzeit nicht kompatibel mit Azure Firewall, wenn Sie [Azure Firewall über mehrere Verfügbarkeitszonen hinweg](deploy-availability-zone-powershell.md) bereitgestellt haben.
 
 ## <a name="associate-nat-gateway-with-azure-firewall-subnet---azure-powershell"></a>NAT-Gateway mit Azure Firewall-Subnetz verknüpfen - Azure PowerShell
 

@@ -4,16 +4,16 @@ description: Beheben von häufigen Problemen in einer Bereitstellung in der Azur
 author: jeffpatt24
 ms.service: storage
 ms.topic: troubleshooting
-ms.date: 8/24/2021
+ms.date: 11/2/2021
 ms.author: jeffpatt
 ms.subservice: files
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 0ba4fe4968a54be0ee9f19e2df6db242c149a7ee
-ms.sourcegitcommit: 10029520c69258ad4be29146ffc139ae62ccddc7
+ms.openlocfilehash: 37ebd3307c49a14763779dfa9453aea880e792a2
+ms.sourcegitcommit: 1a0fe16ad7befc51c6a8dc5ea1fe9987f33611a1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "129080562"
+ms.lasthandoff: 11/05/2021
+ms.locfileid: "131867074"
 ---
 # <a name="troubleshoot-azure-file-sync"></a>Problembehandlung für Azure-Dateisynchronisierung
 Mit der Azure-Dateisynchronisierung können Sie die Dateifreigaben Ihrer Organisation in Azure Files zentralisieren, ohne auf die Flexibilität, Leistung und Kompatibilität eines lokalen Dateiservers verzichten zu müssen. Mit der Azure-Dateisynchronisierung werden Ihre Windows Server-Computer zu einem schnellen Cache für Ihre Azure-Dateifreigabe. Sie können ein beliebiges Protokoll verwenden, das unter Windows Server verfügbar ist, um lokal auf Ihre Daten zuzugreifen, z.B. SMB, NFS und FTPS. Sie können weltweit so viele Caches wie nötig nutzen.
@@ -21,6 +21,7 @@ Mit der Azure-Dateisynchronisierung können Sie die Dateifreigaben Ihrer Organis
 Dieser Artikel enthält Informationen zur Behebung von Fehlern und Lösung von Problemen, die möglicherweise bei ihrer Bereitstellung der Azure-Dateisynchronisierung auftreten. Wir beschreiben außerdem, wie Sie wichtige Protokolle aus dem System erfassen, wenn eine detailliertere Untersuchung des Problems erforderlich ist. Wenn Sie hier keine Antwort auf Ihre Frage finden, können Sie sich über die folgenden Kanäle an uns wenden (Eskalationsreihenfolge):
 
 - [Frageseite von Microsoft Q&A (Fragen und Antworten) zu Azure Files](/answers/products/azure?product=storage)
+- [Azure-Communityfeedback](https://feedback.azure.com/d365community/forum/a8bb4a47-3525-ec11-b6e6-000d3a4f0f84?c=c860fa6b-3525-ec11-b6e6-000d3a4f0f84).
 - Microsoft-Support. Wählen Sie zum Erstellen einer neuen Supportanfrage im Azure-Portal auf der Registerkarte **Hilfe** die Schaltfläche **Hilfe und Support** und anschließend die Option **Neue Supportanfrage**.
 
 ## <a name="im-having-an-issue-with-azure-file-sync-on-my-server-sync-cloud-tiering-etc-should-i-remove-and-recreate-my-server-endpoint"></a>Es besteht ein Problem mit der Azure-Dateisynchronisierung auf dem Server (Synchronisierung, Cloudtiering usw.). Soll der Serverendpunkt entfernt und neu erstellt werden?
@@ -506,6 +507,9 @@ Dieser Fehler tritt auf, weil der Azure-Dateisynchronisierungs-Agent nicht berec
     ```
 2. [Überprüfen Sie, ob das Speicherkonto vorhanden ist.](#troubleshoot-storage-account)
 3. [Überprüfen Sie, ob die Einstellungen für die Firewall und das virtuelle Netzwerk im Speicherkonto ordnungsgemäß konfiguriert sind (sofern aktiviert).](file-sync-deployment-guide.md?tabs=azure-portal#configure-firewall-and-virtual-network-settings)
+
+> [!Note]  
+> Nachdem die Netzwerkkonnektivität mit dem Azure File Sync-Dienst wiederhergestellt wurde, wird die Synchronisierung möglicherweise nicht sofort fortgesetzt. Standardmäßig initiiert Azure File Sync alle 30 Minuten eine Synchronisierungssitzung, wenn am Standort des Serverendpunkts keine Änderungen erkannt werden. Um eine Synchronisierungssitzung zu erzwingen, starten Sie entweder den Dienst Storage Sync Agent (FileSyncSvc) neu, oder nehmen Sie eine Änderung an einer Datei oder an einem Verzeichnis am Standort des Serverendpunkts vor.
 
 <a id="-2134364022"></a><a id="storage-unknown-error"></a>**Unbekannter Fehler beim Zugriff auf das Speicherkonto.**  
 

@@ -1,19 +1,20 @@
 ---
 title: Fortanix Confidential Computing Manager in einer verwalteten Azure-Anwendung
 description: Erfahren Sie, wie Sie Fortanix Confidential Computing Manager (CCM) über das Azure-Portal in einer verwalteten Anwendung bereitstellen.
-author: JBCook
+author: stempesta
 ms.service: virtual-machines
 ms.subservice: confidential-computing
 ms.workload: infrastructure
 ms.topic: how-to
 ms.date: 02/03/2021
-ms.author: jencook
-ms.openlocfilehash: 757ce9b7502316bbc8a5b8f27ba672048b7bbace
-ms.sourcegitcommit: f28ebb95ae9aaaff3f87d8388a09b41e0b3445b5
+ms.author: stempesta
+ms.custom: ignite-fall-2021
+ms.openlocfilehash: fa811a3f528fb0d1bf20e053910540a6204eb724
+ms.sourcegitcommit: 677e8acc9a2e8b842e4aef4472599f9264e989e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "102563420"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "132315908"
 ---
 # <a name="fortanix-confidential-computing-manager-in-an-azure-managed-application"></a>Fortanix Confidential Computing Manager in einer verwalteten Azure-Anwendung
 
@@ -33,7 +34,7 @@ Fortanix ist ein Drittanbieter von Software mit Produkten und Diensten, die auf 
 
 1. Öffnen Sie das [Azure-Portal](https://portal.azure.com/).
 
-    :::image type="content" source="media/how-to-fortanix-confidential-computing-manager/azure-portal.png" alt-text="Azure-Portal":::
+    :::image type="content" source="media/how-to-fortanix-confidential-computing-manager/Azure-portal.png" alt-text="Azure-Portal":::
 
 2. Suchen Sie auf der Suchleiste nach „Fortanix Confidential Computing Manager“, um die Marketplace-Auflistung für Fortanix CCM anzuzeigen. Wählen Sie **Fortanix Confidential Computing Manager in Azure** aus.
 
@@ -117,9 +118,8 @@ Benutzer können auf der Seite des Confidential Computing-Knoten-Agents auch ein
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In diesen Schnellstart haben Sie mithilfe einer verwalteten Azure-App einen Knoten für den Confidential Computing Manager von Fortanix registriert. Durch die Knotenregistrierung können Sie Ihr Anwendungsimage so konvertieren, dass es auf einer Confidential Computing-VM ausgeführt werden kann. Weitere Informationen zu virtuellen Confidential Computing-Computern in Azure finden Sie unter [Lösungen für virtuelle Computer](virtual-machine-solutions.md).
+In diesen Schnellstart haben Sie mithilfe einer verwalteten Azure-App einen Knoten für den Confidential Computing Manager von Fortanix registriert. Durch die Knotenregistrierung können Sie Ihr Anwendungsimage so konvertieren, dass es auf einer Confidential Computing-VM ausgeführt werden kann. Weitere Informationen zu virtuellen Confidential Computing-Computern in Azure finden Sie unter [Lösungen für virtuelle Computer](virtual-machine-solutions-sgx.md).
 
 Weitere Informationen zu den Confidential Computing-Angeboten von Azure finden Sie unter [Confidential Computing unter Azure](overview.md).
 
 Erfahren Sie, wie Sie ähnliche Aufgaben mit anderen Drittanbieterangeboten für Azure wie [Anjuna](https://azuremarketplace.microsoft.com/marketplace/apps/anjuna-5229812.aee-az-v1) und [Scone](https://sconedocs.github.io) erledigen können.
-

@@ -6,12 +6,12 @@ ms.author: sunila
 ms.service: postgresql
 ms.topic: conceptual
 ms.date: 07/30/2021
-ms.openlocfilehash: dda5f9c654d7b6630a733006e69df7f2b98b8eeb
-ms.sourcegitcommit: f6e2ea5571e35b9ed3a79a22485eba4d20ae36cc
+ms.openlocfilehash: bc176567721b3c023afcb82e920b33fca7ca0a53
+ms.sourcegitcommit: 61f87d27e05547f3c22044c6aa42be8f23673256
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128594819"
+ms.lasthandoff: 11/09/2021
+ms.locfileid: "132061228"
 ---
 # <a name="postgresql-extensions-in-azure-database-for-postgresql---flexible-server"></a>PostgreSQL-Erweiterungen in Azure Database for PostgreSQL Flexible Server
 
@@ -98,6 +98,7 @@ Die folgenden Erweiterungen sind für Azure Database for PostgreSQL Flexible Ser
 > |[earthdistance](https://www.postgresql.org/docs/12/earthdistance.html)                | 1.1             | Berechnung von Großkreisentfernungen auf der Erdoberfläche|
 > |[fuzzystrmatch](https://www.postgresql.org/docs/12/fuzzystrmatch.html)                | 1.1             | Ermittlung von Ähnlichkeiten und der Entfernung zwischen Zeichenfolgen|
 > |[hstore](https://www.postgresql.org/docs/12/hstore.html)                       | 1.6             | Datentyp zum Speichern von Schlüssel-Wert-Paaren|
+> |[hypopg](https://github.com/HypoPG/hypopg)                                   |  1.2             | Erweiterung, die Unterstützung für hypothetische Indizes hinzufügt |
 > |[intagg](https://www.postgresql.org/docs/12/intagg.html)                     | 1.1             | Integeraggregator und -enumerator. (Veraltet)|
 > |[intarray](https://www.postgresql.org/docs/12/intarray.html)                     | 1.2             | Funktionen, Operatoren und Indexunterstützung für 1-D-Arrays mit Integerwerten|
 > |[isn](https://www.postgresql.org/docs/12/isn.html)                          | 1.2             | Datentypen für internationale Produktnummerierungsnormen|
@@ -151,6 +152,7 @@ Die folgenden Erweiterungen sind für Azure Database for PostgreSQL Flexible Ser
 > |[earthdistance](https://www.postgresql.org/docs/11/earthdistance.html)                | 1.1             | Berechnung von Großkreisentfernungen auf der Erdoberfläche|
 > |[fuzzystrmatch](https://www.postgresql.org/docs/11/fuzzystrmatch.html)                | 1.1             | Ermittlung von Ähnlichkeiten und der Entfernung zwischen Zeichenfolgen|
 > |[hstore](https://www.postgresql.org/docs/11/hstore.html)                       | 1.5             | Datentyp zum Speichern von Schlüssel-Wert-Paaren|
+> |[hypopg](https://github.com/HypoPG/hypopg)                                   |  1.1.2            | Erweiterung, die Unterstützung für hypothetische Indizes hinzufügt |
 > |[intagg](https://www.postgresql.org/docs/11/intagg.html)                     | 1.1             | Integeraggregator und -enumerator. (Veraltet)|
 > |[intarray](https://www.postgresql.org/docs/11/intarray.html)                     | 1.2             | Funktionen, Operatoren und Indexunterstützung für 1-D-Arrays mit Integerwerten|
 > |[isn](https://www.postgresql.org/docs/11/isn.html)                          | 1.2             | Datentypen für internationale Produktnummerierungsnormen|
@@ -214,6 +216,8 @@ So heben Sie den Zeitplan für alle Tasks aus „pg_cron“ auf
 ```
 SELECT cron.unschedule(jobid) FROM cron.job;
 ```
+> [!NOTE]
+> Die pg_cron-Erweiterung wird in jeder Azure Database for PostgreSQL Flexible Server-Instanz in der postgres-Datenbank vorab geladen, um Ihnen die Möglichkeit zu geben, Aufträge für die Ausführung in anderen Datenbanken in Ihrer PostgreSQL-Datenbankinstanz ohne Beeinträchtigung der Sicherheit zu planen.
 
 ## <a name="pg_stat_statements"></a>pg_stat_statements
 
@@ -225,4 +229,4 @@ Zwischen den von pg_stat_statements bereitgestellten Abfrageausführungsinformat
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Wenn Sie eine Erweiterung fehlt, die Sie verwenden möchten, lassen Sie es uns wissen. Stimmen Sie in unserem [Feedbackforum](https://feedback.azure.com/forums/597976-azure-database-for-postgresql) für vorhandene Anfragen ab, oder geben Sie uns weiteres Feedback.
+Wenn Sie eine Erweiterung fehlt, die Sie verwenden möchten, lassen Sie es uns wissen. Stimmen Sie in unserem [Feedbackforum](https://feedback.azure.com/d365community/forum/c5e32b97-ee24-ec11-b6e6-000d3a4f0da0) für vorhandene Anfragen ab, oder geben Sie uns weiteres Feedback.

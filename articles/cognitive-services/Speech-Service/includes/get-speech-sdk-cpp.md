@@ -1,19 +1,20 @@
 ---
-author: PatrickFarley
+author: eric-urban
 ms.service: cognitive-services
 ms.topic: include
 ms.date: 03/27/2020
-ms.author: pafarley
-ms.openlocfilehash: 4a648c47608ff60c58b1701e87e015a22bf4bf4d
-ms.sourcegitcommit: f2d0e1e91a6c345858d3c21b387b15e3b1fa8b4c
+ms.author: eur
+ms.openlocfilehash: 31d428455929b9cdfb14fb78f65dc8def889d563
+ms.sourcegitcommit: 512e6048e9c5a8c9648be6cffe1f3482d6895f24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2021
-ms.locfileid: "123539959"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "132252362"
 ---
 :::row:::
     :::column span="3":::
-        Das Speech SDK für C++ ist unter Windows, Linux und macOS verfügbar. Weitere Informationen finden Sie unter <a href="https://www.nuget.org/packages/Microsoft.CognitiveServices.Speech" target="_blank">Microsoft.CognitiveServices.Speech </a>.
+        Das C++ Speech SDK ist als NuGet-Paket für Windows, Linux und macOS verfügbar. Weitere Informationen finden Sie unter <a href="https://www.nuget.org/packages/Microsoft.CognitiveServices.Speech" target="_blank">Microsoft.CognitiveServices.Speech</a>.
+        Das C++ Speech SDK ist auch als tar-Paket von https://aka.ms/csspeech/linuxbinary erhältlich.
     :::column-end:::
     :::column:::
         <br>

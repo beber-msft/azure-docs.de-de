@@ -2,19 +2,19 @@
 title: C#-Tutorial zur Verwendung von KI in Azure-Blobs
 titleSuffix: Azure Cognitive Search
 description: Hier wird Schritt für Schritt ein Beispiel für die Textextraktion und die Verarbeitung natürlicher Sprache anhand des Inhalts von Blobspeicher mit C# beschrieben, indem Azure Cognitive Search und das .NET SDK verwendet werden.
+author: gmndrg
+ms.author: gimondra
 manager: nitinme
-author: MarkHeff
-ms.author: maheff
 ms.service: cognitive-search
 ms.topic: tutorial
 ms.date: 01/23/2021
 ms.custom: devx-track-csharp
-ms.openlocfilehash: a25f2a83fe03b8510e6ec56eb6bdcfedbb0098d8
-ms.sourcegitcommit: f2d0e1e91a6c345858d3c21b387b15e3b1fa8b4c
+ms.openlocfilehash: a50f367d39b990a6bf30cf4b7f85ad53b4d784b0
+ms.sourcegitcommit: 591ffa464618b8bb3c6caec49a0aa9c91aa5e882
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2021
-ms.locfileid: "123538073"
+ms.lasthandoff: 11/06/2021
+ms.locfileid: "131891943"
 ---
 # <a name="tutorial-use-net-and-ai-to-generate-searchable-content-from-azure-blobs"></a>Tutorial: Verwenden von .NET und KI zum Generieren von durchsuchbarem Inhalt über Azure-Blobs
 

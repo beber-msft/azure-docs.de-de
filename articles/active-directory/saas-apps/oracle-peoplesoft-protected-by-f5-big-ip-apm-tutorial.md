@@ -11,12 +11,12 @@ ms.workload: identity
 ms.topic: tutorial
 ms.date: 03/22/2021
 ms.author: jeedes
-ms.openlocfilehash: c60b8f605fea83ef0eccab140f1d9f460be78701
-ms.sourcegitcommit: 0770a7d91278043a83ccc597af25934854605e8b
+ms.openlocfilehash: 8b60af46f12af84dc5e08fbce7010de95b9771d1
+ms.sourcegitcommit: 677e8acc9a2e8b842e4aef4472599f9264e989e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "124778949"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "132344368"
 ---
 # <a name="tutorial-azure-active-directory-single-sign-on-sso-integration-with-oracle-peoplesoft---protected-by-f5-big-ip-apm"></a>Tutorial: Integration des einmaligen Anmeldens (Single Sign-On, SSO) von Azure Active Directory mit Oracle PeopleSoft – Protected by F5 BIG-IP APM
 
@@ -294,9 +294,17 @@ Führen Sie die folgenden Schritte aus, um die Unterstützung des einmaligen Abm
 
     * Navigieren Sie zu **Local Traffic > iRule** (Lokaler Datenverkehr > iRule), klicken Sie auf **Create** (Erstellen), geben Sie die folgenden Informationen an, und klicken Sie anschließend auf **Finished** (Fertig gestellt).
 
-        Name: `<Name>`  
-        Definition:  
-                    _when HTTP_REQUEST { switch -glob -- [HTTP::uri] { `/psp/ps/?cmd=logout` { HTTP::redirect `/my.logout.php3` } } }_
+      ```text
+      Name: `<Name>`
+      Definition:
+                  _when HTTP_REQUEST {
+                      switch -glob -- [HTTP::URI] {
+                          `/psp/ps/?cmd=logout` {
+                              HTTP::redirect `/my.logout.php3`
+                          }
+                      }
+                  }_
+      ```
 
 1. Zuweisen der erstellten iRule zum virtuellen Server
 
@@ -333,4 +341,4 @@ Sie können auch den Microsoft-Bereich „Meine Apps“ verwenden, um die Anwend
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Nach dem Konfigurieren von Oracle PeopleSoft – Protected by F5 BIG-IP APM können Sie die Sitzungssteuerung erzwingen, die in Echtzeit vor der Exfiltration und Infiltration vertraulicher Unternehmensdaten schützt. Die Sitzungssteuerung basiert auf bedingtem Zugriff. [Hier](/cloud-app-security/proxy-deployment-any-app) erfahren Sie, wie Sie die Sitzungssteuerung mit Microsoft Cloud App Security erzwingen.
+Nach dem Konfigurieren von Oracle PeopleSoft – Protected by F5 BIG-IP APM können Sie die Sitzungssteuerung erzwingen, die in Echtzeit vor der Exfiltration und Infiltration vertraulicher Unternehmensdaten schützt. Die Sitzungssteuerung basiert auf bedingtem Zugriff. [Erfahren Sie, wie Sie die Sitzungssteuerung mit Microsoft Defender for Cloud Apps erzwingen.](/cloud-app-security/proxy-deployment-any-app)

@@ -4,15 +4,16 @@ description: Hier wird beschrieben, wie Sie einen Azure-Datenträgerpool bereits
 author: roygara
 ms.service: storage
 ms.topic: conceptual
-ms.date: 09/29/2021
+ms.date: 11/09/2021
 ms.author: rogarana
 ms.subservice: disks
-ms.openlocfilehash: 72a25b6bc51732ac9b598cbcb6b45f9ac84fc21b
-ms.sourcegitcommit: 87de14fe9fdee75ea64f30ebb516cf7edad0cf87
+ms.custom: ignite-fall-2021
+ms.openlocfilehash: c4c010d1c142a2f2e09c0a60122f446ab7df6530
+ms.sourcegitcommit: 838413a8fc8cd53581973472b7832d87c58e3d5f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2021
-ms.locfileid: "129351061"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "132135386"
 ---
 # <a name="deploy-an-azure-disk-pool-preview"></a>Bereitstellen eines Azure-Datenträgerpools (Vorschau)
 
@@ -32,6 +33,8 @@ Für eine erfolgreiche Bereitstellung eines Datenträgerpools benötigen Sie Fol
 
 - eine Gruppe verwalteter Datenträger, die Sie einem Datenträgerpool hinzufügen möchten.
 - ein virtuelles Netzwerk mit einem dedizierten Subnetz, das für Ihren Datenträgerpool bereitgestellt wird.
+    - Die ausgehenden Ports 53, 443 und 5671 müssen geöffnet sein.
+    - Stellen Sie sicher, dass Ihre Netzwerkeinstellungen keine der erforderlichen ausgehenden Abhängigkeiten Ihres Datenträgerpools blockiert. Sie können entweder das [Azure PowerShell-Modul](/powershell/module/az.diskpool/get-azdiskpooloutboundnetworkdependencyendpoint?view=azps-6.6.0) oder [Azure CLI,](/cli/azure/disk-pool?view=azure-cli-latest#az_disk_pool_list_outbound_network_dependency_endpoint) um die vollständige Liste aller ausgehenden Abhängigkeiten zu erhalten.
 
 Wenn Sie das Azure PowerShell-Modul verwenden möchten, installieren Sie [Version 6.1.0 oder höher](/powershell/module/az.diskpool/?view=azps-6.1.0&preserve-view=true).
 
@@ -64,8 +67,9 @@ Weitere Informationen zur Subnetzdelegierung finden Sie unter [Hinzufügen oder 
 Damit ein Datenträger in einem Datenträgerpool verwendet werden kann, muss er die folgenden Anforderungen erfüllen:
 
 - Dem **StoragePool**-Ressourcenanbieter muss eine RBAC-Rolle mit den Berechtigungen **Lesen** und **Schreiben** für jeden verwalteten Datenträger im Datenträgerpool zugewiesen sein.
-- Es muss sich entweder um einen SSD Premium-Datenträger oder einen Ultra-Datenträger in derselben Verfügbarkeitszone wie der Datenträgerpool handeln.
+- Es muss sich entweder um einen SSD Premium-Datenträger, Standard-SSD-Datenträger oder einen Ultra-Datenträger in derselben Verfügbarkeitszone wie der Datenträgerpool handeln.
     - Bei Ultra-Datenträgern muss die Sektorgröße des Datenträgers 512 Byte betragen.
+- Datenträgerpools können nicht so konfiguriert werden, dass sie sowohl Premium-/Standard-SSDs als auch Ultra-Datenträger enthalten. Ein für Ultra-Datenträger konfigurierter Datenträgerpool kann nur Ultra-Datenträger enthalten. Ebenso kann ein Datenträgerpool, der für Premium- oder Standard-SSDs konfiguriert ist, nur Premium- und Standard-SSDs enthalten.
 - Es muss sich um einen freigegebenen Datenträger mit einem maxShares-Wert von mindestens 2 handeln.
 
 1. Melden Sie sich beim [Azure-Portal](https://portal.azure.com/) an.
@@ -98,10 +102,11 @@ Für eine optimale Leistung stellen Sie den Datenträgerpool in derselben Verfü
 
 Datenträger müssen die folgenden Anforderungen erfüllen, um hinzugefügt werden zu können:
 
-- Es muss sich entweder um einen SSD Premium-Datenträger oder einen Ultra-Datenträger in derselben Verfügbarkeitszone wie der Datenträgerpool handeln.
-    - Aktuell können im Portal ausschließlich SSD Premium-Datenträger hinzugefügt werden. Ultra-Datenträger müssen entweder mit dem Azure PowerShell-Modul oder über die Azure CLI hinzugefügt werden.
+- Es muss sich entweder um einen SSD Premium-Datenträger, Standard-SSD-Datenträger oder einen Ultra-Datenträger in derselben Verfügbarkeitszone wie der Datenträgerpool handeln.
+    - Aktuell können im Portal ausschließlich SSD Premium-Datenträger und Standard-SSD-Datenträger hinzugefügt werden. Ultra-Datenträger müssen entweder mit dem Azure PowerShell-Modul oder über die Azure CLI hinzugefügt werden.
     - Bei Ultra-Datenträgern muss die Sektorgröße des Datenträgers 512 Byte betragen.
 - Es muss sich um einen freigegebenen Datenträger mit einem maxShares-Wert von mindestens 2 handeln.
+- Datenträgerpools können nicht so konfiguriert werden, dass sie sowohl Premium-/Standard-SSDs als auch Ultra-Datenträger enthalten. Ein für Ultra-Datenträger konfigurierter Datenträgerpool kann nur Ultra-Datenträger enthalten. Ebenso kann ein Datenträgerpool, der für Premium- oder Standard-SSDs konfiguriert ist, nur Premium- und Standard-SSDs enthalten.
 - Sie müssen dem Ressourcenanbieter des Datenträgerpools RBAC-Berechtigungen zur Verwaltung des Datenträgers erteilen, der hinzugefügt werden soll.
 
 Wenn Ihr Datenträger diese Anforderungen erfüllt, können Sie ihn zu einem Datenträgerpool hinzufügen. Wählen Sie dazu im Bereich des Datenträgerpools die Option **+Datenträger hinzufügen** aus.
@@ -113,7 +118,6 @@ Wenn Ihr Datenträger diese Anforderungen erfüllt, können Sie ihn zu einem Dat
 1. Wählen Sie den Bereich **iSCSI** aus.
 1. Wählen Sie **iSCSI aktivieren** aus.
 1. Geben Sie den Namen des iSCSI-Ziels ein. Der iSCSI-Ziel-IQN wird basierend auf diesem Namen generiert.
-    - Wenn Sie das iSCSI-Ziel für einen einzelnen Datenträger deaktivieren möchten, wählen Sie unter **Status** die Option **Deaktivieren** für den Datenträger aus.
     - Der ACL-Modus ist standardmäßig auf **Dynamisch** festgelegt. Wenn Ihr Datenträgerpool als Speicherlösung für Azure VMware Solution verwendet werden soll, muss der ACL-Modus auf **Dynamisch** festgelegt sein.
 1. Klicken Sie auf **Überprüfen + erstellen**.
 
@@ -131,7 +135,7 @@ Ersetzen Sie die Variablen in diesem Skript vor der Ausführung durch Ihre eigen
 
 ```azurepowershell
 # Install the required module for Disk Pool
-Install-Module -Name Az.DiskPool -RequiredVersion 0.1.1 -Repository PSGallery
+Install-Module -Name Az.DiskPool -RequiredVersion 0.3.0 -Repository PSGallery
 
 # Sign in to the Azure account and setup the variables
 $subscriptionID = "<yourSubID>"
@@ -155,7 +159,8 @@ $rpId = (Get-AzADServicePrincipal -SearchString "StoragePool Resource Provider")
 New-AzRoleAssignment -ObjectId $rpId -RoleDefinitionName "Virtual Machine Contributor" -Scope $scopeDef
 
 # Create a Disk Pool
-New-AzDiskPool -Name $diskPoolName -ResourceGroupName $resourceGroupName -Location $location -SubnetId $subnetId -AvailabilityZone $availabilityZone -SkuName Standard
+# If you want to create a disk pool configured for ultra disks, add -AdditionalCapability "DiskPool.Disk.Sku.UltraSSD_LRS" to the command
+New-AzDiskPool -Name $diskPoolName -ResourceGroupName $resourceGroupName -Location $location -SubnetId $subnetId -AvailabilityZone $availabilityZone -SkuName Standard_S1
 $diskpool = Get-AzDiskPool -ResourceGroupName $resourceGroupName -Name $DiskPoolName
 
 # Add disks to the Disk Pool
@@ -185,7 +190,7 @@ Ersetzen Sie die Variablen in diesem Skript vor der Ausführung durch Ihre eigen
 # Add disk pool CLI extension
 az extension add -n diskpool
 
-#az extension add -s https://zuhdefault.blob.core.windows.net/cliext/diskpool-0.1.1-py3-none-any.whl
+#az extension add -s https://azcliprod.blob.core.windows.net/cli-extensions/diskpool-0.2.0-py3-none-any.whl
 
 #Select subscription
 az account set --subscription "<yourSubscription>"
@@ -210,13 +215,14 @@ storagePoolObjectId="${storagePoolObjectId#"}"
 
 az role assignment create --assignee-object-id $storagePoolObjectId --role "Virtual Machine Contributor" --resource-group $resourceGroupName
 
-#Create a disk pool 
+#Create a disk pool
+#To create a disk pool configured for ultra disks, add --additional-capabilities "DiskPool.Disk.Sku.UltraSSD_LRS" to your command
 az disk-pool create --name $diskPoolName \
 --resource-group $resourceGroupName \
 --location $location \
 --availability-zones $zone \
 --subnet-id $subnetId \
---sku name="Standard"
+--sku name="Standard_S1" \
 
 #Initialize an iSCSI target. You can have 1 iSCSI target per disk pool
 az disk-pool iscsi-target create --name $targetName \

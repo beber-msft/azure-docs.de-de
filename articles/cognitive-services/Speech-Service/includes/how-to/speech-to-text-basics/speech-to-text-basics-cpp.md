@@ -1,15 +1,15 @@
 ---
-author: PatrickFarley
+author: eric-urban
 ms.service: cognitive-services
 ms.topic: include
 ms.date: 03/06/2020
-ms.author: pafarley
-ms.openlocfilehash: 5d1604c0b7e9f9dff3b52e3666c024a58fe14ed1
-ms.sourcegitcommit: 87de14fe9fdee75ea64f30ebb516cf7edad0cf87
+ms.author: eur
+ms.openlocfilehash: ba09913faf523c2301228e305e3f26d28a02e237
+ms.sourcegitcommit: 362359c2a00a6827353395416aae9db492005613
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2021
-ms.locfileid: "129378118"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "132530229"
 ---
 Die Funktion zum Erkennen und Transkribieren von menschlicher Sprache (Spracherkennung) ist eines der zentralen Features des Speech-Diensts. In diesem Schnellstart erfahren Sie, wie Sie das Speech SDK in Ihren Apps und Produkten verwenden, um hochwertige Spracherkennungen durchzuführen.
 
@@ -84,9 +84,9 @@ cout << "RECOGNIZED: Text=" << result->Text << std::endl;
 
 Von der Klasse [SpeechRecognizer](/cpp/cognitive-services/speech/speechrecognizer) für das Speech SDK für C++ werden verschiedene Methoden für die Spracherkennung verfügbar gemacht.
 
-### <a name="single-shot-recognition"></a>Einzelerkennung
+### <a name="at-start-recognition"></a>Anfängliche Erkennung
 
-Bei der Einzelerkennung wird eine einzelne Äußerung asynchron erkannt. Zur Erkennung des Endes einer einzelnen Äußerung wird auf Stille am Ende gelauscht oder gewartet, bis maximal 15 Sekunden an Audiodaten verarbeitet wurden. Das folgende Beispiel zeigt eine asynchrone Einzelerkennung mit [`RecognizeOnceAsync`](/cpp/cognitive-services/speech/speechrecognizer#recognizeonceasync):
+Bei der anfänglichen Erkennung wird eine einzelne Äußerung asynchron erkannt. Zur Erkennung des Endes einer einzelnen Äußerung wird auf Stille am Ende gelauscht oder gewartet, bis maximal 15 Sekunden an Audiodaten verarbeitet wurden. Das folgende Beispiel zeigt eine asynchrone anfängliche Erkennung mit [`RecognizeOnceAsync`](/cpp/cognitive-services/speech/speechrecognizer#recognizeonceasync):
 
 ```cpp
 auto result = recognizer->RecognizeOnceAsync().get();
@@ -126,7 +126,7 @@ switch (result->Reason)
 
 ### <a name="continuous-recognition"></a>Kontinuierliche Erkennung
 
-Die kontinuierliche Erkennung ist etwas komplexer als die Einzelerkennung. Für die kontinuierliche Erkennung müssen die Ereignisse `Recognizing`, `Recognized` und `Canceled` abonniert werden, um die Erkennungsergebnisse zu erhalten. Zum Beenden der Erkennung muss [StopContinuousRecognitionAsync](/cpp/cognitive-services/speech/speechrecognizer#stopcontinuousrecognitionasync) aufgerufen werden. Im folgenden Beispiel wird eine kontinuierliche Erkennung für eine Audioeingabedatei durchgeführt.
+Die kontinuierliche Erkennung ist etwas komplexer als die anfängliche Erkennung. Für die kontinuierliche Erkennung müssen die Ereignisse `Recognizing`, `Recognized` und `Canceled` abonniert werden, um die Erkennungsergebnisse zu erhalten. Zum Beenden der Erkennung muss [StopContinuousRecognitionAsync](/cpp/cognitive-services/speech/speechrecognizer#stopcontinuousrecognitionasync) aufgerufen werden. Im folgenden Beispiel wird eine kontinuierliche Erkennung für eine Audioeingabedatei durchgeführt.
 
 Als Erstes wird die Eingabe definiert und eine Spracherkennung ([`SpeechRecognizer`](/cpp/cognitive-services/speech/speechrecognizer)) initialisiert:
 

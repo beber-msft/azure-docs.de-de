@@ -1,34 +1,36 @@
 ---
-title: 'Azure Sentinel: Referenz zum Prozessereignis-Normalisierungsschema | Microsoft-Dokumentation'
-description: In diesem Artikel wird das Prozessereignis-Normalisierungsschema von Azure Sentinel beschrieben.
+title: 'Microsoft Sentinel: Referenz zum Prozessereignis-Normalisierungsschema | Microsoft-Dokumentation'
+description: In diesem Artikel wird das Prozessereignis-Normalisierungsschema von Microsoft Sentinel beschrieben.
 services: sentinel
 cloud: na
 documentationcenter: na
 author: batamig
 manager: rkarlin
-ms.assetid: ''
-ms.service: azure-sentinel
-ms.subservice: azure-sentinel
+ms.service: microsoft-sentinel
+ms.subservice: microsoft-sentinel
 ms.workload: na
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: reference
-ms.date: 06/22/2021
+ms.date: 11/09/2021
 ms.author: bagol
-ms.openlocfilehash: dd9f0c69b610b54ae6f07661ba15d9f0cf22b3ea
-ms.sourcegitcommit: f3f2ec7793ebeee19bd9ffc3004725fb33eb4b3f
+ms.custom: ignite-fall-2021
+ms.openlocfilehash: cff85330635a5c6f9501f6064d36fa623159df22
+ms.sourcegitcommit: 2ed2d9d6227cf5e7ba9ecf52bf518dff63457a59
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "129407207"
+ms.lasthandoff: 11/16/2021
+ms.locfileid: "132522819"
 ---
-# <a name="azure-sentinel-process-event-normalization-schema-reference-public-preview"></a>Azure Sentinel: Referenz zum Prozessereignis-Normalisierungsschema (Öffentliche Vorschau)
+# <a name="microsoft-sentinel-process-event-normalization-schema-reference-public-preview"></a>Microsoft Sentinel: Referenz zum Prozessereignis-Normalisierungsschema (Öffentliche Vorschau)
+
+[!INCLUDE [Banner for top of topics](./includes/banner.md)]
 
 Das Prozessereignis-Normalisierungsschema wird verwendet, um die Betriebssystemaktivität zum Ausführen und Beenden eines Prozesses zu beschreiben. Solche Ereignisse werden von Betriebssystemen und Sicherheitssystemen wie EDR (End Point Detection and Response) gemeldet.
 
 Ein Prozess, wie von OSSEM definiert, ist ein Eigenständigkeits- und Verwaltungsobjekt, das eine aktuell ausgeführte Instanz eines Programms darstellt. Prozesse selbst werden zwar nicht ausgeführt, verwalten aber Threads, die Code ausführen.
 
-Weitere Informationen zu Normalisierung in Azure Sentinel finden Sie unter [Normalisierung und das Azure Sentinel Information Model (ASIM)](normalization.md).
+Weitere Informationen zu Normalisierung in Microsoft Sentinel finden Sie unter [Normalisierung und das Advanced SIEM Information Model (ASIM)](normalization.md).
 
 > [!IMPORTANT]
 > Das Prozessereignis-Normalisierungsschema befindet sich derzeit in der VORSCHAU. Dieses Feature wird ohne Vereinbarung zum Servicelevel bereitgestellt und ist nicht für Produktionsworkloads vorgesehen.
@@ -38,7 +40,7 @@ Weitere Informationen zu Normalisierung in Azure Sentinel finden Sie unter [Norm
 
 ## <a name="parsers"></a>Parser
 
-Azure Sentinel bietet die folgenden integrierten, produktspezifischen Prozessereignisparser:
+Microsoft Sentinel bietet die folgenden integrierten, produktspezifischen Prozessereignisparser:
 
 - **Erstellung des Prozesses für sicherheitsrelevante Ereignisse (Ereignis 4688)** , erfasst mit dem Log Analytics-Agent oder mit Azure Monitor
 - **Beendigung des Prozesses für sicherheitsrelevante Ereignisse (Ereignis 4689)** , erfasst mit dem Log Analytics-Agent oder mit Azure Monitor
@@ -52,7 +54,7 @@ Um die quellunabhängigen Parser zu verwenden, die alle aufgelisteten Parser ver
 - **imProcessTerminate** für Abfragen, die Informationen zur Prozessbeendigung erfordern.
 - **imProcessEvents** für Abfragen, die Informationen zur Prozesserstellung und zur Prozessbeendigung erfordern. In solchen Fällen ermöglicht das Feld `EventType` die Unterscheidung zwischen den Ereignissen und wird auf `ProcessCreate` bzw. `ProcessTerminate` festgelegt. Ereignisse zur Prozessbeendigung enthalten im Allgemeinen viel weniger Informationen als Ereignisse zur Prozesserstellung.
 
-Stellen Sie die [quellunabhängigen und quellspezifischen Parser](normalization-about-parsers.md) aus dem [Azure Sentinel GitHub-Repository](https://aka.ms/AzSentinelProcessEvents) bereit.
+Stellen Sie die [quellunabhängigen und quellspezifischen Parser](normalization-about-parsers.md) aus dem [Microsoft Sentinel GitHub-Repository](https://aka.ms/AzSentinelProcessEvents) bereit.
 
 ## <a name="add-your-own-normalized-parsers"></a>Hinzufügen eigener normalisierter Parser
 
@@ -62,14 +64,14 @@ Fügen Sie Ihre KQL-Funktion den quellunabhängigen Parsern `imProcess<Type>` un
 
 ## <a name="normalized-content-for-process-activity-data"></a>Normalisierter Inhalt für Prozessaktivitätsdaten
 
-Der folgende Azure Sentinel-Inhalt funktioniert mit jeder Prozessaktivität, die mithilfe des Informationsmodells von Azure Sentinel normalisiert wird:
+Der folgende Microsoft Sentinel-Inhalt funktioniert mit jeder Prozessaktivität, die mithilfe des Informationsmodells von Advanced SIEM normalisiert wird:
 
 - **Analyseregeln**:
 
    - [Wahrscheinliche Verwendung des AdFind Recon-Tools (normalisierte Prozessereignisse)](https://github.com/Azure/Azure-Sentinel/blob/master/Detections/ASimProcess/imProcess_AdFind_Usage.yaml)
    - [Base64-codierte Windows-Prozessbefehlszeilen (normalisierte Prozessereignisse)](https://github.com/Azure/Azure-Sentinel/blob/master/Detections/ASimProcess/imProcess_base64_encoded_pefile.yaml)
    - [Schadsoftware im Papierkorb (normalisierte Prozessereignisse)](https://github.com/Azure/Azure-Sentinel/blob/master/Detections/ASimProcess/imProcess_malware_in_recyclebin.yaml)
-   - [SKRIPTIUM – verdächtige rundll32.exe-Ausführung von vbscript (normalisierte Prozessereignisse)](https://github.com/Azure/Azure-Sentinel/blob/master/Detections/ASimProcess/imProcess_NOBELIUM_SuspiciousRundll32Exec.yaml)
+   - [NOBELIUM – verdächtige rundll32.exe-Ausführung von vbscript (normalisierte Prozessereignisse)](https://github.com/Azure/Azure-Sentinel/blob/master/Detections/ASimProcess/imProcess_NOBELIUM_SuspiciousRundll32Exec.yaml)
    - [SUNBURST – verdächtige untergeordnete SolarWinds-Prozesse (normalisierte Prozessereignisse)](https://github.com/Azure/Azure-Sentinel/blob/master/Detections/ASimProcess/imProcess_SolarWinds_SUNBURST_Process-IOCs.yaml)
 
    Weitere Informationen finden Sie unter [Erstellen benutzerdefinierter Analyseregeln zum Erkennen von Bedrohungen](detect-threats-custom.md).
@@ -94,7 +96,7 @@ Der folgende Azure Sentinel-Inhalt funktioniert mit jeder Prozessaktivität, die
     - [Unicode Obfuscation in der Befehlszeile](https://github.com/Azure/Azure-Sentinel/blob/master/Hunting%20Queries/MultipleDataSources/UnicodeObfuscationInCommandLine.yaml)
 
 
-    Weitere Informationen finden Sie unter [Suchen nach Bedrohungen mit Azure Sentinel](hunting.md).
+    Weitere Informationen finden Sie unter [Suchen nach Bedrohungen mit Microsoft Sentinel](hunting.md).
 
 ## <a name="schema-details"></a>Schemadetails
 
@@ -104,7 +106,7 @@ Das Prozessereignis-Informationsmodell ist auf das [OSSEM-Prozessentitätsschema
 
 Die folgenden Felder werden von Log Analytics für jeden Datensatz generiert und können beim Erstellen eines benutzerdefinierten Connectors überschrieben werden.
 
-| Feld         | Typ     | Diskussion (Discussion)      |
+| Feld         | type     | Diskussion (Discussion)      |
 | ------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | <a name="timegenerated"></a>**TimeGenerated** | datetime | Der Zeitpunkt, zu dem das Ereignis vom meldenden Gerät generiert wurde.|
 | **_ResourceId**   | guid     | Die Azure-Ressourcen-ID des meldenden Geräts oder Diensts oder die Ressourcen-ID des Protokollforwarders für Ereignisse, die mit Syslog, CEF oder WEF weitergeleitet werden. |
@@ -119,10 +121,10 @@ Die folgenden Felder werden von Log Analytics für jeden Datensatz generiert und
 
 Ereignisfelder sind allen Schemas gemeinsam und beschreiben die Aktivität selbst und das meldende Gerät.
 
-| Feld               | Klasse       | Typ       |  BESCHREIBUNG        |
+| Feld               | Klasse       | type       |  BESCHREIBUNG        |
 |---------------------|-------------|------------|--------------------|
 | **EventMessage**        | Optional    | String     |     Eine allgemeine Nachricht oder Beschreibung, entweder im Datensatz enthalten oder aus ihm generiert.   |
-| **EventCount**          | Obligatorisch.   | Integer    |     Die Anzahl der Ereignisse, die im Datensatz beschrieben werden. <br><br>Dieser Wert wird verwendet, wenn die Quelle Aggregation unterstützt. Ein einzelner Datensatz kann mehrere Ereignisse darstellen. <br><br>Legen Sie den Wert für andere Quellen auf `1` fest.   |
+| **EventCount**          | Obligatorisch.   | Integer    |     Die Anzahl der Ereignisse, die vom Datensatz beschrieben werden. <br><br>Dieser Wert wird verwendet, wenn die Quelle Aggregation unterstützt. Ein einzelner Datensatz kann mehrere Ereignisse darstellen. <br><br>Legen Sie den Wert für andere Quellen auf `1` fest.   |
 | **EventStartTime**      | Obligatorisch.   | Datum/Uhrzeit  |      Wenn die Quelle Aggregation unterstützt und der Datensatz mehrere Ereignisse darstellt, gibt dieses Feld die Zeit an, zu der das erste Ereignis generiert wurde. Andernfalls wird in diesem Feld ein Alias für das Feld [TimeGenerated](#timegenerated) verwendet. |
 | **EventEndTime**        | Obligatorisch.   | Alias      |      Alias für das Feld [TimeGenerated](#timegenerated).    |
 | **EventType**           | Obligatorisch.   | Enumerated |    Beschreibt den vom Datensatz gemeldeten Vorgang. <br><br>Für Prozessdatensätze werden folgende Werte unterstützt: <br>- `ProcessCreated` <br>- `ProcessTerminated` |
@@ -156,7 +158,7 @@ Das Prozessereignisschema verweist auf die folgenden Entitäten, die für die Ve
 - **TargetUser**. Der Benutzer, dessen Anmeldeinformationen zum Erstellen des neuen Prozesses verwendet werden.
 - **ParentProcess**. Der Prozess, der den Actor-Prozess initiiert hat.
 
-| Feld          | Klasse        | Typ       | BESCHREIBUNG   |
+| Feld          | Klasse        | type       | BESCHREIBUNG   |
 |---------------|--------------|------------|-----------------|
 | **Benutzer**           | Alias        |            | Alias für [TargetUsername](#targetusername). <br><br>Beispiel: `CONTOSO\dadmin`     |
 | **Process**        | Alias        |            | Alias für [TargetProcessName](#targetprocessname) <br><br>Beispiel: `C:\Windows\System32\rundll32.exe`|
@@ -175,7 +177,7 @@ Das Prozessereignisschema verweist auf die folgenden Entitäten, die für die Ve
 | **ActingProcessFileVersion**       | Optional     | String     |               Die Produktversion aus den Versionsinformationen der Imagedatei des agierenden Prozesses. <br><br>Beispiel: `7.9.5.0`   |
 | **ActingProcessFileInternalName**  | Optional     | String     |      Der produktinterne Dateiname aus den Versionsinformationen in der Imagedatei des agierenden Prozesses. |
 | **ActingProcessFileOriginalName** | Optional     | String     |Der ursprüngliche Produkdateiname aus den Versionsinformationen der Imagedatei des agierenden Prozesses.       <br><br> Beispiel: `Notepad++.exe` |
-| **ActingProcessIsHidden**          | Optional     | Boolesch    |      Ein Hinweis darauf, ob sich der agierende Prozess im ausgeblendeten Modus befindet.  |
+| **ActingProcessIsHidden**          | Optional     | Boolean    |      Ein Hinweis darauf, ob sich der agierende Prozess im ausgeblendeten Modus befindet.  |
 | **ActingProcessInjectedAddress**   | Optional     | String     |      Die Speicheradresse, an der der verantwortliche agierende Prozess gespeichert ist.           |
 | **ActingProcessId**| Obligatorisch.    | String        | Die Prozess-ID (PID) des handelnden Prozesses.<br><br>Beispiel: `48610176`           <br><br>**Hinweis**: Der Typ ist als *Zeichenfolge* definiert, um unterschiedliche Systeme zu unterstützen, aber unter Windows und Linux muss dieser Wert numerisch sein. <br><br>Wenn Sie einen Windows- oder Linux-Computer verwenden und einen anderen Typ verwendet haben, stellen Sie sicher, dass Sie die Werte konvertieren. Wenn Sie beispielsweise einen Hexadezimalwert verwendet haben, konvertieren Sie diesen in einen Dezimalwert.    |
 | **ActingProcessGuid**              | Optional     | Zeichenfolge     |  Ein generierter eindeutiger Bezeichner (GUID) des agierenden Prozesses. Ermöglicht die systemübergreifende Identifizierung des Prozesses.  <br><br> Beispiel: `EF3BD0BD-2B74-60C5-AF5C-010000001E00`            |
@@ -193,7 +195,7 @@ Das Prozessereignisschema verweist auf die folgenden Entitäten, die für die Ve
 | **ParentProcessFileDescription**   | Optional     | String     |  Die Beschreibung aus den Versionsinformationen in der Imagedatei des übergeordneten Prozesses.    <br><br>Beispiel: `Notepad++ : a free (GPL) source code editor`|
 | **ParentProcessFileProduct**       | Optional     | String     |Der Produktname aus den Versionsinformationen in der Imagedatei des übergeordneten Prozesses.    <br><br>  Beispiel: `Notepad++`  |
 | **ParentProcessFileVersion**       | Optional     | String     | Die Produktversion aus den Versionsinformationen in der Imagedatei des übergeordneten Prozesses.    <br><br> Beispiel: `7.9.5.0` |
-| **ParentProcessIsHidden**          | Optional     | Boolesch    |   Ein Hinweis darauf, ob sich der übergeordnete Prozess im ausgeblendeten Modus befindet.  |
+| **ParentProcessIsHidden**          | Optional     | Boolean    |   Ein Hinweis darauf, ob sich der übergeordnete Prozess im ausgeblendeten Modus befindet.  |
 | **ParentProcessInjectedAddress**   | Optional     | String     |    Die Speicheradresse, an der der verantwortliche übergeordnete Prozess gespeichert ist.           |
 | **ParentProcessId**| Obligatorisch.    | String    | Die Prozess-ID (PID) des übergeordneten Prozesses.   <br><br>     Beispiel: `48610176`    |
 | **ParentProcessGuid**              | Optional     | String     |  Ein generierter eindeutiger Bezeichner (GUID) des übergeordneten Prozesses.  Ermöglicht die systemübergreifende Identifizierung des Prozesses.    <br><br> Beispiel: `EF3BD0BD-2B74-60C5-AF5C-010000001E00` |
@@ -218,7 +220,7 @@ Das Prozessereignisschema verweist auf die folgenden Entitäten, die für die Ve
 | **TargetProcessFileVersion**       | Optional     | String     |Die Produktversion aus den Versionsinformationen in der Imagedatei des Zielprozesses.   <br><br>  Beispiel: `7.9.5.0` |
 | **TargetProcessFileInternalName**  |    Optional          | String  |   Der produktinterne Dateiname aus den Versionsinformationen in der Imagedatei des Zielprozesses. |
 | **TargetProcessFileOriginalName** |       Optional       | String   |   Der ursprüngliche Produkdateiname aus den Versionsinformationen der Imagedatei des Zielprozesses. |
-| **TargetProcessIsHidden**          | Optional     | Boolesch    |   Ein Hinweis darauf, ob sich der Zielprozess im ausgeblendeten Modus befindet.  |
+| **TargetProcessIsHidden**          | Optional     | Boolean    |   Ein Hinweis darauf, ob sich der Zielprozess im ausgeblendeten Modus befindet.  |
 | **TargetProcessInjectedAddress**   | Optional     | String     |    Die Speicheradresse, an der der verantwortliche Zielprozess gespeichert ist.           |
 | **TargetProcessMD5**               | Optional     | MD5        | Der MD5-Hash der Imagedatei des Zielprozesses.   <br><br> Beispiel: `75a599802f1fa166cdadb360960b1dd0`|
 | **TargetProcessSHA1**              | Optional     | SHA1       | Der SHA-1-Hash der Imagedatei des Zielprozesses.       <br><br>  Beispiel: `d55c5a4df19b46db8c54c801c4665d3338acdab0`   |
@@ -240,9 +242,9 @@ Das Prozessereignisschema verweist auf die folgenden Entitäten, die für die Ve
 
 Weitere Informationen finden Sie unter
 
-- [Normalisierung in Azure Sentinel](normalization.md)
-- [Azure Sentinel: Referenz zum Authentifizierungsnormalisierungsschema (Öffentliche Vorschau)](authentication-normalization-schema.md)
-- [Azure Sentinel: Referenz zum DNS-Normalisierungsschema](dns-normalization-schema.md)
-- [Azure Sentinel: Referenz zum Dateiereignis-Normalisierungsschema (Öffentliche Vorschau)](file-event-normalization-schema.md)
-- [Azure Sentinel: Referenz zum Netzwerknormalisierungsschema](normalization-schema.md)
-- [Azure Sentinel: Referenz zum Registrierungsereignis-Normalisierungsschema (Öffentliche Vorschau)](registry-event-normalization-schema.md)
+- [Normalisierung in Microsoft Sentinel](normalization.md)
+- [Microsoft Sentinel: Referenz zum Schema zur Normalisierung der Authentifizierung (Public Preview)](authentication-normalization-schema.md)
+- [Microsoft Sentinel: Referenz zum DNS-Normalisierungsschema](dns-normalization-schema.md)
+- [Microsoft Sentinel: Referenz zum Schema zur Normalisierung von Dateiereignissen (Public Preview)](file-event-normalization-schema.md)
+- [Microsoft Sentinel: Referenz zum Netzwerknormalisierungsschema](./network-normalization-schema.md)
+- [Microsoft Sentinel: Referenz zum Schema zur Normalisierung von Registrierungsereignissen (Public Preview)](registry-event-normalization-schema.md)

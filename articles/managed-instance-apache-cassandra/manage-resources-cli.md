@@ -4,30 +4,25 @@ description: Hier erfahren Sie mehr über die allgemeinen Befehle zum Automatisi
 author: TheovanKraay
 ms.service: managed-instance-apache-cassandra
 ms.topic: how-to
-ms.date: 09/17/2021
+ms.date: 11/02/2021
 ms.author: thvankra
-ms.custom: devx-track-azurecli, seo-azure-cli
+ms.custom: devx-track-azurecli, seo-azure-cli, ignite-fall-2021
 keywords: Befehlszeilenschnittstelle von Azure Resource Manager
-ms.openlocfilehash: 72cada375a6c88f5a3401acb77f0a982d231d0a4
-ms.sourcegitcommit: f6e2ea5571e35b9ed3a79a22485eba4d20ae36cc
+ms.openlocfilehash: 1cb28336c27a6f470a305917a267fc9c9320620a
+ms.sourcegitcommit: 591ffa464618b8bb3c6caec49a0aa9c91aa5e882
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128663723"
+ms.lasthandoff: 11/06/2021
+ms.locfileid: "131892461"
 ---
-# <a name="manage-azure-managed-instance-for-apache-cassandra-resources-using-azure-cli-preview"></a>Verwalten von Azure SQL Managed Instance für Apache Cassandra-Ressourcen mithilfe der Azure CLI (Vorschau)
+# <a name="manage-azure-managed-instance-for-apache-cassandra-resources-using-azure-cli"></a>Verwalten von Azure SQL Managed Instance für Apache Cassandra-Ressourcen mithilfe der Azure CLI
 
 In diesem Artikel werden allgemeine Befehle zum Automatisieren der Verwaltung von Azure SQL Managed Instance für Apache Cassandra-Cluster mithilfe der Azure CLI beschrieben.
-
-> [!IMPORTANT]
-> Azure SQL Managed Instance für Apache Cassandra befindet sich derzeit in der öffentlichen Vorschauphase.
-> Diese Vorschauversion wird ohne Vereinbarung zum Servicelevel bereitgestellt und ist nicht für Produktionsworkloads vorgesehen. Manche Features werden möglicherweise nicht unterstützt oder sind nur eingeschränkt verwendbar.
-> Weitere Informationen finden Sie unter [Zusätzliche Nutzungsbestimmungen für Microsoft Azure-Vorschauen](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).
 
 [!INCLUDE [azure-cli-prepare-your-environment.md](../../includes/azure-cli-prepare-your-environment.md)]
 
 > [!IMPORTANT]
-> Für diesen Artikel ist die Azure CLI-Version 2.17.1 oder höher erforderlich. Wenn Sie Azure Cloud Shell verwenden, ist die neueste Version bereits installiert.
+> Für diesen Artikel ist die Azure CLI-Version 2.30.0 oder höher erforderlich. Wenn Sie Azure Cloud Shell verwenden, ist die neueste Version bereits installiert.
 >
 > Ressourcen für die Verwaltung von Azure SQL Managed Instance für Apache Cassandra können nicht umbenannt werden, da dies gegen die Funktionsweise von Azure Resource Manager mit Ressourcen-URIs verstößt.
 
@@ -99,7 +94,7 @@ Rufen Sie den Clusterknotenstatus mithilfe des Befehls [az managed-cassandra clu
 clusterName='cassandra-hybrid-cluster'
 resourceGroupName='MyResourceGroup'
 
-az managed-cassandra cluster node-status \
+az managed-cassandra cluster status \
     --cluster-name $clusterName \
     --resource-group $resourceGroupName
 ```
@@ -172,6 +167,9 @@ az managed-cassandra datacenter delete \
     --cluster-name $clusterName \
     --data-center-name $dataCenterName 
 ```
+
+> [!WARNING]
+> Wenn Sie in Ihrem Cluster über mehrere Rechenzentren verfügen, müssen Sie zuerst alle Verweise auf das Rechenzentrum entfernen, das Sie in allen [Einstellungen für die Keyspace-Replikationsstrategie](https://docs.datastax.com/en/cassandra-oss/3.x/cassandra/operations/opsChangeKSStrategy.html) löschen möchten. Bei diesem Befehl tritt ein Fehler auf, wenn es noch Verweise auf das Rechenzentrum in einem der Keyspaces innerhalb Ihres Clusters gibt. 
 
 ### <a name="get-datacenter-details"></a><a id="get-datacenter-details"></a>Abrufen von Details zu Rechenzentren
 

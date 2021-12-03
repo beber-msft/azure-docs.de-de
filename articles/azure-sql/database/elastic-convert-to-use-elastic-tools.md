@@ -11,12 +11,12 @@ author: scoriani
 ms.author: scoriani
 ms.reviewer: mathoma
 ms.date: 01/25/2019
-ms.openlocfilehash: 18a78ef71143968327b290548b3307a8bbcfdfd2
-ms.sourcegitcommit: 942a1c6df387438acbeb6d8ca50a831847ecc6dc
+ms.openlocfilehash: c6a2506ec92580c949deef98c53d42b06bc37054
+ms.sourcegitcommit: 702df701fff4ec6cc39134aa607d023c766adec3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2021
-ms.locfileid: "112021589"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "131473602"
 ---
 # <a name="migrate-existing-databases-to-scale-out"></a>Migrieren vorhandener Datenbanken für die Aufskalierung
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -156,9 +156,9 @@ Nach der Einrichtung können Sie die Clientbibliothek für elastische Datenbanke
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Laden Sie die PowerShell-Skripts auf der Seite [Azure SQL Database – Elastic Database tools scripts](https://gallery.technet.microsoft.com/scriptcenter/Azure-SQL-DB-Elastic-731883db) (Azure SQL-Datenbank – Skripts für Tools für elastische Datenbanken) herunter.
+Laden Sie die PowerShell-Skripts von [Azure Skripts für Tools für elastische Datenbanken](https://github.com/Azure/elastic-db-tools/tree/master/Samples/PowerShell) (Azure Elastic Database tools scripts) herunter.
 
-Die Tools finden Sie auch auf GitHub: [Azure/elastic-db-tools](https://github.com/Azure/elastic-db-tools).
+Die Client-Bibliothek für Tools für elastische Datenbanken ist unter GitHub [Azure/elastic-db-tools](https://github.com/Azure/elastic-db-tools) verfügbar.
 
 Verschieben Sie Daten mithilfe des Split-Merge-Tools in das Modell mit mehreren Mandanten bzw. aus diesem Modell in ein Modell mit einem einzelnen Mandanten. Siehe [Split-Merge-Tool](elastic-scale-configure-deploy-split-and-merge.md).
 
@@ -168,7 +168,7 @@ Informationen zu gängigen Datenarchitekturmustern von mehrinstanzenfähigen Saa
 
 ## <a name="questions-and-feature-requests"></a>Fragen und Featureanfragen
 
-Bei Fragen nutzen Sie die [Microsoft F&A-Seite für SQL-Datenbank](/answers/topics/azure-sql-database.html), Featureanforderungen können Sie im [Feedbackforum für SQL-Datenbank](https://feedback.azure.com/forums/217321-sql-database/) einreichen.
+Bei Fragen nutzen Sie die [Microsoft F&A-Seite für SQL-Datenbank](/answers/topics/azure-sql-database.html), Featureanforderungen können Sie im [Feedbackforum für SQL-Datenbank](https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0) einreichen.
 
 <!--Image references-->
 [1]: ./media/elastic-convert-to-use-elastic-tools/listmapping.png

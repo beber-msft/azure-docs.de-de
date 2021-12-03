@@ -11,21 +11,18 @@ ms.service: cloud-services
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: tbd
-ms.date: 10/18/2021
-ms.author: gunnarc
-ms.openlocfilehash: 194e425ca62cbe36fa163efaf88a75fb7e1f09f9
-ms.sourcegitcommit: 92889674b93087ab7d573622e9587d0937233aa2
+ms.date: 11/01/2021
+ms.author: ibthampy
+ms.openlocfilehash: 244708b6603351ce7b01a6f69f2f19887cc63ea9
+ms.sourcegitcommit: 677e8acc9a2e8b842e4aef4472599f9264e989e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "130175881"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "132344007"
 ---
 # <a name="azure-guest-os"></a>Azure-Gastbetriebssystem
 Die folgenden Tabellen zeigen die Microsoft Security Response Center-Updates (MSRC), die auf das Azure-Gastbetriebssystem angewendet wurden. Durchsuchen Sie diesen Artikel, um zu ermitteln, ob ein bestimmtes Update für das Gastbetriebssystem gilt, das Sie verwenden. Updates werden für die [Familie][family-explain], in der sie eingeführt wurden, immer in die jeweils neueste Version übertragen.
 
->[!NOTE] 
-
->Das Gastbetriebssystem für Oktober wird derzeit auf Clouddienst-VMs eingeführt, die für automatische Updates konfiguriert sind. Wenn die Bereitstellung abgeschlossen ist, wird diese Version für manuelle Updates über das Azure-Portal und Konfigurationsdateien verfügbar gemacht. Die folgenden Patches sind im Gastbetriebssystem für Oktober enthalten. Änderungen der Liste vorbehalten. 
 
 ## <a name="october-2021-guest-os"></a>Gastbetriebssystem für Oktober 2021
 | Produktkategorie | Übergeordneter KB-Artikel | Beschreibung des Sicherheitsrisikos | Gastbetriebssystem | Datum der ersten Einführung |
@@ -584,7 +581,7 @@ Die folgenden Tabellen zeigen die Microsoft Security Response Center-Updates (MS
 |  Rel 20-12 |  4580325  |  Flash-Update | [3.92], [4.85], [5.50], [6.26] | 13. Oktober 2020 |
 |  Rel 20-12 |  [4586768]  |  Kumulative IE-Updates | [2.105], [3.92], [4.85] | 10. November 2020 |
 |  Rel 20-12 |  [4593226]  |  Letztes kumulatives Update | [5.50] | 8\. Dezember 2020 |
-|  Rel 20-12 |  [4052623]  |  Defender | [5.50], [6.26] | 13. Dezember 2020 |
+|  Rel 20-12 |  [4052623]  |  Defender für Cloud | [5.50], [6.26] | 13. Dezember 2020 |
 |  Rel 20-12 |  [4578952]  |  .NET Framework 3.5: Sicherheits- und Qualitätsrollup | [2.105] | 10. November 2020 |
 |  Rel 20-12 |  [4578955]  |  .NET Framework 4.5.2: Sicherheits- und Qualitätsrollup | [2.105] | 10. November 2020 |
 |  Rel 20-12 |  [4578953]  |  .NET Framework 3.5: Sicherheits- und Qualitätsrollup | [4.85] | 10. November 2020 |

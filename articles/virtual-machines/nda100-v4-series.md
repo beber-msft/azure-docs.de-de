@@ -5,12 +5,12 @@ ms.service: virtual-machines
 ms.subservice: vm-sizes-gpu
 ms.topic: conceptual
 ms.date: 05/26/2021
-ms.openlocfilehash: 5b60f65de72de0a039ec806a06f00145867c7648
-ms.sourcegitcommit: 37cc33d25f2daea40b6158a8a56b08641bca0a43
+ms.openlocfilehash: d18172751bb58d6a21115dd482024bdfcc47bea1
+ms.sourcegitcommit: 106f5c9fa5c6d3498dd1cfe63181a7ed4125ae6d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "130073352"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "131060438"
 ---
 # <a name="nd-a100-v4-series"></a>A100_v4-Serie
 
@@ -36,7 +36,7 @@ Diese Instanzen bieten hervorragende Leistung für zahlreiche KI-, ML- und Analy
 [Updates mit Speicherbeibehaltung:](maintenance-and-updates.md) Nicht unterstützt<br>
 [Unterstützung von VM-Generationen:](generation-2.md) Generation 2<br>
 [Beschleunigter Netzwerkbetrieb:](../virtual-network/create-vm-accelerated-networking-cli.md) Nicht unterstützt<br>
-[Kurzlebige Betriebssystemdatenträger](ephemeral-os-disks.md): Unterstützt ([in der Vorschauphase](ephemeral-os-disks.md#preview---ephemeral-os-disks-can-now-be-stored-on-temp-disks))<br>
+[Kurzlebige Betriebssystemdatenträger](ephemeral-os-disks.md): Unterstützt<br>
 InfiniBand: Unterstützt, GPUDirect-RDMA, 8 x 200 Gigabit HDR<br>
 Nvidia NVLink Interconnect: Unterstützt<br>
 <br>

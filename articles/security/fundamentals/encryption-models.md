@@ -11,14 +11,14 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 04/27/2021
+ms.date: 10/26/2021
 ms.author: mbaldwin
-ms.openlocfilehash: 8e39864e2246e175bb9f699f01b78646782d84eb
-ms.sourcegitcommit: 52491b361b1cd51c4785c91e6f4acb2f3c76f0d5
+ms.openlocfilehash: a939ec6093d6c06e9a7aeb0d7c46bdce2d78223a
+ms.sourcegitcommit: 677e8acc9a2e8b842e4aef4472599f9264e989e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "108315343"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "132335554"
 ---
 # <a name="data-encryption-models"></a>Datenverschlüsselungsmodelle
 
@@ -148,7 +148,6 @@ Die Azure-Dienste, die die einzelnen Verschlüsselungsmodelle unterstützen:
 | Azure Cognitive Search           | Ja                | Ja                | -                  |
 | Azure Cognitive Services         | Ja                | Ja                | -                  |
 | Azure Machine Learning           | Ja                | Ja                | -                  |
-| Azure Machine Learning Studio (klassisch) | Ja         | RSA 2048 Bit, Vorschauversion | -               |
 | Content Moderator                | Ja                | Ja                | -                  |
 | Gesicht                             | Ja                | Ja                | -                  |
 | Language Understanding           | Ja                | Ja                | -                  |
@@ -194,7 +193,7 @@ Die Azure-Dienste, die die einzelnen Verschlüsselungsmodelle unterstützen:
 | Azure Synapse Analytics          | Ja                | Ja, RSA 3072 Bit  | -                  |
 | SQL Server Stretch Database      | Ja                | Ja, RSA 3072 Bit  | Ja                |
 | Table Storage                    | Ja                | Ja                | Ja                |
-| Azure Cosmos DB                  | Ja                | Ja                | -                  |
+| Azure Cosmos DB                  | Ja  ([weitere Informationen](../../cosmos-db/database-security.md?tabs=sql-api))              | Ja ([weitere Informationen](../../cosmos-db/how-to-setup-cmk.md))                | -                  |
 | Azure Databricks                 | Ja                | Ja                | -                  |
 | Azure Database Migration Service | Ja                | N/V\*              | -                  |
 | **Identität**                     |                    |                    |                    |
@@ -213,8 +212,8 @@ Die Azure-Dienste, die die einzelnen Verschlüsselungsmodelle unterstützen:
 | **Medien**                        |                    |                    |                    |
 | Media Services                   | Ja                | Ja                | Ja                |
 | **Security**                     |                    |                    |                    |
-| Azure Security Center für IoT    | Ja                | Ja                | -                  |
-| Azure Sentinel                   | Ja                | Ja                | -                  |
+| Microsoft Defender für IoT    | Ja                | Ja                | -                  |
+| Microsoft Sentinel                   | Ja                | Ja                | -                  |
 | **Storage**                      |                    |                    |                    |
 | Blob Storage                     | Ja                | Ja                | Ja                |
 | Blob Storage Premium             | Ja                | Ja                | Ja                |

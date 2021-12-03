@@ -5,15 +5,16 @@ author: roygara
 ms.service: virtual-machines
 ms.collection: linux
 ms.topic: how-to
-ms.date: 10/15/2018
+ms.date: 11/02/2021
 ms.author: rogarana
 ms.subservice: disks
-ms.openlocfilehash: c8c8881de696143be60c9ff61c1649eb31fe59b3
-ms.sourcegitcommit: 58d82486531472268c5ff70b1e012fc008226753
+ms.custom: references_regions, ignite-fall-2021
+ms.openlocfilehash: f9d38bdbbd21d2bc1d54e74c9fd413bbfc38e93a
+ms.sourcegitcommit: 702df701fff4ec6cc39134aa607d023c766adec3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2021
-ms.locfileid: "122695610"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "131448943"
 ---
 # <a name="expand-virtual-hard-disks-on-a-linux-vm-with-the-azure-cli"></a>Erweitern von virtuellen Festplatten auf virtuellen Linux-Computern mit der Azure-CLI
 
@@ -25,11 +26,37 @@ Dieser Artikel erläutert, wie verwaltete Datenträger für einen virtuellen Lin
 > Achten Sie immer darauf, dass Ihr Dateisystem in einem fehlerfreien Zustand ist und dass Ihre Datenträgerpartitionstabelle die neue Größe unterstützt. Vergewissern Sie sich außerdem, dass Ihre Daten gesichert sind, bevor Sie Vorgänge zur Größenänderung von Datenträgern ausführen. Weitere Informationen finden Sie im [Schnellstart zu Azure Backup](../../backup/quick-backup-vm-portal.md). 
 
 ## <a name="expand-an-azure-managed-disk"></a>Erweitern eines verwalteten Azure-Datenträgers
+
+### <a name="resize-without-downtime-preview"></a>Größenänderung ohne Ausfallzeit (Vorschau)
+
+Sie können nun die Größe Ihrer verwalteten Datenträger ändern, ohne Ihre VM zu deallokieren.
+
+Die Vorschau für diesen Bereich hat folgende Einschränkungen:
+
+[!INCLUDE [virtual-machines-disks-expand-without-downtime-restrictions](../../../includes/virtual-machines-disks-expand-without-downtime-restrictions.md)]
+
+Um sich für die Funktion zu registrieren, verwenden Sie den folgenden Befehl:
+
+```azurecli
+az feature register --namespace Microsoft.Compute --name LiveResize
+```
+
+Es kann ein paar Minuten dauern, bis die Registrierung abgeschlossen ist. Um zu bestätigen, dass Sie sich registriert haben, verwenden Sie den folgenden Befehl:
+
+```azurecli
+az feature show --namespace Microsoft.Compute --name LiveResize
+```
+
+### <a name="get-started"></a>Erste Schritte
+
 Überprüfen Sie, ob Sie die neueste Version der [Azure CLI](/cli/azure/install-az-cli2) installiert haben und mit [az login](/cli/azure/reference-index#az_login) bei einem Azure-Konto angemeldet sind.
 
 Für diesen Artikel ist ein vorhandener virtueller Computer in Azure mit mindestens einem angefügten und vorbereiteten Datenträger erforderlich. Wenn Sie noch nicht über einen virtuellen Computer verfügen, den Sie verwenden können, finden Sie entsprechende Informationen unter [Erstellen und Vorbereiten eines virtuellen Computers mit Datenträgern](tutorial-manage-disks.md#create-and-attach-disks).
 
 Ersetzen Sie in den folgenden Beispielen die Beispielparameternamen wie *myResourceGroup* und *myVM* durch Ihre eigenen Werte.
+
+> [!IMPORTANT]
+> Wenn Sie **LiveResize** aktiviert haben und Ihre Festplatte die Anforderungen in [Resize ohne Ausfallzeit (Vorschau)](#resize-without-downtime-preview) erfüllt, können Sie Schritt 1 und 3 überspringen. 
 
 1. Vorgänge auf virtuellen Festplatten können nicht durchgeführt werden, wenn die VM ausgeführt wird. Heben Sie die Zuordnung der VM mit [az vm deallocate](/cli/azure/vm#az_vm_deallocate) auf. Im folgenden Beispiel wird die Zuordnung für die VM *myVM* in der Ressourcengruppe *myResourceGroup* aufgehoben:
 

@@ -2,17 +2,18 @@
 title: Indizieren von Daten über SharePoint Online (Vorschau)
 titleSuffix: Azure Cognitive Search
 description: Richten Sie einen SharePoint Online-Indexer ein, um die Indizierung der Inhalte von Dokumentbibliotheken in Azure Cognitive Search zu automatisieren.
-author: MarkHeff
-ms.author: maheff
+author: gmndrg
+ms.author: gimondra
+manager: nitinme
 ms.service: cognitive-search
 ms.topic: conceptual
 ms.date: 03/01/2021
-ms.openlocfilehash: e73e8226bd90b1600b0f3538e34c9f4f937ce189
-ms.sourcegitcommit: 54e7b2e036f4732276adcace73e6261b02f96343
+ms.openlocfilehash: f0e5afcc4f0869c4fe12a634e34e7b0669da5c75
+ms.sourcegitcommit: 838413a8fc8cd53581973472b7832d87c58e3d5f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2021
-ms.locfileid: "129807372"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "132137790"
 ---
 # <a name="index-data-from-sharepoint-online"></a>Indizieren von Daten über SharePoint Online
 
@@ -152,6 +153,9 @@ api-key: [admin key]
 
 ```
 
+> [!IMPORTANT]
+> Nur [`metadata_spo_site_library_item_id`](#metadata) kann als Schlüsselfeld in einem vom SharePoint Online-Indexer erstellten Index verwendet werden. Wenn ein Schlüsselfeld in der Datenquelle nicht vorhanden ist, wird `metadata_spo_site_library_item_id` automatisch dem Schlüsselfeld zugeordnet.
+
 Weitere Informationen finden Sie unter [Erstellen eines Index (REST-API)](/rest/api/searchservice/create-index).
 
 ### <a name="step-5-create-an-indexer"></a>Schritt 5: Erstellen eines Indexers
@@ -261,6 +265,8 @@ Nachdem die Datenquelle aktualisiert wurde, führen Sie die folgenden Schritte a
 1.  Anmeldename
 
 1.  Starten Sie erneut manuell eine Ausführung des Indexers, und überprüfen Sie den Indexerstatus. Dieses Mal sollte die Indexerausführung erfolgreich gestartet werden.
+
+<a name="metadata"></a>
 
 ## <a name="indexing-document-metadata"></a>Indizieren von Dokumentmetadaten
 Wenn Sie den Indexer zum Indizieren von Dokumentmetadaten konfiguriert haben, können Sie die folgenden Metadaten indizieren.
